@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Terrain : MonoBehaviour
 {
-    List <GameObject> Tiles = new List<GameObject> ();
+    public List <GameObject> Tiles = new List<GameObject> ();
 
+    public Transform startNode;
+    public Transform endNode;
+    
     void Awake()
     {
         BoxCollider[] temp = GetComponentsInChildren<BoxCollider>();
         foreach (var tile in temp)
         {
             Tiles.Add(tile.gameObject);    
-            Debug.Log(tile.name);       
+            Debug.Log(tile.name);
         }
     }
 
@@ -20,5 +23,4 @@ public class Terrain : MonoBehaviour
     {
 
     }
-
 }
