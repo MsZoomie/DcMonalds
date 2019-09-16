@@ -6,8 +6,8 @@ public class Terrain : MonoBehaviour
 {
     public List <GameObject> Tiles = new List<GameObject> ();
 
-    public Transform startNode;
-    public Transform endNode;
+    public Transform agent;
+    public Transform target;
     
     void Awake()
     {
