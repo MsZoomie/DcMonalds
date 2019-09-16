@@ -7,8 +7,8 @@ public class Pathfinder : MonoBehaviour
     public Terrain ground;
     GameObject startTransform;
     GameObject endTransform;
-    List<GameObject> openList = new List<GameObject>;
-    List<GameObject> closedList = new List<GameObject>;
+    List<GameObject> openList = new List<GameObject>();
+    List<GameObject> closedList = new List<GameObject>();
 
     void Awake()
     {
@@ -20,9 +20,9 @@ public class Pathfinder : MonoBehaviour
     void Start() 
     { 
         //Look for the startNode and add it to the open list
-        for (int i = 0; i < ground.Tiles.Length; i++)
+        for (int i = 0; i < ground.Tiles.Count; i++)
         {
-            if(Tiles[i].transform.x == startTransform.x && Tiles[i].transform.y == startTransform.y)
+            if(ground.Tiles[i].transform.position.x == startTransform. && ground.Tiles[i].transform.position.y == startTransform.y)
             {
                openList.Add(Tiles[i]);
             }
