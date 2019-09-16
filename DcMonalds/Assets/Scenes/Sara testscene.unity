@@ -225,7 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &51962536
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &172799989
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &195266527
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &254566413
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &296987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &307409120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &310662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &479022621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &495870072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &499033468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &505813067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &507718769
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,7 +2064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &545115559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,7 +2171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &589521910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,7 +2278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &610466704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,7 +2385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &631827866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,7 +2492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &647228260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &694937359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,7 +2743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,7 +3021,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &810595280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &850718998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,7 +3235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &885769710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,7 +3342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &954608166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1068970713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,7 +3793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1110385273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,7 +3900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1184738101
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,7 +4037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1220654073
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,7 +4224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1001 &1258556953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4393,7 +4421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1310928760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4579,7 +4608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1316398366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,7 +4715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1318423308
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,7 +4822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1325478913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,7 +4929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1326103437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,7 +5153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1353671785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,7 +5260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1355585855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,7 +5367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1398353299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,7 +5474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1401927137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,7 +5581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1422434347
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,7 +5688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1428864313
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,7 +5795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1433266258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,7 +5902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1449571841
 GameObject:
   m_ObjectHideFlags: 0
@@ -5968,7 +6009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1483260911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,7 +6116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1492392705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,7 +6223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1529711706
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,7 +6330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1562745188
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,7 +6474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1627713609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6535,7 +6581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1639661403
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,7 +6688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1646806694
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,7 +6795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1652449790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,7 +6982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1702065052
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,7 +7089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1708821741
 GameObject:
   m_ObjectHideFlags: 0
@@ -7145,7 +7196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1724478549
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,7 +7303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1726613437
 GameObject:
   m_ObjectHideFlags: 0
@@ -7357,7 +7410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1752535745
 GameObject:
   m_ObjectHideFlags: 0
@@ -7463,7 +7517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1817521901
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,7 +7624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1827379397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7675,7 +7731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1832054492
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,7 +7838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1850656192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7967,7 +8025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1885406874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8073,7 +8132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1893424937
 GameObject:
   m_ObjectHideFlags: 0
@@ -8179,7 +8239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1894949970
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,7 +8346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1898239703
 GameObject:
   m_ObjectHideFlags: 0
@@ -8391,7 +8453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1941050073
 GameObject:
   m_ObjectHideFlags: 0
@@ -8497,7 +8560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1972448624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,7 +8667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1973577258
 GameObject:
   m_ObjectHideFlags: 0
@@ -8709,7 +8774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1983894319
 GameObject:
   m_ObjectHideFlags: 0
@@ -8815,7 +8881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &1985569277
 GameObject:
   m_ObjectHideFlags: 0
@@ -8921,7 +8988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &2010818752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9107,7 +9175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &2082170123
 GameObject:
   m_ObjectHideFlags: 0
@@ -9152,6 +9221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchSpace: {fileID: 277636925}
+  circleSprite: {fileID: 5783877959338001752, guid: 680202078dc199a438416538b94abb98,
+    type: 3}
 --- !u!4 &2082170127
 Transform:
   m_ObjectHideFlags: 0
@@ -9272,7 +9343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &2096857291
 GameObject:
   m_ObjectHideFlags: 0
@@ -9378,7 +9450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &2104779815
 GameObject:
   m_ObjectHideFlags: 0
@@ -9564,7 +9637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasObstacle: 0
+  isStartNode: 0
+  isEndNode: 0
 --- !u!1 &2117098206
 GameObject:
   m_ObjectHideFlags: 0
@@ -9645,3 +9719,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &5783877960353216558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5783877959338001752, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_Name
+      value: White Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783877959338001750, guid: 680202078dc199a438416538b94abb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 680202078dc199a438416538b94abb98, type: 3}

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     public SearchSpace searchSpace;
+    public GameObject circleSprite;
+
     List<GameObject> openList = new List<GameObject>();
     List<GameObject> closedList = new List<GameObject>();
     List<GameObject> path = new List<GameObject>();
@@ -125,6 +127,11 @@ public class Pathfinder : MonoBehaviour
         Debug.Log("Path is: ");
         for (int i = path.Count-1; i > -1; i--)
         {
+            Transform tempTransform = path[i].transform;
+            tempTransform.position = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
+            tempTransform.Rotate(Vector3.right, 90f);
+            tempTransform.localScale = new Vector3(0.01f, 0.01f);
+            GameObject indicator = Instantiate(circleSprite, tempTransform);
             Debug.Log(path[i].ToString());
         }
     }
