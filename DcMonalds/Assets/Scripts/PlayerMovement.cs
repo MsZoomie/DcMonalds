@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (moving)
+        else if (moving)
         {
             float distCovered = (Time.time - movingStartTime) * movementSpeed;
             float fracJourney = distCovered / journeyLength;
