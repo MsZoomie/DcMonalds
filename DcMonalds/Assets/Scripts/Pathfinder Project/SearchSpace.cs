@@ -5,10 +5,7 @@ using UnityEngine;
 public class SearchSpace : MonoBehaviour
 {
     public List <GameObject> Tiles = new List<GameObject> ();
-
-  //  public Transform agent;
-  //  public Transform target;
-    
+        
     void Awake()
     {
         Tile[] temp = GetComponentsInChildren<Tile>();
