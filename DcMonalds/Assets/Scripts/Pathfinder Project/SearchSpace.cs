@@ -15,9 +15,4 @@ public class SearchSpace : MonoBehaviour
         //    Debug.Log(tile.name);
         }
     }
-
-    void Start()
-    {
-
-    }
 }

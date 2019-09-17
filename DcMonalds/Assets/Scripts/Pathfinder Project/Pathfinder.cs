@@ -199,4 +199,15 @@ public class Pathfinder : MonoBehaviour
             }
         }
     }
+
+    public void MoveAgent()
+    {
+        if (!pathFound)
+        {
+            Debug.Log("Agent cannot move before a path is created.");
+            return;
+        }
+
+
+    }
 }

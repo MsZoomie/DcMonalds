@@ -83,6 +83,7 @@ public class Tile : MonoBehaviour
 
         return tileCost;
     }
+
     /// <summary>
     /// Get the total tile cost without doing calculations.
     /// </summary>
