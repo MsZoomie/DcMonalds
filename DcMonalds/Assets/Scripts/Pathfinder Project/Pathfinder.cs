@@ -19,11 +19,18 @@ public class Pathfinder : MonoBehaviour
     List<GameObject> closedList = new List<GameObject>();
     List<GameObject> path = new List<GameObject>();
 
-    bool pathFound = false;
-    bool listsIndicated = false;
+    private PlayerMovement playerMovement;
+
+    private bool pathFound = false;
+    //private bool listsIndicated = false;
 
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
+    }
+
+
     void Start() 
     { 
         //Look for the startNode and add it to the open list
@@ -36,11 +43,6 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     public void FindPath()
@@ -157,17 +159,6 @@ public class Pathfinder : MonoBehaviour
         }
 
         path.Add(currentNode);
-       
-        
-       
-        for (int i = path.Count-1; i > -1; i--)
-        {
-            Transform tempTransform = path[i].transform;
-            Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-            Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
-
-            Instantiate(pathIndicator, tempPos, tempQuat, pathParent.transform);
-        }
     }
 
     public void ShowOpenList()
@@ -200,6 +191,18 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
+    public void ShowPath()
+    {
+        for (int i = path.Count - 1; i > -1; i--)
+        {
+            Transform tempTransform = path[i].transform;
+            Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
+            Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
+
+            Instantiate(pathIndicator, tempPos, tempQuat, pathParent.transform);
+        }
+    }
+
     public void MoveAgent()
     {
         if (!pathFound)
@@ -208,6 +211,28 @@ public class Pathfinder : MonoBehaviour
             return;
         }
 
+        List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
 
+        for (int i = path.Count - 2; i > 0; i--)
+        {
+            Vector3 dir = path[i + 1].transform.position - path[i].transform.position;
+
+            if (Mathf.Approximately (dir.x, -1))
+            {
+                pathDirections.Add(PlayerMovement.Direction.LEFT);
+            }
+            else if (Mathf.Approximately (dir.x, 1))
+            {
+                pathDirections.Add(PlayerMovement.Direction.RIGHT);
+            }
+            else if(Mathf.Approximately (dir.z, 1))
+            {
+                pathDirections.Add(PlayerMovement.Direction.FORWARD);
+            }
+
+            Debug.Log(pathDirections[path.Count - i + 1].ToString());
+        }
+
+    //    playerMovement.CrossyRoadMove();
     }
 }

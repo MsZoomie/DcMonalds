@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        else if (moving)
+        if (moving)
         {
             float distCovered = (Time.time - movingStartTime) * movementSpeed;
             float fracJourney = distCovered / journeyLength;
@@ -75,7 +75,18 @@ public class PlayerMovement : MonoBehaviour
             switch (movementMethod)
             {
                 case MovementMethod.CrossyRoad:
-                    CrossyRoadMove();
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        CrossyRoadMove(Direction.LEFT);
+                    }
+                    else if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        CrossyRoadMove(Direction.RIGHT);
+                    }
+                    else if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        CrossyRoadMove(Direction.FORWARD);
+                    }
                     break;
                 default:
                     break;
@@ -83,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    public void Move(Direction direction)
+    private void Walk(Direction direction)
     {
         moving = true;
         movingStartTime = Time.time;
@@ -135,26 +146,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void CrossyRoadMove()
+    private void CrossyRoadMove(Direction dir)
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Move(Direction.LEFT);
-            Turn(Direction.LEFT);
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            Move(Direction.RIGHT);
-            Turn(Direction.RIGHT);
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            Move(Direction.FORWARD);
-            Turn(Direction.FORWARD);
-        }
+        Walk(dir);
+        Turn(dir);
     }
 
-   private bool CheckWalkablity(Vector3 tilePos)
+    public void Move(Direction dir)
+    {
+        switch (movementMethod)
+        {
+            case MovementMethod.CrossyRoad:
+                CrossyRoadMove(dir);
+                break;
+            default:
+                break;
+        }
+    }
+   
+
+    private bool CheckWalkablity(Vector3 tilePos)
     {
         GameObject tile = searchSpace.Tiles.Find 
                (t => Mathf.Abs(t.transform.position.x - tilePos.x) <= 0.1f
