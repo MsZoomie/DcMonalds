@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Tile : MonoBehaviour
 {
     public bool isStartNode = false;
@@ -15,6 +17,7 @@ public class Tile : MonoBehaviour
     private GameObject startNode;
     private GameObject endNode;
     private GameObject parentTile;
+
 
     void Awake()
     {
@@ -37,6 +40,17 @@ public class Tile : MonoBehaviour
             isEndNode = true;
         }
 
+
+        Vector3 up = transform.TransformDirection(Vector3.up);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, up, out hit, 3))
+        {
+            if (hit.collider.CompareTag("Obstacle"))
+            {
+                hasObstacle = true;
+            }
+        }
+        
 
         CalculateHeuristicCost();
     }

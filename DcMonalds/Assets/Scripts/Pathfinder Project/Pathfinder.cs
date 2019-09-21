@@ -18,16 +18,21 @@ public class Pathfinder : MonoBehaviour
     List<GameObject> openList = new List<GameObject>();
     List<GameObject> closedList = new List<GameObject>();
     List<GameObject> path = new List<GameObject>();
+    List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
 
     private PlayerMovement playerMovement;
 
+    private int pathDirIndex = 0;
+
     private bool pathFound = false;
+    private bool agentMoving;
     //private bool listsIndicated = false;
 
 
     private void Awake()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
+        searchSpace = FindObjectOfType<SearchSpace>();
     }
 
 
@@ -44,15 +49,31 @@ public class Pathfinder : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (agentMoving && !playerMovement.moving)
+        {
+            playerMovement.Move(pathDirections[pathDirIndex]);
+            pathDirIndex++;
+            if (pathDirIndex >= pathDirections.Count)
+            {
+                agentMoving = false;
+            }
+
+            
+        }
+    }
+
 
     public void FindPath()
     {
         while (!pathFound)
         {
+
             List<GameObject> tempList = new List<GameObject>(openList);
 
             GameObject nodeWithSmallestCost = null;
-            float currentSmallestCost = 1000;   //using 1000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
+            float currentSmallestCost = 10000;   //using 1000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
 
             if (tempList.Count != 0 && !pathFound)
             {
@@ -68,7 +89,10 @@ public class Pathfinder : MonoBehaviour
 
                 if (nodeWithSmallestCost != null)
                     CheckNode(nodeWithSmallestCost);
+
+                
             }
+            
         }
     }
 
@@ -211,11 +235,11 @@ public class Pathfinder : MonoBehaviour
             return;
         }
 
-        List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
+        pathDirections.Clear();
 
-        for (int i = path.Count - 2; i > 0; i--)
+        for (int i = path.Count - 1; i > 0; i--)
         {
-            Vector3 dir = path[i + 1].transform.position - path[i].transform.position;
+            Vector3 dir = path[i-1].transform.position - path[i].transform.position;
 
             if (Mathf.Approximately (dir.x, -1))
             {
@@ -230,9 +254,13 @@ public class Pathfinder : MonoBehaviour
                 pathDirections.Add(PlayerMovement.Direction.FORWARD);
             }
 
-            Debug.Log(pathDirections[path.Count - i + 1].ToString());
         }
 
-    //    playerMovement.CrossyRoadMove();
+        for (int i = 0; i < pathDirections.Count; i++)
+        {
+            Debug.Log(pathDirections[i].ToString());
+        }
+
+        agentMoving = true;
     }
 }

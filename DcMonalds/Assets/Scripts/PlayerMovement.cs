@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private float journeyLength;
 
     public MovementMethod movementMethod;
-    private bool moving;
-    private bool turning;
+    public bool moving;
+    public bool turning;
 
     private Vector3 startPos;
     private Vector3 endPos;
