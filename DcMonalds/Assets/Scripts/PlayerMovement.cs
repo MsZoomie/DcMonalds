@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public enum Direction
-    { LEFT, RIGHT, FORWARD }
+    { Left, Right, Forward, LeftAndForward, RightAndForward }
     public enum MovementMethod
-    { NoInput, CrossyRoad, AlwaysForward}
+    { NoInput, Dancing, AlwaysForward}
 
     public bool tiledEnviroment;
     private SearchSpace searchSpace;
@@ -42,57 +42,87 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
-        if (turning)
+        switch (movementMethod)
         {
-            transform.rotation = Quaternion.Slerp(startRot, endRot, turnTimeCount);
-            turnTimeCount += Time.deltaTime;
-
-            if (Mathf.Abs( transform.rotation.y - endRot.y) <= 0.01)
-            {
-                turning = false;
-                if (moving)
+            case MovementMethod.Dancing:
                 {
-                    movingStartTime = Time.time;
-                    startPos = transform.position;
+                    if (turning)
+                    {
+                        transform.rotation = Quaternion.Slerp(startRot, endRot, turnTimeCount);
+                        turnTimeCount += Time.deltaTime;
+
+                        if (Mathf.Abs(transform.rotation.y - endRot.y) <= 0.01)
+                        {
+                            turning = false;
+                            if (moving)
+                            {
+                                movingStartTime = Time.time;
+                                startPos = transform.position;
+                            }
+                        }
+                    }
+
+                    if (moving)
+                    {
+                        float distCovered = (Time.time - movingStartTime) * movementSpeed;
+                        float fracJourney = distCovered / journeyLength;
+                        transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
+
+                        if (Vector3.Distance(transform.position, endPos) <= 0.01)
+                        {
+                            moving = false;
+                        }
+                    }
+                    else
+                    {
+
+                        if (Input.GetKeyDown(KeyCode.A))
+                        {
+                            MoveDancing(Direction.Left);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.D))
+                        {
+                            MoveDancing(Direction.Right);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.W))
+                        {
+                            MoveDancing(Direction.Forward);
+                        }
+                    }
                 }
-            }
-        }
+                break;
 
-        if (moving)
-        {
-            float distCovered = (Time.time - movingStartTime) * movementSpeed;
-            float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
+            case MovementMethod.AlwaysForward:
+                {
+                    if (moving)
+                    {
+                        float distCovered = (Time.time - movingStartTime) * movementSpeed;
+                        float fracJourney = distCovered / journeyLength;
+                        transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
 
-            if (Vector3.Distance( transform.position, endPos) <= 0.01 )
-            {
-                moving = false;
-            }
+                        if (Vector3.Distance(transform.position, endPos) <= 0.01)
+                        {
+                            moving = false;
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKeyDown(KeyCode.A))
+                        {
+                            MoveAlwaysForward(Direction.LeftAndForward);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.D))
+                        {
+                            MoveAlwaysForward(Direction.RightAndForward);
+                        }
+                        else
+                            MoveAlwaysForward(Direction.Forward);
+                    }
+                }
+                break;
+            default:
+                break;
         }
-        else
-        {
-            switch (movementMethod)
-            {
-                case MovementMethod.CrossyRoad:
-                    if (Input.GetKeyDown(KeyCode.A))
-                    {
-                        CrossyRoadMove(Direction.LEFT);
-                    }
-                    else if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        CrossyRoadMove(Direction.RIGHT);
-                    }
-                    else if (Input.GetKeyDown(KeyCode.W))
-                    {
-                        CrossyRoadMove(Direction.FORWARD);
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-
     }
     private void Walk(Direction direction)
     {
@@ -102,14 +132,20 @@ public class PlayerMovement : MonoBehaviour
 
         switch (direction)
         {
-            case Direction.LEFT:
+            case Direction.Left:
                 endPos = new Vector3(startPos.x - 1, startPos.y, startPos.z);
                 break;
-            case Direction.RIGHT:
+            case Direction.Right:
                 endPos = new Vector3(startPos.x + 1, startPos.y, startPos.z);
                 break;
-            case Direction.FORWARD:
+            case Direction.Forward:
                 endPos = new Vector3(startPos.x, startPos.y, startPos.z + 1);
+                break;
+            case Direction.LeftAndForward:
+                endPos = new Vector3(startPos.x - 1, startPos.y, startPos.z + 1);
+                break;
+            case Direction.RightAndForward:
+                endPos = new Vector3(startPos.x + 1, startPos.y, startPos.z + 1);
                 break;
             default:
                 break;
@@ -132,13 +168,13 @@ public class PlayerMovement : MonoBehaviour
 
         switch (direction)
         {
-            case Direction.LEFT:
+            case Direction.Left:
                 endRot = Quaternion.AngleAxis(-90.0f, Vector3.up);
                 break;
-            case Direction.RIGHT:
+            case Direction.Right:
                 endRot = Quaternion.AngleAxis(90.0f, Vector3.up);
                 break;
-            case Direction.FORWARD:
+            case Direction.Forward:
                 endRot = Quaternion.AngleAxis(0.0f, Vector3.up);
                 break;
             default:
@@ -146,18 +182,28 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void CrossyRoadMove(Direction dir)
+    private void MoveDancing(Direction dir)
     {
         Walk(dir);
         Turn(dir);
+    }
+    
+    private void MoveAlwaysForward(Direction dir)
+    {
+        Walk(dir);
     }
 
     public void Move(Direction dir)
     {
         switch (movementMethod)
         {
-            case MovementMethod.CrossyRoad:
-                CrossyRoadMove(dir);
+            case MovementMethod.Dancing:
+                MoveDancing(dir);
+                break;
+            case MovementMethod.AlwaysForward:
+                break;
+            case MovementMethod.NoInput:
+                MoveDancing(dir);
                 break;
             default:
                 break;

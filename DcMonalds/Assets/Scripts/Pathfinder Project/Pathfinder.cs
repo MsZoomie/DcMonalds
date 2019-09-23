@@ -15,10 +15,10 @@ public class Pathfinder : MonoBehaviour
     public GameObject pathIndicator;
     public GameObject pathParent;
 
-    List<GameObject> openList = new List<GameObject>();
-    List<GameObject> closedList = new List<GameObject>();
-    List<GameObject> path = new List<GameObject>();
-    List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
+    private List<GameObject> openList = new List<GameObject>();
+    private List<GameObject> closedList = new List<GameObject>();
+    private List<GameObject> path = new List<GameObject>();
+    private List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
 
     private PlayerMovement playerMovement;
 
@@ -27,7 +27,6 @@ public class Pathfinder : MonoBehaviour
     private bool pathFound = false;
     private bool deadend = false;
     private bool agentMoving;
-    //private bool listsIndicated = false;
 
 
     private void Awake()
@@ -60,8 +59,6 @@ public class Pathfinder : MonoBehaviour
             {
                 agentMoving = false;
             }
-
-            
         }
     }
 
@@ -123,9 +120,9 @@ public class Pathfinder : MonoBehaviour
 
 
         //Add the adjecent nodes to the open list if possible
-        bool temp = AddNodeToOpenList(leftNode, node);
-        temp = AddNodeToOpenList(rightNode, node);
-        temp = AddNodeToOpenList(frontNode, node);
+        AddNodeToOpenList(leftNode, node);
+        AddNodeToOpenList(rightNode, node);
+        AddNodeToOpenList(frontNode, node);
        
 
         //move current node from the open list to the closed list
@@ -238,15 +235,15 @@ public class Pathfinder : MonoBehaviour
 
             if (Mathf.Approximately (dir.x, -1))
             {
-                pathDirections.Add(PlayerMovement.Direction.LEFT);
+                pathDirections.Add(PlayerMovement.Direction.Left);
             }
             else if (Mathf.Approximately (dir.x, 1))
             {
-                pathDirections.Add(PlayerMovement.Direction.RIGHT);
+                pathDirections.Add(PlayerMovement.Direction.Right);
             }
             else if(Mathf.Approximately (dir.z, 1))
             {
-                pathDirections.Add(PlayerMovement.Direction.FORWARD);
+                pathDirections.Add(PlayerMovement.Direction.Forward);
             }
 
         }
