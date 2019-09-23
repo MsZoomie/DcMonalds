@@ -10,13 +10,13 @@ public class Tile : MonoBehaviour
     public bool isEndNode = false;
     public bool hasObstacle = false;
 
-    private float tileCost = 0.0f;
-    private float heuristicCost = 0.0f;
-    private float fromStartCost = 0.0f;
+    public float tileCost = 0.0f;
+    public float heuristicCost = 0.0f;
+    public float fromStartCost = 1000.0f;
 
     private GameObject startNode;
     private GameObject endNode;
-    private GameObject parentTile;
+    public GameObject parentTile;
 
 
     void Awake()
@@ -28,6 +28,7 @@ public class Tile : MonoBehaviour
             startNode.transform.position.z == gameObject.transform.position.z)
         {
             isStartNode = true;
+            fromStartCost = 0;
         }
 
 
@@ -83,13 +84,13 @@ public class Tile : MonoBehaviour
     /// <returns>tileCost</returns>
     public float CalculateCost()
     {
-        if (fromStartCost == 0 && !isStartNode)
+        if (fromStartCost >= 1000 && !isStartNode)
         {
-            CalculateFromStartCost();
+            fromStartCost = CalculateFromStartCost();
         }
-        else if (fromStartCost == 0)
+        else if (isStartNode)
         {
-            Debug.Log("You haven't appointed a parent tile for this tile");
+            Debug.Log("This is the start node, it doesn't have a parent node.");
             return 0;
         }
 
@@ -116,9 +117,13 @@ public class Tile : MonoBehaviour
 
     private float CalculateFromStartCost()
     {
-        if (parentTile == null || isStartNode)
+        if (isStartNode)
         {
-            fromStartCost = 0.0f;
+            fromStartCost = 0;
+        }
+        else if (parentTile == null)
+        {
+            Debug.Log("You haven't appointed a parent tile for this tile");
         }
         else
         {

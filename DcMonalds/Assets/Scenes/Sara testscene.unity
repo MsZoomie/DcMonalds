@@ -169,6 +169,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &13265346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -277,6 +281,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &18127200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -444,6 +452,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &51962536
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +542,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &55445823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -675,6 +691,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &64193180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -813,6 +833,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &111198120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -947,6 +971,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 123718391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &123813280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1184738102}
+    m_Modifications:
+    - target: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_Name
+      value: Stone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 276e51125932f824cbfd8334b989568f, type: 3}
 --- !u!1 &134469616
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1094,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &134469619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1271,6 +1373,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &172799989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1523,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -1615,6 +1751,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &195266527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1863,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &205940897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1884,6 +2028,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &220195698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1992,6 +2140,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &227381744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2100,6 +2252,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &242630713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2595,6 +2751,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &296987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,6 +2863,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &307409120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,6 +2975,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &310662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3134,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &332263650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3516,6 +3688,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &366379360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3711,6 +3887,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &380610325 stripped
@@ -3844,6 +4050,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -4014,6 +4250,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &432853143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4122,6 +4362,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &436720536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4230,6 +4474,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &440837595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4338,6 +4586,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &446064571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4452,6 +4704,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &464237550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4560,6 +4816,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &465153691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4957,6 +5217,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &479022621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,6 +5329,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &492765942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5132,6 +5400,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &492765943 stripped
@@ -5189,6 +5487,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &495052511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5356,6 +5658,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &499033468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,6 +5770,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &501939139
 GameObject:
   m_ObjectHideFlags: 0
@@ -5644,6 +5954,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &507718769
 GameObject:
   m_ObjectHideFlags: 0
@@ -5789,6 +6103,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &537184047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5838,6 +6156,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &537184050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6005,6 +6327,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &548190882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6256,6 +6582,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &555166836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6364,6 +6694,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &557469343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6472,6 +6806,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &567133880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6580,6 +6918,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &568614555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6706,6 +7048,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &570591690 stripped
@@ -6763,6 +7135,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &572949884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6871,6 +7247,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &575772722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7113,6 +7493,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &595071484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7237,6 +7621,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &601859327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7404,6 +7792,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &625427238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7587,6 +7979,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &638201089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,6 +8032,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &638201092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7781,6 +8181,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &652353895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7889,6 +8293,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &667405958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8056,6 +8464,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &674561096
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,7 +8638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &692262256
 Transform:
   m_ObjectHideFlags: 0
@@ -8352,6 +8764,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!4 &696984147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -8498,6 +8914,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &705898158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8686,6 +9106,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &717022411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8745,6 +9169,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717022408}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &717637323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+    type: 3}
+  m_PrefabInstance: {fileID: 123813280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &719350965
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,6 +9304,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &736229501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9074,6 +9508,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -9287,6 +9751,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &782592336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9470,6 +9938,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &785253967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9658,6 +10130,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &790561530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9766,6 +10242,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &796445904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9933,6 +10413,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &808824665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9982,6 +10466,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &808824668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10149,6 +10637,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &811859608
 GameObject:
   m_ObjectHideFlags: 0
@@ -10331,6 +10823,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &817495357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10457,6 +10953,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &834868010 stripped
@@ -10514,6 +11040,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &837182160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10760,6 +11290,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &861646438
 GameObject:
   m_ObjectHideFlags: 0
@@ -10809,6 +11343,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &861646441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11015,6 +11553,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &863830178 stripped
@@ -11072,6 +11640,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &869210642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11254,6 +11826,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &877765721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11421,6 +11997,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &919910923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11487,6 +12067,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -11562,6 +12172,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -11925,6 +12565,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &955389689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12252,6 +12896,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &970692373 stripped
@@ -12517,6 +13191,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &999593328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12625,6 +13303,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1017417721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12770,6 +13452,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1023831210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12915,6 +13601,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1029952592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13148,6 +13838,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1039192470
 GameObject:
   m_ObjectHideFlags: 0
@@ -13197,6 +13891,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1039192473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13497,6 +14195,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1078103499
 GameObject:
   m_ObjectHideFlags: 0
@@ -13747,6 +14449,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1100401396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14092,6 +14798,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1111217048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14210,6 +14920,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1119019926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14318,6 +15032,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1137302312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14377,6 +15095,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137302309}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1144234349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1184738102}
+    m_Modifications:
+    - target: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_Name
+      value: Stone (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 276e51125932f824cbfd8334b989568f, type: 3}
 --- !u!1001 &1156113269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14594,6 +15386,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1160909192 stripped
@@ -14726,6 +15548,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1165663739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14903,6 +15729,8 @@ Transform:
   - {fileID: 1252908325}
   - {fileID: 969797052}
   - {fileID: 1630125696}
+  - {fileID: 717637323}
+  - {fileID: 1473847010}
   m_Father: {fileID: 692262256}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15014,6 +15842,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1194820942
 GameObject:
   m_ObjectHideFlags: 0
@@ -15063,6 +15895,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1194820945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15251,6 +16087,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1217110524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15653,6 +16493,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1230325235
 GameObject:
   m_ObjectHideFlags: 0
@@ -15702,6 +16546,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1230325238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16006,6 +16854,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1257620667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16209,6 +17061,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1268478763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16451,6 +17307,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1281763154
 GameObject:
   m_ObjectHideFlags: 0
@@ -16556,6 +17416,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1283828826 stripped
@@ -16613,6 +17503,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1288349668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16724,7 +17618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1294157303
 Transform:
   m_ObjectHideFlags: 0
@@ -16930,6 +17824,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1316398366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17038,6 +17936,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1318423308
 GameObject:
   m_ObjectHideFlags: 0
@@ -17146,6 +18048,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1321019270
 GameObject:
   m_ObjectHideFlags: 0
@@ -17366,6 +18272,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1326103437
 GameObject:
   m_ObjectHideFlags: 0
@@ -17741,6 +18651,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1342012042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17807,6 +18721,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -17883,6 +18827,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1347492875 stripped
@@ -17940,6 +18914,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1348142209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18107,6 +19085,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1355585855
 GameObject:
   m_ObjectHideFlags: 0
@@ -18215,6 +19197,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1358241306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18339,6 +19325,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1368388284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18527,6 +19517,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1393076069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18635,6 +19629,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1394777733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18840,6 +19838,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1398797230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19023,6 +20025,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1422434347
 GameObject:
   m_ObjectHideFlags: 0
@@ -19131,6 +20137,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!4 &1426619001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226054797211439340, guid: 6dfd2be79b65b7c4fa05d2e9ea076705,
@@ -19245,6 +20255,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1433266258
 GameObject:
   m_ObjectHideFlags: 0
@@ -19353,6 +20367,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1449571841
 GameObject:
   m_ObjectHideFlags: 0
@@ -19461,6 +20479,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1454615246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19616,6 +20638,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1473847010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1144234349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1480591701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19758,6 +20786,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1481984444 stripped
@@ -19874,6 +20932,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1492392705
 GameObject:
   m_ObjectHideFlags: 0
@@ -19982,6 +21044,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1492654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -20031,6 +21097,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1492654485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20139,6 +21209,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1494367931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20265,6 +21339,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1499657761 stripped
@@ -20322,6 +21426,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1513550638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20564,6 +21672,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1533834412
 GameObject:
   m_ObjectHideFlags: 0
@@ -20783,6 +21895,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1584574198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21067,6 +22183,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1618063680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21199,6 +22319,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1627120728 stripped
@@ -21315,6 +22465,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!4 &1630125696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -21370,6 +22524,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1633346426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21537,6 +22695,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1640362321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21603,6 +22765,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -21826,6 +23018,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1649073378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21893,6 +23089,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1649073379 stripped
@@ -21950,6 +23176,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1651442144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22213,6 +23443,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1680472785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22380,6 +23614,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1689817521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22446,6 +23684,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -22638,6 +23906,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1708821741
 GameObject:
   m_ObjectHideFlags: 0
@@ -22746,6 +24018,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1712056452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22864,6 +24140,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1720306419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23031,6 +24311,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1725058120
 GameObject:
   m_ObjectHideFlags: 0
@@ -23225,6 +24509,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1727048233
 GameObject:
   m_ObjectHideFlags: 0
@@ -23443,6 +24731,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1754093856
 GameObject:
   m_ObjectHideFlags: 0
@@ -23739,6 +25031,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1769652282 stripped
@@ -23871,6 +25193,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1798832726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24059,6 +25385,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1804896217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24167,6 +25497,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1805917025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24334,6 +25668,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1826334312
 GameObject:
   m_ObjectHideFlags: 0
@@ -24575,6 +25913,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1832054492
 GameObject:
   m_ObjectHideFlags: 0
@@ -24683,6 +26025,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1841530788
 GameObject:
   m_ObjectHideFlags: 0
@@ -24732,6 +26078,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1841530791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24979,6 +26329,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1855582860
 GameObject:
   m_ObjectHideFlags: 0
@@ -25028,6 +26382,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1855582863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25232,6 +26590,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1886129742
 GameObject:
   m_ObjectHideFlags: 0
@@ -25281,6 +26643,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1886129745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25407,6 +26773,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1887649644 stripped
@@ -25523,6 +26919,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1894949970
 GameObject:
   m_ObjectHideFlags: 0
@@ -25631,6 +27031,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1897589832
 GameObject:
   m_ObjectHideFlags: 0
@@ -25680,6 +27084,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1897589835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25847,6 +27255,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1912134516
 GameObject:
   m_ObjectHideFlags: 0
@@ -25896,6 +27308,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1912134519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26004,6 +27420,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1914017100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26112,6 +27532,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1921706733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26295,6 +27719,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1927308849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26478,6 +27906,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1930118574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26604,6 +28036,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1931108192 stripped
@@ -26720,6 +28182,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1947099586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26786,6 +28252,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -26919,6 +28415,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1961773563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27027,6 +28527,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1962725395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27220,6 +28724,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1968093944 stripped
@@ -27336,6 +28870,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1973577258
 GameObject:
   m_ObjectHideFlags: 0
@@ -27444,6 +28982,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1983894319
 GameObject:
   m_ObjectHideFlags: 0
@@ -27552,6 +29094,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1985569277
 GameObject:
   m_ObjectHideFlags: 0
@@ -27660,6 +29206,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1987008889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27784,6 +29334,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &1988001480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27898,6 +29452,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &2006511113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28182,6 +29740,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &2033899966
 GameObject:
   m_ObjectHideFlags: 0
@@ -28231,6 +29793,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &2033899969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28451,6 +30017,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &2077658212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28705,6 +30275,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &2096857291
 GameObject:
   m_ObjectHideFlags: 0
@@ -28813,6 +30387,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &2097444573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28879,6 +30457,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
@@ -29076,6 +30684,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &2117098206
 GameObject:
   m_ObjectHideFlags: 0
@@ -29205,6 +30817,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &2122145110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29313,6 +30929,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!65 &2130033623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29517,6 +31137,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928272671198999532, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954005175046370918, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535833698819230539, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175449334067374252, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444957786499262226, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204078288273452141, guid: f759b6dd9434aa34b93799b976ab8ceb,
+        type: 3}
+      propertyPath: fromStartCost
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
