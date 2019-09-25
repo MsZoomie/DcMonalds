@@ -15,18 +15,18 @@ public class Pathfinder : MonoBehaviour
     public GameObject pathIndicator;
     public GameObject pathParent;
 
-    List<GameObject> openList = new List<GameObject>();
-    List<GameObject> closedList = new List<GameObject>();
-    List<GameObject> path = new List<GameObject>();
-    List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
+    private List<GameObject> openList = new List<GameObject>();
+    private List<GameObject> closedList = new List<GameObject>();
+    private List<GameObject> path = new List<GameObject>();
+    private List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
 
     private PlayerMovement playerMovement;
 
     private int pathDirIndex = 0;
 
     private bool pathFound = false;
+    private bool deadend = false;
     private bool agentMoving;
-    //private bool listsIndicated = false;
 
 
     private void Awake()
@@ -59,15 +59,13 @@ public class Pathfinder : MonoBehaviour
             {
                 agentMoving = false;
             }
-
-            
         }
     }
 
 
     public void FindPath()
     {
-        while (!pathFound)
+        while (!pathFound && !deadend)
         {
 
             List<GameObject> tempList = new List<GameObject>(openList);
@@ -75,7 +73,13 @@ public class Pathfinder : MonoBehaviour
             GameObject nodeWithSmallestCost = null;
             float currentSmallestCost = 10000;   //using 1000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
 
-            if (tempList.Count != 0 && !pathFound)
+            if (tempList.Count <= 0)
+            {
+                deadend = true;
+                Debug.Log("Dead End. No possible path to target.");
+                return;
+            }
+            else 
             {
                 foreach (var node in tempList)
                 {
@@ -89,8 +93,6 @@ public class Pathfinder : MonoBehaviour
 
                 if (nodeWithSmallestCost != null)
                     CheckNode(nodeWithSmallestCost);
-
-                
             }
             
         }
@@ -118,21 +120,10 @@ public class Pathfinder : MonoBehaviour
 
 
         //Add the adjecent nodes to the open list if possible
-        bool temp = AddNodeToOpenList(leftNode);
-        if (temp)
-        {
-            leftNode.GetComponent<Tile>().SetParent(node);
-        }
-        temp = AddNodeToOpenList(rightNode);
-        if (temp)
-        {
-            rightNode.GetComponent<Tile>().SetParent(node);
-        }
-        temp = AddNodeToOpenList(frontNode);
-        if (temp)
-        {
-            frontNode.GetComponent<Tile>().SetParent(node);
-        }
+        AddNodeToOpenList(leftNode, node);
+        AddNodeToOpenList(rightNode, node);
+        AddNodeToOpenList(frontNode, node);
+       
 
         //move current node from the open list to the closed list
         closedList.Add(node);
@@ -149,7 +140,7 @@ public class Pathfinder : MonoBehaviour
     /// </summary>
     /// <param name="node"></param>
     /// <returns>Successfully added node to open list.</returns>
-    bool AddNodeToOpenList(GameObject node)
+    bool AddNodeToOpenList(GameObject node, GameObject parentNode)
     {
         if (node == null)
             return false;
@@ -162,6 +153,7 @@ public class Pathfinder : MonoBehaviour
             return false;
         else
         {
+            node.GetComponent<Tile>().SetParent(parentNode);
             node.GetComponent<Tile>().CalculateCost();
             openList.Add(node);
             return true;
@@ -243,23 +235,23 @@ public class Pathfinder : MonoBehaviour
 
             if (Mathf.Approximately (dir.x, -1))
             {
-                pathDirections.Add(PlayerMovement.Direction.LEFT);
+                pathDirections.Add(PlayerMovement.Direction.Left);
             }
             else if (Mathf.Approximately (dir.x, 1))
             {
-                pathDirections.Add(PlayerMovement.Direction.RIGHT);
+                pathDirections.Add(PlayerMovement.Direction.Right);
             }
             else if(Mathf.Approximately (dir.z, 1))
             {
-                pathDirections.Add(PlayerMovement.Direction.FORWARD);
+                pathDirections.Add(PlayerMovement.Direction.Forward);
             }
 
         }
 
-        for (int i = 0; i < pathDirections.Count; i++)
+       /* for (int i = 0; i < pathDirections.Count; i++)
         {
             Debug.Log(pathDirections[i].ToString());
-        }
+        }*/
 
         agentMoving = true;
     }
