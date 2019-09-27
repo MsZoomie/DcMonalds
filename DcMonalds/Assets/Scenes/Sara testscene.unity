@@ -453,7 +453,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &51962536
@@ -1374,7 +1374,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &172799989
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &195266527
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 1
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &205940897
@@ -2616,7 +2616,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bdd115966b846daa4ef191ac3f431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tiles: []
+  Tiles:
+  - {fileID: 1573835658}
+  - {fileID: 1068970713}
+  - {fileID: 1646806694}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1983894319}
+  - {fileID: 1724478549}
+  - {fileID: 1893424937}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 1353671785}
+  - {fileID: 1110385273}
+  - {fileID: 1854128599}
+  - {fileID: 610466704}
+  - {fileID: 1483260911}
+  - {fileID: 673555634}
+  - {fileID: 1894949970}
+  - {fileID: 694937359}
+  - {fileID: 1449571841}
+  - {fileID: 1529711706}
+  - {fileID: 1398353299}
+  - {fileID: 1752535745}
+  - {fileID: 296987117}
+  - {fileID: 1681866188}
+  - {fileID: 1318423308}
+  - {fileID: 307409120}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 475674901}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1832054492}
+  - {fileID: 1898239703}
+  - {fileID: 2022443454}
+  - {fileID: 1422434347}
+  - {fileID: 479022621}
+  - {fileID: 1340458868}
+  - {fileID: 1311212628}
+  - {fileID: 589521910}
+  - {fileID: 1708821741}
+  - {fileID: 805915021}
+  - {fileID: 631827866}
+  - {fileID: 1355585855}
+  - {fileID: 509620048}
+  - {fileID: 885769710}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1639661403}
+  - {fileID: 850718998}
+  - {fileID: 1492392705}
+  - {fileID: 190242369}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 37688995}
+  - {fileID: 1627713609}
+  - {fileID: 1973577258}
+  - {fileID: 2113018024}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1972448624}
 --- !u!4 &277636926
 Transform:
   m_ObjectHideFlags: 0
@@ -2752,7 +2824,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &296987117
@@ -2862,9 +2934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &307409120
@@ -2976,7 +3048,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &310662960
@@ -5216,9 +5288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &479022621
@@ -5330,7 +5402,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &492765942
@@ -5657,9 +5729,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &499033468
@@ -5771,7 +5843,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &501939139
@@ -5955,7 +6027,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &507718769
@@ -6104,7 +6176,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &537184047
@@ -6328,7 +6400,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &548190882
@@ -7494,7 +7566,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &595071484
@@ -7793,7 +7865,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &625427238
@@ -7980,7 +8052,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &638201089
@@ -8465,7 +8537,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &674561096
@@ -8765,7 +8837,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!4 &696984147 stripped
@@ -10412,9 +10484,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &808824665
@@ -10638,7 +10710,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &811859608
@@ -11291,7 +11363,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &861646438
@@ -11998,7 +12070,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &919910923
@@ -12724,6 +12796,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7adced7fb39c54284c5b80560787f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementScale: 0.1
+  currentPos: {x: 0, y: 0, z: 0}
+  nextPos: {x: 0, y: 0, z: 0}
+  originalPos: {x: 0, y: 0, z: 0}
+  normal: {x: 0, y: 0, z: 0}
 --- !u!1001 &963400561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13852,7 +13929,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1039192470
@@ -14209,7 +14286,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 14
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1078103499
@@ -14812,7 +14889,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1111217048
@@ -15856,7 +15933,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1194820942
@@ -16504,7 +16581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartNode: 0
-  isEndNode: 0
+  isEndNode: 1
   hasObstacle: 0
   tileCost: 0
   heuristicCost: 0
@@ -17317,12 +17394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartNode: 0
+  isStartNode: 1
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
-  fromStartCost: 1000
+  heuristicCost: 12
+  fromStartCost: 0
   parentTile: {fileID: 0}
 --- !u!1 &1281763154
 GameObject:
@@ -17838,7 +17915,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1316398366
@@ -17950,7 +18027,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1318423308
@@ -18062,7 +18139,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1321019270
@@ -18286,7 +18363,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1326103437
@@ -18663,9 +18740,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1342012042
@@ -19099,7 +19176,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1355585855
@@ -19211,7 +19288,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1358241306
@@ -19850,9 +19927,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1398797230
@@ -20039,7 +20116,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1422434347
@@ -20151,7 +20228,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!4 &1426619001 stripped
@@ -20269,7 +20346,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1433266258
@@ -20381,7 +20458,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1449571841
@@ -20493,7 +20570,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1454615246
@@ -20944,9 +21021,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1492392705
@@ -21058,7 +21135,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1492654482
@@ -21686,7 +21763,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1533834412
@@ -21909,7 +21986,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 15
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1584574198
@@ -22479,7 +22556,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!4 &1630125696 stripped
@@ -22709,7 +22786,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1640362321
@@ -23032,7 +23109,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1649073378
@@ -23628,7 +23705,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1689817521
@@ -23920,7 +23997,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1708821741
@@ -24032,7 +24109,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1712056452
@@ -24325,7 +24402,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1725058120
@@ -24523,7 +24600,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1727048233
@@ -24745,7 +24822,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1754093856
@@ -25682,7 +25759,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1826334312
@@ -25927,7 +26004,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1832054492
@@ -26037,9 +26114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1841530788
@@ -26341,9 +26418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1855582860
@@ -26604,7 +26681,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1886129742
@@ -26933,7 +27010,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1894949970
@@ -27045,7 +27122,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1897589832
@@ -27269,7 +27346,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1912134516
@@ -28196,7 +28273,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1947099586
@@ -28882,9 +28959,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 1
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1973577258
@@ -28994,9 +29071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1983894319
@@ -29106,9 +29183,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 14
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1985569277
@@ -29220,7 +29297,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 1
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1987008889
@@ -29752,9 +29829,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 0
+  hasObstacle: 1
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &2033899966
@@ -30137,7 +30214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559278b62d86e4952b77ebdf40509d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  searchSpace: {fileID: 0}
+  searchSpace: {fileID: 277636925}
   openListIndicator: {fileID: 5783877959338001752, guid: 680202078dc199a438416538b94abb98,
     type: 3}
   openListParent: {fileID: 1966290701}
@@ -30289,7 +30366,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &2096857291
@@ -30401,7 +30478,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &2097444573
@@ -30698,7 +30775,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 0
+  heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &2117098206
