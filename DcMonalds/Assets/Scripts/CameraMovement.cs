@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour
                 case TouchPhase.Moved:
                     endPos = touch.position;
 
-                    transform.position += (endPos - startPos);
+                    transform.position += new Vector3(endPos.x - startPos.x, transform.position.y, endPos.z - startPos.z);
 
 
                     break;
