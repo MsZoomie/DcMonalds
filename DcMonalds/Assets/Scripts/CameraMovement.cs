@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+
+    Vector3 startPos;
+    Vector3 currentPos;
     private void LateUpdate()
     {
         Move();
@@ -21,12 +24,24 @@ public class CameraMovement : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Moved)
+            switch (touch.phase)
             {
+                case TouchPhase.Began:
+                    startPos = touch.position;
+                    break;
+                case TouchPhase.Moved:
+                    currentPos = touch.position;
 
-                Vector2 pos = touch.position;
-                transform.position = new Vector3(-pos.x, pos.y, 0.0f);
+                    transform.position = new Vector3(currentPos.x, transform.position.y, currentPos.z);
+
+                    break;
+                case TouchPhase.Ended:
+                    break;
+
+                default:
+                    break;
             }
+
         }
     }
 
