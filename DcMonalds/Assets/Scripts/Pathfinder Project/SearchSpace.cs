@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class SearchSpace : MonoBehaviour
 {
     public List <GameObject> Tiles = new List<GameObject> ();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Pathfinder : MonoBehaviour
 {
     public SearchSpace searchSpace;
@@ -46,6 +47,9 @@ public class Pathfinder : MonoBehaviour
                openList.Add(searchSpace.Tiles[i]);
             }
         }
+
+
+        FindPath();
     }
 
 
