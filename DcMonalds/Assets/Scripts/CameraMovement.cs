@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    private void Update()
+    private void LateUpdate()
     {
         Move();
 
