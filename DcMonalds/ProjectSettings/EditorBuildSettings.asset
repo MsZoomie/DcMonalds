@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sara testscene.unity
-    guid: ebc9a7c813889eb498bb99263eeaf81f
+    path: Assets/Scenes/Sofie testscen.unity
+    guid: 360780ad0c2fb464797ebbf5611d41b5
   m_configObjects: {}
