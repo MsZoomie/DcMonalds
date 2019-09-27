@@ -6,11 +6,19 @@ public class CameraMovement : MonoBehaviour
 {
 
     Vector3 startPos;
-    Vector3 currentPos;
+    Vector3 endPos;
+
+ /*   bool moving;
+    public float speed = 1.0f;
+    private float startTime;
+    private float journeyLength;*/
+
+
+   
     private void LateUpdate()
     {
         Move();
-
+        
         if (Input.GetKey(KeyCode.Escape))
         {
             Application.Quit();
@@ -28,14 +36,18 @@ public class CameraMovement : MonoBehaviour
             {
                 case TouchPhase.Began:
                     startPos = touch.position;
+            //        moving = true;
+            //        startTime = Time.time;
                     break;
                 case TouchPhase.Moved:
-                    currentPos = touch.position;
+                    endPos = touch.position;
 
-                    transform.position = new Vector3(currentPos.x, transform.position.y, currentPos.z);
+                    transform.position += (endPos - startPos);
+
 
                     break;
                 case TouchPhase.Ended:
+            //        moving = false;
                     break;
 
                 default:
