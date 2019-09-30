@@ -18,41 +18,31 @@ public class Tile : MonoBehaviour
     private GameObject endNode;
     public GameObject parentTile;
 
+    private SearchSpace searchSpace;
 
-    void Awake()
+    private void Awake()
     {
-        startNode = GameObject.FindWithTag("Player");
-        if (startNode == null)
-            return;
-        else if (startNode.transform.position.x == gameObject.transform.position.x &&
-            startNode.transform.position.z == gameObject.transform.position.z)
-        {
-            isStartNode = true;
-            fromStartCost = 0;
-        }
+        searchSpace = FindObjectOfType<SearchSpace>();
+    }
 
-
-        endNode = GameObject.FindWithTag("Finish");
-        if (endNode == null)
-            return;
-        else if (endNode.transform.position.x == gameObject.transform.position.x &&
-            endNode.transform.position.z == gameObject.transform.position.z)
-        {
-            isEndNode = true;
-        }
-
-
-        Vector3 up = transform.TransformDirection(Vector3.up);
+    private void Start()
+    {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, up, out hit, 3))
-        {
-            if (hit.collider.CompareTag("Obstacle"))
-            {
-                hasObstacle = true;
-            }
-        }
-        
 
+        if (!Physics.Raycast(transform.position, Vector3.forward, out hit, 1))
+        {
+            searchSpace.EndRow.Add(gameObject);
+        }
+        else
+        {
+            Debug.Log("Raycast hit: " + hit, hit.collider.gameObject);
+        }
+
+    }
+
+    public void UpdateTile()
+    {
+        ResetTile();
         CalculateHeuristicCost();
     }
 
@@ -90,7 +80,6 @@ public class Tile : MonoBehaviour
         }
         else if (isStartNode)
         {
-            Debug.Log("This is the start node, it doesn't have a parent node.");
             return 0;
         }
 
@@ -132,4 +121,44 @@ public class Tile : MonoBehaviour
 
         return fromStartCost;
     }
+
+
+    private void ResetTile()
+    {
+        isStartNode = false;
+        hasObstacle = false;
+
+        tileCost = 0.0f;
+        heuristicCost = 0.0f;
+        fromStartCost = 1000.0f;
+
+        startNode = null;
+        endNode = null;
+        parentTile = null;
+
+
+        startNode = GameObject.FindWithTag("Player");
+        if (startNode == null)
+            return;
+        else if (startNode.transform.position.x == gameObject.transform.position.x &&
+            startNode.transform.position.z == gameObject.transform.position.z)
+        {
+            isStartNode = true;
+            fromStartCost = 0;
+        }
+
+        endNode = searchSpace.endNode;
+
+        Vector3 up = transform.TransformDirection(Vector3.up);
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, up, out hit, 3))
+        {
+            if (hit.collider.CompareTag("Obstacle"))
+            {
+                hasObstacle = true;
+            }
+        }
+    }
+
 }

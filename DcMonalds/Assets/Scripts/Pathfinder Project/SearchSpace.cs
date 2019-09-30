@@ -6,6 +6,9 @@ using UnityEngine;
 public class SearchSpace : MonoBehaviour
 {
     public List <GameObject> Tiles = new List<GameObject> ();
+    public List<GameObject> EndRow = new List<GameObject> ();
+
+    public GameObject endNode;
         
     void Awake()
     {

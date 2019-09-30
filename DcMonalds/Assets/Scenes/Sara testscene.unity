@@ -452,10 +452,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 5
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 6
+  fromStartCost: 12
+  parentTile: {fileID: 1639661403}
 --- !u!1 &51962536
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,36 +754,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64193177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &72396886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 72396887}
-  m_Layer: 0
-  m_Name: Path
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &72396887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72396886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111198117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1233,7 @@ Transform:
   - {fileID: 344708754}
   - {fileID: 1801005407}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168337991
 GameObject:
@@ -1373,10 +1343,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 12
+  fromStartCost: 2
+  parentTile: {fileID: 1893424937}
 --- !u!1 &172799989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,10 +1721,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 3
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 4
+  fromStartCost: 10
+  parentTile: {fileID: 885769710}
 --- !u!1 &195266527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,10 +1833,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 1
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 2
+  fromStartCost: 12
+  parentTile: {fileID: 2113018024}
 --- !u!1001 &205940897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2689,6 +2659,164 @@ MonoBehaviour:
   - {fileID: 195266527}
   - {fileID: 1228210118}
   - {fileID: 1972448624}
+  - {fileID: 1573835658}
+  - {fileID: 1068970713}
+  - {fileID: 1646806694}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1983894319}
+  - {fileID: 1724478549}
+  - {fileID: 1893424937}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 1353671785}
+  - {fileID: 1110385273}
+  - {fileID: 1854128599}
+  - {fileID: 610466704}
+  - {fileID: 1483260911}
+  - {fileID: 673555634}
+  - {fileID: 1894949970}
+  - {fileID: 694937359}
+  - {fileID: 1449571841}
+  - {fileID: 1529711706}
+  - {fileID: 1398353299}
+  - {fileID: 1752535745}
+  - {fileID: 296987117}
+  - {fileID: 1681866188}
+  - {fileID: 1318423308}
+  - {fileID: 307409120}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 475674901}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1832054492}
+  - {fileID: 1898239703}
+  - {fileID: 2022443454}
+  - {fileID: 1422434347}
+  - {fileID: 479022621}
+  - {fileID: 1340458868}
+  - {fileID: 1311212628}
+  - {fileID: 589521910}
+  - {fileID: 1708821741}
+  - {fileID: 805915021}
+  - {fileID: 631827866}
+  - {fileID: 1355585855}
+  - {fileID: 509620048}
+  - {fileID: 885769710}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1639661403}
+  - {fileID: 850718998}
+  - {fileID: 1492392705}
+  - {fileID: 190242369}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 37688995}
+  - {fileID: 1627713609}
+  - {fileID: 1973577258}
+  - {fileID: 2113018024}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1972448624}
+  - {fileID: 1573835658}
+  - {fileID: 1068970713}
+  - {fileID: 1646806694}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1983894319}
+  - {fileID: 1724478549}
+  - {fileID: 1893424937}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 1353671785}
+  - {fileID: 1110385273}
+  - {fileID: 1854128599}
+  - {fileID: 610466704}
+  - {fileID: 1483260911}
+  - {fileID: 673555634}
+  - {fileID: 1894949970}
+  - {fileID: 694937359}
+  - {fileID: 1449571841}
+  - {fileID: 1529711706}
+  - {fileID: 1398353299}
+  - {fileID: 1752535745}
+  - {fileID: 296987117}
+  - {fileID: 1681866188}
+  - {fileID: 1318423308}
+  - {fileID: 307409120}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 475674901}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1832054492}
+  - {fileID: 1898239703}
+  - {fileID: 2022443454}
+  - {fileID: 1422434347}
+  - {fileID: 479022621}
+  - {fileID: 1340458868}
+  - {fileID: 1311212628}
+  - {fileID: 589521910}
+  - {fileID: 1708821741}
+  - {fileID: 805915021}
+  - {fileID: 631827866}
+  - {fileID: 1355585855}
+  - {fileID: 509620048}
+  - {fileID: 885769710}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1639661403}
+  - {fileID: 850718998}
+  - {fileID: 1492392705}
+  - {fileID: 190242369}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 37688995}
+  - {fileID: 1627713609}
+  - {fileID: 1973577258}
+  - {fileID: 2113018024}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1972448624}
+  EndRow:
+  - {fileID: 1972448624}
+  - {fileID: 1401927137}
+  - {fileID: 1228210118}
+  - {fileID: 499033468}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 195266527}
+  - {fileID: 495870072}
+  - {fileID: 499033468}
+  - {fileID: 1228210118}
+  - {fileID: 1401927137}
+  - {fileID: 1972448624}
+  endNode: {fileID: 1972448624}
 --- !u!4 &277636926
 Transform:
   m_ObjectHideFlags: 0
@@ -2823,10 +2951,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 3
+  fromStartCost: 11
+  parentTile: {fileID: 1702065052}
 --- !u!1 &296987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +3064,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 9
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &307409120
@@ -3047,10 +3175,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 9
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 10
+  fromStartCost: 4
+  parentTile: {fileID: 1529711706}
 --- !u!1 &310662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,6 +4184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tiles: []
+  EndRow: []
+  endNode: {fileID: 0}
 --- !u!1001 &390671921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5290,7 +5420,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 10
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &479022621
@@ -5401,10 +5531,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 9
+  fromStartCost: 9
+  parentTile: {fileID: 1827379397}
 --- !u!1001 &492765942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5731,7 +5861,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 2
+  heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &499033468
@@ -5842,10 +5972,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 5
+  fromStartCost: 13
+  parentTile: {fileID: 37688995}
 --- !u!1 &501939139
 GameObject:
   m_ObjectHideFlags: 0
@@ -5918,6 +6048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tiles: []
+  EndRow: []
+  endNode: {fileID: 0}
 --- !u!1 &505813067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,10 +6158,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 12
+  fromStartCost: 2
+  parentTile: {fileID: 1277007298}
 --- !u!1 &507718769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6175,10 +6307,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 5
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 6
+  fromStartCost: 10
+  parentTile: {fileID: 885769710}
 --- !u!1 &537184047
 GameObject:
   m_ObjectHideFlags: 0
@@ -6399,10 +6531,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 7
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 6
+  fromStartCost: 8
+  parentTile: {fileID: 2096857291}
 --- !u!1001 &548190882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6506,10 +6638,10 @@ RectTransform:
   m_Father: {fileID: 1640792768}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -65}
+  m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549662357
 MonoBehaviour:
@@ -7565,10 +7697,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 5
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 6
+  fromStartCost: 8
+  parentTile: {fileID: 1898239703}
 --- !u!1001 &595071484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7864,10 +7996,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 12
+  fromStartCost: 2
+  parentTile: {fileID: 1893424937}
 --- !u!1001 &625427238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8051,10 +8183,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 7
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 8
+  fromStartCost: 10
+  parentTile: {fileID: 479022621}
 --- !u!1 &638201089
 GameObject:
   m_ObjectHideFlags: 0
@@ -8536,10 +8668,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 9
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 10
+  fromStartCost: 4
+  parentTile: {fileID: 1433266258}
 --- !u!1 &674561096
 GameObject:
   m_ObjectHideFlags: 0
@@ -8726,7 +8858,7 @@ Transform:
   - {fileID: 1184738102}
   - {fileID: 2104779817}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694937359
 GameObject:
@@ -8836,10 +8968,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 12
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 13
+  fromStartCost: 5
+  parentTile: {fileID: 1449571841}
 --- !u!4 &696984147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -10486,7 +10618,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 5
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &808824665
@@ -10709,10 +10841,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 3
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 2
+  fromStartCost: 12
+  parentTile: {fileID: 1316398366}
 --- !u!1 &811859608
 GameObject:
   m_ObjectHideFlags: 0
@@ -10747,10 +10879,10 @@ RectTransform:
   m_Father: {fileID: 1640792768}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -115}
+  m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811859610
 MonoBehaviour:
@@ -11362,10 +11494,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 5
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 6
+  fromStartCost: 12
+  parentTile: {fileID: 1492392705}
 --- !u!1 &861646438
 GameObject:
   m_ObjectHideFlags: 0
@@ -12069,10 +12201,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 5
+  fromStartCost: 9
+  parentTile: {fileID: 589521910}
 --- !u!1001 &919910923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13058,10 +13190,10 @@ RectTransform:
   m_Father: {fileID: 1640792768}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -90}
+  m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978884496
 MonoBehaviour:
@@ -13818,7 +13950,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1037341993
 GameObject:
@@ -13928,10 +14060,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 9
+  fromStartCost: 7
+  parentTile: {fileID: 1428864313}
 --- !u!1 &1039192470
 GameObject:
   m_ObjectHideFlags: 0
@@ -14078,10 +14210,10 @@ RectTransform:
   m_Father: {fileID: 1640792768}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -40}
+  m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063214974
 MonoBehaviour:
@@ -14285,10 +14417,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 14
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 15
+  fromStartCost: 1
+  parentTile: {fileID: 1646806694}
 --- !u!1 &1078103499
 GameObject:
   m_ObjectHideFlags: 0
@@ -14694,7 +14826,7 @@ RectTransform:
   m_Children:
   - {fileID: 1640792768}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14889,7 +15021,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 13
+  heuristicCost: 14
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1111217048
@@ -15185,6 +15317,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137302309}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1143190719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143190721}
+  - component: {fileID: 1143190720}
+  m_Layer: 0
+  m_Name: Level Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1143190720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143190719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b419bd01db29bd94faf13e8df0e935d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1143190721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143190719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1144234349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15932,10 +16107,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 7
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 8
+  fromStartCost: 6
+  parentTile: {fileID: 1325478913}
 --- !u!1 &1194820942
 GameObject:
   m_ObjectHideFlags: 0
@@ -16581,12 +16756,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartNode: 0
-  isEndNode: 1
+  isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 0
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 1
+  fromStartCost: 13
+  parentTile: {fileID: 195266527}
 --- !u!1 &1230325235
 GameObject:
   m_ObjectHideFlags: 0
@@ -17394,13 +17569,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartNode: 1
+  isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 12
-  fromStartCost: 0
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 13
+  fromStartCost: 1
+  parentTile: {fileID: 1646806694}
 --- !u!1 &1281763154
 GameObject:
   m_ObjectHideFlags: 0
@@ -17724,7 +17899,7 @@ Transform:
   - {fileID: 1089235907}
   - {fileID: 1725058121}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1310928760
 GameObject:
@@ -17914,10 +18089,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 7
+  fromStartCost: 9
+  parentTile: {fileID: 589521910}
 --- !u!1 &1316398366
 GameObject:
   m_ObjectHideFlags: 0
@@ -18026,10 +18201,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 2
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 3
+  fromStartCost: 11
+  parentTile: {fileID: 190242369}
 --- !u!1 &1318423308
 GameObject:
   m_ObjectHideFlags: 0
@@ -18138,10 +18313,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 10
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 11
+  fromStartCost: 5
+  parentTile: {fileID: 307409120}
 --- !u!1 &1321019270
 GameObject:
   m_ObjectHideFlags: 0
@@ -18362,10 +18537,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 9
+  fromStartCost: 5
+  parentTile: {fileID: 307409120}
 --- !u!1 &1326103437
 GameObject:
   m_ObjectHideFlags: 0
@@ -18742,7 +18917,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 7
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1342012042
@@ -19175,10 +19350,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 10
+  fromStartCost: 4
+  parentTile: {fileID: 1433266258}
 --- !u!1 &1355585855
 GameObject:
   m_ObjectHideFlags: 0
@@ -19287,10 +19462,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 7
+  fromStartCost: 11
+  parentTile: {fileID: 509620048}
 --- !u!1001 &1358241306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19929,7 +20104,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 9
+  heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1001 &1398797230
@@ -20115,10 +20290,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 3
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 4
+  fromStartCost: 14
+  parentTile: {fileID: 499033468}
 --- !u!1 &1422434347
 GameObject:
   m_ObjectHideFlags: 0
@@ -20227,10 +20402,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 5
+  fromStartCost: 9
+  parentTile: {fileID: 545115559}
 --- !u!4 &1426619001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226054797211439340, guid: 6dfd2be79b65b7c4fa05d2e9ea076705,
@@ -20345,10 +20520,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 9
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 10
+  fromStartCost: 6
+  parentTile: {fileID: 1817521901}
 --- !u!1 &1433266258
 GameObject:
   m_ObjectHideFlags: 0
@@ -20457,10 +20632,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 10
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 11
+  fromStartCost: 3
+  parentTile: {fileID: 168337991}
 --- !u!1 &1449571841
 GameObject:
   m_ObjectHideFlags: 0
@@ -20569,10 +20744,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 12
+  fromStartCost: 4
+  parentTile: {fileID: 1529711706}
 --- !u!1001 &1454615246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21023,7 +21198,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 10
+  heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1492392705
@@ -21134,10 +21309,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 5
+  fromStartCost: 11
+  parentTile: {fileID: 190242369}
 --- !u!1 &1492654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -21762,10 +21937,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 10
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 11
+  fromStartCost: 3
+  parentTile: {fileID: 610466704}
 --- !u!1 &1533834412
 GameObject:
   m_ObjectHideFlags: 0
@@ -21985,10 +22160,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 15
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 16
+  fromStartCost: 2
+  parentTile: {fileID: 1068970713}
 --- !u!1001 &1584574198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22555,10 +22730,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 5
+  fromStartCost: 13
+  parentTile: {fileID: 37688995}
 --- !u!4 &1630125696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -22785,10 +22960,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 7
+  fromStartCost: 11
+  parentTile: {fileID: 631827866}
 --- !u!1001 &1640362321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22907,12 +23082,12 @@ GameObject:
   - component: {fileID: 1640792769}
   - component: {fileID: 1640792771}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: OBSOLETE PathfinderPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1640792768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23105,12 +23280,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartNode: 0
+  isStartNode: 1
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 13
-  fromStartCost: 1000
+  heuristicCost: 14
+  fromStartCost: 0
   parentTile: {fileID: 0}
 --- !u!1001 &1649073378
 PrefabInstance:
@@ -23704,10 +23879,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 12
+  fromStartCost: 6
+  parentTile: {fileID: 1318423308}
 --- !u!1001 &1689817521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23996,10 +24171,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 3
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 4
+  fromStartCost: 10
+  parentTile: {fileID: 885769710}
 --- !u!1 &1708821741
 GameObject:
   m_ObjectHideFlags: 0
@@ -24108,10 +24283,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 5
+  fromStartCost: 9
+  parentTile: {fileID: 589521910}
 --- !u!1001 &1712056452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24401,10 +24576,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 13
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 16
+  heuristicCost: 14
+  fromStartCost: 2
+  parentTile: {fileID: 1893424937}
 --- !u!1 &1725058120
 GameObject:
   m_ObjectHideFlags: 0
@@ -24599,10 +24774,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 12
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 11
+  fromStartCost: 3
+  parentTile: {fileID: 505813067}
 --- !u!1 &1727048233
 GameObject:
   m_ObjectHideFlags: 0
@@ -24683,36 +24858,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1732980740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1732980741}
-  m_Layer: 0
-  m_Name: ClosedList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1732980741
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732980740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752535745
 GameObject:
   m_ObjectHideFlags: 0
@@ -24821,10 +24966,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 9
+  fromStartCost: 5
+  parentTile: {fileID: 673555634}
 --- !u!1 &1754093856
 GameObject:
   m_ObjectHideFlags: 0
@@ -25758,10 +25903,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 9
+  fromStartCost: 5
+  parentTile: {fileID: 307409120}
 --- !u!1 &1826334312
 GameObject:
   m_ObjectHideFlags: 0
@@ -25796,10 +25941,10 @@ RectTransform:
   m_Father: {fileID: 1640792768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -15}
+  m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826334314
 MonoBehaviour:
@@ -26003,10 +26148,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 9
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 18
+  heuristicCost: 10
+  fromStartCost: 8
+  parentTile: {fileID: 1037341993}
 --- !u!1 &1832054492
 GameObject:
   m_ObjectHideFlags: 0
@@ -26116,7 +26261,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 7
+  heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1841530788
@@ -26420,7 +26565,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 12
+  heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1855582860
@@ -26680,10 +26825,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 2
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 1
+  fromStartCost: 13
+  parentTile: {fileID: 1985569277}
 --- !u!1 &1886129742
 GameObject:
   m_ObjectHideFlags: 0
@@ -27009,10 +27154,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 12
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 13
+  fromStartCost: 1
+  parentTile: {fileID: 1646806694}
 --- !u!1 &1894949970
 GameObject:
   m_ObjectHideFlags: 0
@@ -27121,10 +27266,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 10
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 9
+  fromStartCost: 5
+  parentTile: {fileID: 673555634}
 --- !u!1 &1897589832
 GameObject:
   m_ObjectHideFlags: 0
@@ -27345,10 +27490,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 7
+  fromStartCost: 7
+  parentTile: {fileID: 2087100653}
 --- !u!1 &1912134516
 GameObject:
   m_ObjectHideFlags: 0
@@ -28272,10 +28417,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 7
+  fromStartCost: 7
+  parentTile: {fileID: 1189564477}
 --- !u!1001 &1947099586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28717,36 +28862,6 @@ Transform:
   m_Father: {fileID: 382967293}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1966290701
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1966290702}
-  m_Layer: 0
-  m_Name: OpenList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1966290702
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966290701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1968093943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28961,7 +29076,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 1
+  heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1973577258
@@ -29073,7 +29188,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 3
+  heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1983894319
@@ -29185,7 +29300,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 14
+  heuristicCost: 15
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &1985569277
@@ -29296,10 +29411,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 1
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 2
+  fromStartCost: 12
+  parentTile: {fileID: 2113018024}
 --- !u!1001 &1987008889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29831,7 +29946,7 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 1
   tileCost: 0
-  heuristicCost: 5
+  heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
 --- !u!1 &2033899966
@@ -30215,15 +30330,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchSpace: {fileID: 277636925}
-  openListIndicator: {fileID: 5783877959338001752, guid: 680202078dc199a438416538b94abb98,
-    type: 3}
-  openListParent: {fileID: 1966290701}
-  closedListIndicator: {fileID: 8821054326490645348, guid: 45da5ced5d91cde4eb65748a63c376b2,
-    type: 3}
-  closedListParent: {fileID: 1732980740}
-  pathIndicator: {fileID: 8045170683279250828, guid: 410baf9d66b39194883c1fdf8d5d779b,
-    type: 3}
-  pathParent: {fileID: 72396886}
+  openList: []
+  closedList:
+  - {fileID: 1646806694}
+  - {fileID: 1646806694}
+  - {fileID: 1646806694}
+  - {fileID: 1893424937}
+  - {fileID: 610466704}
+  - {fileID: 1529711706}
+  - {fileID: 307409120}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 1898239703}
+  - {fileID: 589521910}
+  - {fileID: 885769710}
+  - {fileID: 190242369}
+  - {fileID: 2113018024}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1708821741}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1422434347}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 673555634}
+  - {fileID: 1752535745}
+  - {fileID: 1894949970}
+  - {fileID: 1353671785}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1492392705}
+  - {fileID: 509620048}
+  - {fileID: 1311212628}
+  - {fileID: 1428864313}
+  - {fileID: 1037341993}
+  - {fileID: 1318423308}
+  - {fileID: 1449571841}
+  - {fileID: 1724478549}
+  - {fileID: 1068970713}
+  - {fileID: 1573835658}
+  - {fileID: 694937359}
+  - {fileID: 1681866188}
+  - {fileID: 1827379397}
+  - {fileID: 479022621}
+  - {fileID: 631827866}
+  - {fileID: 1639661403}
+  - {fileID: 37688995}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 1627713609}
+  - {fileID: 1355585855}
+  - {fileID: 850718998}
+  path:
+  - {fileID: 1401927137}
+  - {fileID: 499033468}
+  - {fileID: 37688995}
+  - {fileID: 1639661403}
+  - {fileID: 631827866}
+  - {fileID: 479022621}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 307409120}
+  - {fileID: 1529711706}
+  - {fileID: 610466704}
+  - {fileID: 1893424937}
+  - {fileID: 1646806694}
 --- !u!114 &2082170126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30250,12 +30434,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082170123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: -0.5}
+  m_LocalPosition: {x: -2.5, y: 0, z: -0.5}
   m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children:
   - {fileID: 1258556954}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087100653
 GameObject:
@@ -30365,10 +30549,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 7
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 8
+  fromStartCost: 6
+  parentTile: {fileID: 1817521901}
 --- !u!1 &2096857291
 GameObject:
   m_ObjectHideFlags: 0
@@ -30477,10 +30661,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 6
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 7
+  fromStartCost: 7
+  parentTile: {fileID: 2087100653}
 --- !u!1001 &2097444573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30602,7 +30786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2104779816
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30774,10 +30958,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 2
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  tileCost: 14
+  heuristicCost: 3
+  fromStartCost: 11
+  parentTile: {fileID: 190242369}
 --- !u!1 &2117098206
 GameObject:
   m_ObjectHideFlags: 0
