@@ -452,10 +452,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 6
-  fromStartCost: 12
-  parentTile: {fileID: 1639661403}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &51962536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 4
   fromStartCost: 10
-  parentTile: {fileID: 885769710}
+  parentTile: {fileID: 1492392705}
 --- !u!1 &195266527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 2
   fromStartCost: 12
-  parentTile: {fileID: 2113018024}
+  parentTile: {fileID: 495870072}
 --- !u!1001 &205940897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2365,6 +2365,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &258291177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258291179}
+  - component: {fileID: 258291178}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &258291178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258291177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 982978701}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &258291179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258291177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267606776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,6 +2846,150 @@ MonoBehaviour:
   - {fileID: 195266527}
   - {fileID: 1228210118}
   - {fileID: 1972448624}
+  - {fileID: 1573835658}
+  - {fileID: 1068970713}
+  - {fileID: 1646806694}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1983894319}
+  - {fileID: 1724478549}
+  - {fileID: 1893424937}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 1353671785}
+  - {fileID: 1110385273}
+  - {fileID: 1854128599}
+  - {fileID: 610466704}
+  - {fileID: 1483260911}
+  - {fileID: 673555634}
+  - {fileID: 1894949970}
+  - {fileID: 694937359}
+  - {fileID: 1449571841}
+  - {fileID: 1529711706}
+  - {fileID: 1398353299}
+  - {fileID: 1752535745}
+  - {fileID: 296987117}
+  - {fileID: 1681866188}
+  - {fileID: 1318423308}
+  - {fileID: 307409120}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 475674901}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1832054492}
+  - {fileID: 1898239703}
+  - {fileID: 2022443454}
+  - {fileID: 1422434347}
+  - {fileID: 479022621}
+  - {fileID: 1340458868}
+  - {fileID: 1311212628}
+  - {fileID: 589521910}
+  - {fileID: 1708821741}
+  - {fileID: 805915021}
+  - {fileID: 631827866}
+  - {fileID: 1355585855}
+  - {fileID: 509620048}
+  - {fileID: 885769710}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1639661403}
+  - {fileID: 850718998}
+  - {fileID: 1492392705}
+  - {fileID: 190242369}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 37688995}
+  - {fileID: 1627713609}
+  - {fileID: 1973577258}
+  - {fileID: 2113018024}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1972448624}
+  - {fileID: 1573835658}
+  - {fileID: 1068970713}
+  - {fileID: 1646806694}
+  - {fileID: 1277007298}
+  - {fileID: 505813067}
+  - {fileID: 1726613437}
+  - {fileID: 1983894319}
+  - {fileID: 1724478549}
+  - {fileID: 1893424937}
+  - {fileID: 168337991}
+  - {fileID: 1433266258}
+  - {fileID: 1353671785}
+  - {fileID: 1110385273}
+  - {fileID: 1854128599}
+  - {fileID: 610466704}
+  - {fileID: 1483260911}
+  - {fileID: 673555634}
+  - {fileID: 1894949970}
+  - {fileID: 694937359}
+  - {fileID: 1449571841}
+  - {fileID: 1529711706}
+  - {fileID: 1398353299}
+  - {fileID: 1752535745}
+  - {fileID: 296987117}
+  - {fileID: 1681866188}
+  - {fileID: 1318423308}
+  - {fileID: 307409120}
+  - {fileID: 1325478913}
+  - {fileID: 1189564477}
+  - {fileID: 1941050073}
+  - {fileID: 475674901}
+  - {fileID: 1428864313}
+  - {fileID: 1817521901}
+  - {fileID: 2087100653}
+  - {fileID: 2096857291}
+  - {fileID: 545115559}
+  - {fileID: 1827379397}
+  - {fileID: 1037341993}
+  - {fileID: 1832054492}
+  - {fileID: 1898239703}
+  - {fileID: 2022443454}
+  - {fileID: 1422434347}
+  - {fileID: 479022621}
+  - {fileID: 1340458868}
+  - {fileID: 1311212628}
+  - {fileID: 589521910}
+  - {fileID: 1708821741}
+  - {fileID: 805915021}
+  - {fileID: 631827866}
+  - {fileID: 1355585855}
+  - {fileID: 509620048}
+  - {fileID: 885769710}
+  - {fileID: 1702065052}
+  - {fileID: 280775971}
+  - {fileID: 1639661403}
+  - {fileID: 850718998}
+  - {fileID: 1492392705}
+  - {fileID: 190242369}
+  - {fileID: 1316398366}
+  - {fileID: 810595280}
+  - {fileID: 37688995}
+  - {fileID: 1627713609}
+  - {fileID: 1973577258}
+  - {fileID: 2113018024}
+  - {fileID: 1985569277}
+  - {fileID: 1885406874}
+  - {fileID: 499033468}
+  - {fileID: 1401927137}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
+  - {fileID: 1228210118}
+  - {fileID: 1972448624}
   EndRow:
   - {fileID: 1972448624}
   - {fileID: 1401927137}
@@ -2816,6 +3003,18 @@ MonoBehaviour:
   - {fileID: 1228210118}
   - {fileID: 1401927137}
   - {fileID: 1972448624}
+  - {fileID: 195266527}
+  - {fileID: 495870072}
+  - {fileID: 499033468}
+  - {fileID: 1228210118}
+  - {fileID: 1401927137}
+  - {fileID: 1972448624}
+  - {fileID: 1972448624}
+  - {fileID: 1401927137}
+  - {fileID: 1228210118}
+  - {fileID: 499033468}
+  - {fileID: 495870072}
+  - {fileID: 195266527}
   endNode: {fileID: 1972448624}
 --- !u!4 &277636926
 Transform:
@@ -2951,10 +3150,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 3
-  fromStartCost: 11
-  parentTile: {fileID: 1702065052}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &296987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,7 +3261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
+  hasObstacle: 0
   tileCost: 0
   heuristicCost: 8
   fromStartCost: 1000
@@ -5418,7 +5617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
+  hasObstacle: 0
   tileCost: 0
   heuristicCost: 11
   fromStartCost: 1000
@@ -5531,10 +5730,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 9
-  fromStartCost: 9
-  parentTile: {fileID: 1827379397}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &492765942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5859,11 +6058,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 3
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 11
+  parentTile: {fileID: 1973577258}
 --- !u!1 &499033468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,10 +6171,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 5
-  fromStartCost: 13
-  parentTile: {fileID: 37688995}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &501939139
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,10 +6357,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 12
-  fromStartCost: 2
-  parentTile: {fileID: 1277007298}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &507718769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6307,10 +6506,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 16
+  tileCost: 14
   heuristicCost: 6
-  fromStartCost: 10
-  parentTile: {fileID: 885769710}
+  fromStartCost: 8
+  parentTile: {fileID: 1311212628}
 --- !u!1 &537184047
 GameObject:
   m_ObjectHideFlags: 0
@@ -6531,10 +6730,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 6
-  fromStartCost: 8
-  parentTile: {fileID: 2096857291}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &548190882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7700,7 +7899,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 6
   fromStartCost: 8
-  parentTile: {fileID: 1898239703}
+  parentTile: {fileID: 1311212628}
 --- !u!1001 &595071484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8183,10 +8382,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 8
-  fromStartCost: 10
-  parentTile: {fileID: 479022621}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &638201089
 GameObject:
   m_ObjectHideFlags: 0
@@ -8668,10 +8867,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 10
-  fromStartCost: 4
-  parentTile: {fileID: 1433266258}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &674561096
 GameObject:
   m_ObjectHideFlags: 0
@@ -8842,7 +9041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &692262256
 Transform:
   m_ObjectHideFlags: 0
@@ -8968,10 +9167,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 13
-  fromStartCost: 5
-  parentTile: {fileID: 1449571841}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!4 &696984147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -10616,7 +10815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
+  hasObstacle: 0
   tileCost: 0
   heuristicCost: 4
   fromStartCost: 1000
@@ -10841,10 +11040,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 2
-  fromStartCost: 12
-  parentTile: {fileID: 1316398366}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &811859608
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,9 +11693,9 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 16
   heuristicCost: 6
-  fromStartCost: 12
+  fromStartCost: 10
   parentTile: {fileID: 1492392705}
 --- !u!1 &861646438
 GameObject:
@@ -12204,7 +12403,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 5
   fromStartCost: 9
-  parentTile: {fileID: 589521910}
+  parentTile: {fileID: 509620048}
 --- !u!1001 &919910923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13289,6 +13488,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978884494}
   m_CullTransparentMesh: 0
+--- !u!115 &982978701
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: Level
+  m_Namespace: 
 --- !u!1001 &983522034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14063,7 +14276,7 @@ MonoBehaviour:
   tileCost: 16
   heuristicCost: 9
   fromStartCost: 7
-  parentTile: {fileID: 1428864313}
+  parentTile: {fileID: 1832054492}
 --- !u!1 &1039192470
 GameObject:
   m_ObjectHideFlags: 0
@@ -14309,118 +14522,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063214972}
   m_CullTransparentMesh: 0
---- !u!1 &1068970713
+--- !u!1 &1068970713 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2323200841188247961}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1068970717}
-  - component: {fileID: 1068970716}
-  - component: {fileID: 1068970715}
-  - component: {fileID: 1068970714}
-  - component: {fileID: 1068970718}
-  m_Layer: 0
-  m_Name: Grass
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1068970714
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068970713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1068970715
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068970713}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e93025951047846f7a2beafdc5a84540, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1068970716
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068970713}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1068970717
+--- !u!4 &1068970717 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2323200841188247961}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068970713}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 647228261}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1068970718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068970713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStartNode: 0
-  isEndNode: 0
-  hasObstacle: 0
-  tileCost: 16
-  heuristicCost: 15
-  fromStartCost: 1
-  parentTile: {fileID: 1646806694}
 --- !u!1 &1078103499
 GameObject:
   m_ObjectHideFlags: 0
@@ -15346,6 +15459,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b419bd01db29bd94faf13e8df0e935d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfRows: 0
+  lanes:
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
+  - type: 0
+    obstacles: []
 --- !u!4 &1143190721
 Transform:
   m_ObjectHideFlags: 0
@@ -16107,10 +16246,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 8
-  fromStartCost: 6
-  parentTile: {fileID: 1325478913}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1194820942
 GameObject:
   m_ObjectHideFlags: 0
@@ -18089,10 +18228,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 16
+  tileCost: 14
   heuristicCost: 7
-  fromStartCost: 9
-  parentTile: {fileID: 589521910}
+  fromStartCost: 7
+  parentTile: {fileID: 1832054492}
 --- !u!1 &1316398366
 GameObject:
   m_ObjectHideFlags: 0
@@ -18201,10 +18340,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 3
-  fromStartCost: 11
-  parentTile: {fileID: 190242369}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1318423308
 GameObject:
   m_ObjectHideFlags: 0
@@ -18915,11 +19054,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 16
   heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 8
+  parentTile: {fileID: 1311212628}
 --- !u!1001 &1342012042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19350,10 +19489,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 10
-  fromStartCost: 4
-  parentTile: {fileID: 1433266258}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1355585855
 GameObject:
   m_ObjectHideFlags: 0
@@ -19462,9 +19601,9 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 16
   heuristicCost: 7
-  fromStartCost: 11
+  fromStartCost: 9
   parentTile: {fileID: 509620048}
 --- !u!1001 &1358241306
 PrefabInstance:
@@ -20102,11 +20241,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 10
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 4
+  parentTile: {fileID: 1529711706}
 --- !u!1001 &1398797230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20290,10 +20429,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 16
   heuristicCost: 4
-  fromStartCost: 14
-  parentTile: {fileID: 499033468}
+  fromStartCost: 12
+  parentTile: {fileID: 495870072}
 --- !u!1 &1422434347
 GameObject:
   m_ObjectHideFlags: 0
@@ -20402,10 +20541,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 5
-  fromStartCost: 9
-  parentTile: {fileID: 545115559}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!4 &1426619001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226054797211439340, guid: 6dfd2be79b65b7c4fa05d2e9ea076705,
@@ -20632,10 +20771,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 11
-  fromStartCost: 3
-  parentTile: {fileID: 168337991}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1449571841
 GameObject:
   m_ObjectHideFlags: 0
@@ -21196,11 +21335,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 11
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 3
+  parentTile: {fileID: 610466704}
 --- !u!1 &1492392705
 GameObject:
   m_ObjectHideFlags: 0
@@ -21309,10 +21448,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 16
+  tileCost: 14
   heuristicCost: 5
-  fromStartCost: 11
-  parentTile: {fileID: 190242369}
+  fromStartCost: 9
+  parentTile: {fileID: 509620048}
 --- !u!1 &1492654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -22052,118 +22191,18 @@ Transform:
   m_Father: {fileID: 277636926}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1573835658
+--- !u!1 &1573835658 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7142043246128689946}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573835659}
-  - component: {fileID: 1573835662}
-  - component: {fileID: 1573835661}
-  - component: {fileID: 1573835660}
-  - component: {fileID: 1573835663}
-  m_Layer: 0
-  m_Name: Sidewalk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1573835659
+--- !u!4 &1573835659 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7142043246128689946}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573835658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 647228261}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1573835660
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573835658}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1573835661
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573835658}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5c5f050d2b647403eba9251b3521981b, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1573835662
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573835658}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1573835663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573835658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStartNode: 0
-  isEndNode: 0
-  hasObstacle: 0
-  tileCost: 18
-  heuristicCost: 16
-  fromStartCost: 2
-  parentTile: {fileID: 1068970713}
 --- !u!1001 &1584574198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22730,10 +22769,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 16
   heuristicCost: 5
-  fromStartCost: 13
-  parentTile: {fileID: 37688995}
+  fromStartCost: 11
+  parentTile: {fileID: 1973577258}
 --- !u!4 &1630125696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -22960,10 +22999,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 7
-  fromStartCost: 11
-  parentTile: {fileID: 631827866}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1640362321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23175,118 +23214,18 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!1 &1646806694
+--- !u!1 &1646806694 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+    type: 3}
+  m_PrefabInstance: {fileID: 7598838582599412898}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1646806695}
-  - component: {fileID: 1646806698}
-  - component: {fileID: 1646806697}
-  - component: {fileID: 1646806696}
-  - component: {fileID: 1646806699}
-  m_Layer: 0
-  m_Name: Road
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1646806695
+--- !u!4 &1646806695 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+    type: 3}
+  m_PrefabInstance: {fileID: 7598838582599412898}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646806694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 647228261}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1646806696
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646806694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1646806697
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646806694}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b6d4aa9a866f04ab9ae031e4acb2ee3f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1646806698
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646806694}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1646806699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646806694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStartNode: 1
-  isEndNode: 0
-  hasObstacle: 0
-  tileCost: 0
-  heuristicCost: 14
-  fromStartCost: 0
-  parentTile: {fileID: 0}
 --- !u!1001 &1649073378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23879,10 +23818,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 12
-  fromStartCost: 6
-  parentTile: {fileID: 1318423308}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1689817521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24171,10 +24110,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 4
-  fromStartCost: 10
-  parentTile: {fileID: 885769710}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1708821741
 GameObject:
   m_ObjectHideFlags: 0
@@ -24283,10 +24222,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 5
-  fromStartCost: 9
-  parentTile: {fileID: 589521910}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1712056452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24774,10 +24713,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 11
-  fromStartCost: 3
-  parentTile: {fileID: 505813067}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1727048233
 GameObject:
   m_ObjectHideFlags: 0
@@ -24966,10 +24905,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 9
-  fromStartCost: 5
-  parentTile: {fileID: 673555634}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1754093856
 GameObject:
   m_ObjectHideFlags: 0
@@ -26148,10 +26087,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 18
+  tileCost: 0
   heuristicCost: 10
-  fromStartCost: 8
-  parentTile: {fileID: 1037341993}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1832054492
 GameObject:
   m_ObjectHideFlags: 0
@@ -26259,11 +26198,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 8
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 6
+  parentTile: {fileID: 1817521901}
 --- !u!1 &1841530788
 GameObject:
   m_ObjectHideFlags: 0
@@ -26563,11 +26502,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 16
   heuristicCost: 13
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 3
+  parentTile: {fileID: 610466704}
 --- !u!1 &1855582860
 GameObject:
   m_ObjectHideFlags: 0
@@ -26825,10 +26764,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 1
-  fromStartCost: 13
-  parentTile: {fileID: 1985569277}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1886129742
 GameObject:
   m_ObjectHideFlags: 0
@@ -27266,10 +27205,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 9
-  fromStartCost: 5
-  parentTile: {fileID: 673555634}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1 &1897589832
 GameObject:
   m_ObjectHideFlags: 0
@@ -27493,7 +27432,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 7
   fromStartCost: 7
-  parentTile: {fileID: 2087100653}
+  parentTile: {fileID: 1832054492}
 --- !u!1 &1912134516
 GameObject:
   m_ObjectHideFlags: 0
@@ -28417,10 +28356,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 7
-  fromStartCost: 7
-  parentTile: {fileID: 1189564477}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1947099586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29074,11 +29013,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 0
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 14
+  parentTile: {fileID: 1228210118}
 --- !u!1 &1973577258
 GameObject:
   m_ObjectHideFlags: 0
@@ -29186,11 +29125,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
-  tileCost: 0
+  hasObstacle: 0
+  tileCost: 14
   heuristicCost: 4
-  fromStartCost: 1000
-  parentTile: {fileID: 0}
+  fromStartCost: 10
+  parentTile: {fileID: 1492392705}
 --- !u!1 &1983894319
 GameObject:
   m_ObjectHideFlags: 0
@@ -29298,7 +29237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
+  hasObstacle: 0
   tileCost: 0
   heuristicCost: 15
   fromStartCost: 1000
@@ -29411,10 +29350,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 2
-  fromStartCost: 12
-  parentTile: {fileID: 2113018024}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &1987008889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29944,7 +29883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStartNode: 0
   isEndNode: 0
-  hasObstacle: 1
+  hasObstacle: 0
   tileCost: 0
   heuristicCost: 6
   fromStartCost: 1000
@@ -30324,14 +30263,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082170123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 559278b62d86e4952b77ebdf40509d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  searchSpace: {fileID: 277636925}
-  openList: []
+  searchSpace: {fileID: 0}
+  openList:
+  - {fileID: 1068970713}
+  - {fileID: 1277007298}
+  - {fileID: 1724478549}
+  - {fileID: 168337991}
+  - {fileID: 1854128599}
+  - {fileID: 1483260911}
+  - {fileID: 1449571841}
+  - {fileID: 1398353299}
+  - {fileID: 1318423308}
+  - {fileID: 1325478913}
+  - {fileID: 1428864313}
+  - {fileID: 2087100653}
+  - {fileID: 1037341993}
+  - {fileID: 1898239703}
+  - {fileID: 1340458868}
+  - {fileID: 589521910}
+  - {fileID: 1355585855}
+  - {fileID: 885769710}
+  - {fileID: 850718998}
+  - {fileID: 190242369}
+  - {fileID: 1627713609}
+  - {fileID: 2113018024}
+  - {fileID: 1401927137}
+  - {fileID: 1972448624}
   closedList:
+  - {fileID: 1646806694}
   - {fileID: 1646806694}
   - {fileID: 1646806694}
   - {fileID: 1646806694}
@@ -30340,68 +30304,24 @@ MonoBehaviour:
   - {fileID: 1529711706}
   - {fileID: 307409120}
   - {fileID: 1817521901}
-  - {fileID: 2087100653}
-  - {fileID: 1898239703}
-  - {fileID: 589521910}
-  - {fileID: 885769710}
-  - {fileID: 190242369}
-  - {fileID: 2113018024}
+  - {fileID: 1832054492}
+  - {fileID: 1311212628}
+  - {fileID: 509620048}
+  - {fileID: 1492392705}
+  - {fileID: 1973577258}
+  - {fileID: 495870072}
   - {fileID: 195266527}
   - {fileID: 1228210118}
-  - {fileID: 1985569277}
-  - {fileID: 1885406874}
-  - {fileID: 1316398366}
-  - {fileID: 810595280}
-  - {fileID: 1702065052}
-  - {fileID: 280775971}
-  - {fileID: 1708821741}
-  - {fileID: 2096857291}
-  - {fileID: 545115559}
-  - {fileID: 1422434347}
-  - {fileID: 1325478913}
-  - {fileID: 1189564477}
-  - {fileID: 1941050073}
-  - {fileID: 168337991}
-  - {fileID: 1433266258}
-  - {fileID: 673555634}
-  - {fileID: 1752535745}
-  - {fileID: 1894949970}
-  - {fileID: 1353671785}
-  - {fileID: 1277007298}
-  - {fileID: 505813067}
-  - {fileID: 1726613437}
+  path:
+  - {fileID: 1972448624}
+  - {fileID: 1228210118}
+  - {fileID: 195266527}
+  - {fileID: 495870072}
+  - {fileID: 1973577258}
   - {fileID: 1492392705}
   - {fileID: 509620048}
   - {fileID: 1311212628}
-  - {fileID: 1428864313}
-  - {fileID: 1037341993}
-  - {fileID: 1318423308}
-  - {fileID: 1449571841}
-  - {fileID: 1724478549}
-  - {fileID: 1068970713}
-  - {fileID: 1573835658}
-  - {fileID: 694937359}
-  - {fileID: 1681866188}
-  - {fileID: 1827379397}
-  - {fileID: 479022621}
-  - {fileID: 631827866}
-  - {fileID: 1639661403}
-  - {fileID: 37688995}
-  - {fileID: 499033468}
-  - {fileID: 1401927137}
-  - {fileID: 1627713609}
-  - {fileID: 1355585855}
-  - {fileID: 850718998}
-  path:
-  - {fileID: 1401927137}
-  - {fileID: 499033468}
-  - {fileID: 37688995}
-  - {fileID: 1639661403}
-  - {fileID: 631827866}
-  - {fileID: 479022621}
-  - {fileID: 1827379397}
-  - {fileID: 1037341993}
-  - {fileID: 1428864313}
+  - {fileID: 1832054492}
   - {fileID: 1817521901}
   - {fileID: 307409120}
   - {fileID: 1529711706}
@@ -30661,10 +30581,10 @@ MonoBehaviour:
   isStartNode: 0
   isEndNode: 0
   hasObstacle: 0
-  tileCost: 14
+  tileCost: 0
   heuristicCost: 7
-  fromStartCost: 7
-  parentTile: {fileID: 2087100653}
+  fromStartCost: 1000
+  parentTile: {fileID: 0}
 --- !u!1001 &2097444573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30961,7 +30881,7 @@ MonoBehaviour:
   tileCost: 14
   heuristicCost: 3
   fromStartCost: 11
-  parentTile: {fileID: 190242369}
+  parentTile: {fileID: 1973577258}
 --- !u!1 &2117098206
 GameObject:
   m_ObjectHideFlags: 0
@@ -31588,6 +31508,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 276e51125932f824cbfd8334b989568f, type: 3}
+--- !u!1001 &2323200841188247961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 647228261}
+    m_Modifications:
+    - target: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_Name
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371972, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323200840625371975, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+        type: 3}
+      propertyPath: parentTile
+      value: 
+      objectReference: {fileID: 1646806694}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a027f9c7940a6fd49a69b02744ab7fe2, type: 3}
 --- !u!1001 &3226054795562299524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31876,3 +31870,141 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4312007383150352821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7142043246128689946
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 647228261}
+    m_Modifications:
+    - target: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_Name
+      value: Sidewalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142043244555444369, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80ff802f67e108244b47a0a02b9a1f0f, type: 3}
+--- !u!1001 &7598838582599412898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 647228261}
+    m_Modifications:
+    - target: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598838583171394053, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da2f60565c9d2e2438e4fa799eec2383, type: 3}
