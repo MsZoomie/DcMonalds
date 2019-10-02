@@ -6,45 +6,6 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class LevelGenerator : MonoBehaviour
 {
-    [Serializable]
-    private class LaneInfo
-    {
-        public enum LaneType
-        { Sidewalk, Grass, Road }
-
-        public LaneType type;
-        public List<Obstacle> obstacles = new List<Obstacle>();
-
-        private GameObject prefab;
-
-        public void SetPrefab(GameObject prefabObject)
-        {
-            prefab = prefabObject;
-        }
-
-        public GameObject GetPrefab()
-        {
-            return prefab;
-        }
-    }
-
-    [Serializable]
-    private class Obstacle
-    {
-        public GameObject prefab;
-
-        public bool spawnFrequently;
-        public int spacing = 2;
-
-        public Transform lastInstance;
-        
-
-        [Range(0, 100)]
-        public int spawnProbability = 50;
-
-    }
-
-
     [SerializeField]
     public int numberOfRows = 3;
 
@@ -129,6 +90,7 @@ public class LevelGenerator : MonoBehaviour
 
         GameObject tempLevel = new GameObject("Level");
         tempLevel.AddComponent<Level>();
+
         GameObject levelObstacles = new GameObject("Obstacles");
         levelObstacles.transform.SetParent(tempLevel.transform);
 
@@ -169,8 +131,12 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
     private void InstantiateObstacle(Obstacle obstacle, Transform transformParent, Transform parentObject)
     {
+        // biased random generator för att välja vilken obstacle från listan, beroende på probability, kolla föreläsning i AI om självinlärning
+
+
         if (obstacle.spawnFrequently)
         {
+            Vector3 tempPos;
             if (obstacle.lastInstance != null)
             {
                 float dist = Mathf.Abs(obstacle.lastInstance.position.z - transformParent.position.z);
@@ -178,10 +144,13 @@ public class LevelGenerator : MonoBehaviour
                 {
                     return;
                 }
+                tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
+            }
+            else
+            {
+                tempPos = obstacle.firstSpawnPosition;
             }
             
-
-            Vector3 tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
 
             GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
             newObstacle.name = obstacle.prefab.name;
@@ -201,6 +170,9 @@ public class LevelGenerator : MonoBehaviour
                 newObstacle.name = obstacle.prefab.name;
             }
         }
+
+
+
     }
 }
 
@@ -208,6 +180,45 @@ public class LevelGenerator : MonoBehaviour
 
 public class Level : MonoBehaviour
 {
-   // SearchSpace searchSpace = new SearchSpace();
+}
+
+
+[Serializable]
+public class LaneInfo
+{
+    public enum LaneType
+    { Sidewalk, Grass, Road }
+
+    public LaneType type;
+    public List<Obstacle> obstacles = new List<Obstacle>();
+
+    private GameObject prefab;
+
+    public void SetPrefab(GameObject prefabObject)
+    {
+        prefab = prefabObject;
+    }
+
+    public GameObject GetPrefab()
+    {
+        return prefab;
+    }
+}
+
+[Serializable]
+public class Obstacle
+{
+    public GameObject prefab;
+
+    public bool spawnFrequently;
+    public int spacing = 2;
+    public Vector3 firstSpawnPosition;
+
+    [HideInInspector]
+    public Transform lastInstance;
+
+
+    [Range(0, 100)]
+    public int spawnProbability = 50;
 
 }
