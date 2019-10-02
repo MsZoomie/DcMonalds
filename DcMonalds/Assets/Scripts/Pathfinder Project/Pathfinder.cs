@@ -2,69 +2,76 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Pathfinder : MonoBehaviour
 {
     public SearchSpace searchSpace;
     [Space]
-    public GameObject openListIndicator;
-    public GameObject openListParent;
-    [Space]
-    public GameObject closedListIndicator;
-    public GameObject closedListParent;
-    [Space]
-    public GameObject pathIndicator;
-    public GameObject pathParent;
 
-    private List<GameObject> openList = new List<GameObject>();
-    private List<GameObject> closedList = new List<GameObject>();
-    private List<GameObject> path = new List<GameObject>();
-    private List<PlayerMovement.Direction> pathDirections = new List<PlayerMovement.Direction>();
-
-    private PlayerMovement playerMovement;
-
-    private int pathDirIndex = 0;
+    public List<GameObject> openList = new List<GameObject>();
+    public List<GameObject> closedList = new List<GameObject>();
+    public List<GameObject> path = new List<GameObject>();
+    private List<bool> pathsFound = new List<bool>();
 
     private bool pathFound = false;
     private bool deadend = false;
-    private bool agentMoving;
+
 
 
     private void Awake()
     {
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
         searchSpace = FindObjectOfType<SearchSpace>();
     }
 
 
-    void Start() 
-    { 
-        //Look for the startNode and add it to the open list
+
+    void Update()
+    {
+        
+        pathsFound.Clear();
+
+        for (int i = 0; i < searchSpace.EndRow.Count; i++)
+        {
+            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
+            searchSpace.endNode = searchSpace.EndRow[i];
+
+            for (int j = 0; j < searchSpace.Tiles.Count; j++)
+            {
+                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
+            }
+
+
+            pathsFound.Add(FindPath());
+
+            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
+        }
+
+        if (!pathsFound.Contains(true))
+        {
+            Debug.LogError("There is no available path from player to the end row.");
+        }
+
+    }
+
+
+    public bool FindPath()
+    {
+        pathFound = false;
+        deadend = false;
+        ResetLists();
+
+
+        //Add start node to open list
         for (int i = 0; i < searchSpace.Tiles.Count; i++)
         {
-            if(searchSpace.Tiles[i].GetComponent<Tile>().isStartNode)
+            if (searchSpace.Tiles[i].GetComponent<Tile>().isStartNode)
             {
-               openList.Add(searchSpace.Tiles[i]);
+                openList.Add(searchSpace.Tiles[i]);
             }
         }
-    }
 
-
-    private void Update()
-    {
-        if (agentMoving && !playerMovement.moving)
-        {
-            playerMovement.Move(pathDirections[pathDirIndex]);
-            pathDirIndex++;
-            if (pathDirIndex >= pathDirections.Count)
-            {
-                agentMoving = false;
-            }
-        }
-    }
-
-
-    public void FindPath()
-    {
+        
+        //find a path
         while (!pathFound && !deadend)
         {
 
@@ -73,17 +80,17 @@ public class Pathfinder : MonoBehaviour
             GameObject nodeWithSmallestCost = null;
             float currentSmallestCost = 10000;   //using 1000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
 
+            //dead end
             if (tempList.Count <= 0)
             {
                 deadend = true;
-                Debug.Log("Dead End. No possible path to target.");
-                return;
+                return !deadend;
             }
-            else 
+            else    //not dead end
             {
                 foreach (var node in tempList)
                 {
-                    float tempCost = node.GetComponent<Tile>().GetTileCost();
+                    float tempCost = node.GetComponent<Tile>().CalculateCost();
                     currentSmallestCost = Mathf.Min(currentSmallestCost, tempCost);
                     if (currentSmallestCost == tempCost)
                     {
@@ -94,8 +101,8 @@ public class Pathfinder : MonoBehaviour
                 if (nodeWithSmallestCost != null)
                     CheckNode(nodeWithSmallestCost);
             }
-            
         }
+        return !deadend;
     }
 
     void CheckNode(GameObject node)
@@ -123,13 +130,11 @@ public class Pathfinder : MonoBehaviour
         AddNodeToOpenList(leftNode, node);
         AddNodeToOpenList(rightNode, node);
         AddNodeToOpenList(frontNode, node);
-       
+
 
         //move current node from the open list to the closed list
         closedList.Add(node);
         openList.Remove(node);
-        //   Debug.Log("Open list count: " + openList.Count);
-        //   Debug.Log("Closed list count: " + closedList.Count);
     }
 
     /// <summary>
@@ -162,6 +167,8 @@ public class Pathfinder : MonoBehaviour
 
     void CreatePath(GameObject finalNode)
     {
+        path.Clear();
+
         GameObject currentNode = finalNode;
         while (!currentNode.GetComponent<Tile>().isStartNode)
         {
@@ -177,36 +184,41 @@ public class Pathfinder : MonoBehaviour
         path.Add(currentNode);
     }
 
-    public void ShowOpenList()
-    {
-        foreach (var node in openList)
-        {
-            if (!path.Contains(node))
-            {
-                Transform tempTransform = node.transform;
-                Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-                Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
+    /* Obsolete Method ShowOpenList
+   public void ShowOpenList()
+   {
+       foreach (var node in openList)
+       {
+           if (!path.Contains(node))
+           {
+               Transform tempTransform = node.transform;
+               Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
+               Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
 
-                Instantiate(openListIndicator, tempPos, tempQuat, openListParent.transform);
-            }
-        }
-    }
+               Instantiate(openListIndicator, tempPos, tempQuat, openListParent.transform);
+           }
+       }
+   }
+   */
 
-    public void ShowClosedList()
-    {
-        foreach (var node in closedList)
-        {
-            if (!path.Contains(node))
-            {
-                Transform tempTransform = node.transform;
-                Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-                Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
+    /*Obsolete Method ShowClosedList
+   public void ShowClosedList()
+   {
+       foreach (var node in closedList)
+       {
+           if (!path.Contains(node))
+           {
+               Transform tempTransform = node.transform;
+               Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
+               Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
 
-                Instantiate(closedListIndicator, tempPos, tempQuat, closedListParent.transform);
-            }
-        }
-    }
+               Instantiate(closedListIndicator, tempPos, tempQuat, closedListParent.transform);
+           }
+       }
+   }
+   */
 
+    /* Obsolete Method ShowPath
     public void ShowPath()
     {
         for (int i = path.Count - 1; i > -1; i--)
@@ -216,43 +228,46 @@ public class Pathfinder : MonoBehaviour
             Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
 
             Instantiate(pathIndicator, tempPos, tempQuat, pathParent.transform);
+
         }
     }
+    */
 
-    public void MoveAgent()
+    private void ResetLists()
     {
-        if (!pathFound)
+        openList.Clear();
+        closedList.Clear();
+       
+    }
+
+
+
+    public void CheckAllPaths()
+    {
+        searchSpace = FindObjectOfType<SearchSpace>();
+
+        pathsFound.Clear();
+
+        for (int i = 0; i < searchSpace.EndRow.Count; i++)
         {
-            Debug.Log("Agent cannot move before a path is created.");
-            return;
+            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
+            searchSpace.endNode = searchSpace.EndRow[i];
+
+            for (int j = 0; j < searchSpace.Tiles.Count; j++)
+            {
+                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
+            }
+
+
+            pathsFound.Add(FindPath());
+
+            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
         }
 
-        pathDirections.Clear();
-
-        for (int i = path.Count - 1; i > 0; i--)
+        if (!pathsFound.Contains(true))
         {
-            Vector3 dir = path[i-1].transform.position - path[i].transform.position;
-
-            if (Mathf.Approximately (dir.x, -1))
-            {
-                pathDirections.Add(PlayerMovement.Direction.Left);
-            }
-            else if (Mathf.Approximately (dir.x, 1))
-            {
-                pathDirections.Add(PlayerMovement.Direction.Right);
-            }
-            else if(Mathf.Approximately (dir.z, 1))
-            {
-                pathDirections.Add(PlayerMovement.Direction.Forward);
-            }
-
+            Debug.LogError("There is no available path from player to the end row.");
         }
 
-       /* for (int i = 0; i < pathDirections.Count; i++)
-        {
-            Debug.Log(pathDirections[i].ToString());
-        }*/
-
-        agentMoving = true;
     }
 }

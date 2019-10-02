@@ -6,38 +6,21 @@ public class CameraMovement : MonoBehaviour
 {
     public float movementScale = 1.0f;
 
-    public Vector3 currentPos;
-    public Vector3 nextPos;
+    private Vector3 plane = new Vector3(1, 0, 1);
+    private Vector3 planeNormal;
+    private float distanceToPlane;
 
-    public Vector3 originalPos;
-    public Vector3 normal;
-
-    /*   bool moving;
-       public float speed = 1.0f;
-       private float startTime;
-       private float journeyLength;*/
-
+    private Vector2 currentPos;
+    private Vector2 nextPos;
 
     private void Awake()
-    {
-        originalPos = transform.position;
-
-        Vector3 temp = originalPos + Vector3.forward + Vector3.right;
-        normal = Vector3.Cross(originalPos, temp);
+    {/*
+        planeNormal = Vector3.Cross(plane, new Vector3(1, 0, 2));
+        Vector3 positionProj = Vector3.Project(transform.position, planeNormal);
+        distanceToPlane = Vector3.Distance(positionProj, plane);*/
     }
 
-    private void LateUpdate()
-    {
-        Move();
-        
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-    }
-
-
-    private void Move()
+    private void Update()
     {
         if (Input.touchCount > 0)
         {
@@ -51,31 +34,37 @@ public class CameraMovement : MonoBehaviour
                     nextPos = touch.position;
                     nextPos = Camera.main.ScreenToWorldPoint(nextPos);
                     break;
+
                 case TouchPhase.Moved:
                     currentPos = nextPos;
                     nextPos = touch.position;
                     nextPos = Camera.main.ScreenToWorldPoint(nextPos);
 
                     Vector2 temp = nextPos - currentPos;
-                    Vector3 tempX = Vector3.right * temp.x;
-                    tempX = Vector3.ProjectOnPlane(tempX, transform.up);
+                    movementScale *= 0.1f;
+                    if (temp.x > 0)
+                    {
+                        MoveLeft();
+                    }
+                    else if (temp.x < 0)
+                    {
+                        MoveRight();
+                    }
 
-                    Vector3 tempY = Vector3.forward * temp.y;
-                    tempY = Vector3.ProjectOnPlane(tempY, transform.right);
+                    if (temp.y > 0)
+                    {
+                        MoveDown();
+                    }
+                    else if (temp.y < 0)
+                    {
+                        MoveUp();
+                    }
+                    movementScale *= 10f;
 
-                    transform.position += tempX.normalized * movementScale;
-                    transform.position += tempY.normalized * movementScale;
-
-                    break;
-                case TouchPhase.Ended:
-            //        moving = false;
-                    break;
-
-                default:
                     break;
             }
-
         }
+
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -93,18 +82,49 @@ public class CameraMovement : MonoBehaviour
             Vector2 temp = nextPos - currentPos;
             //  Debug.Log(temp);
 
-            Vector3 tempX = Vector3.right * temp.x;
-            tempX = Vector3.ProjectOnPlane(tempX, transform.up);
-            Debug.Log(tempX);
+            movementScale *= 0.1f;
+            if (temp.x > 0)
+            {
+                MoveLeft();
+            }
+            else if (temp.x < 0)
+            {
+                MoveRight();
+            }
 
-            Vector3 tempY = Vector3.forward * temp.y;
-            tempY = Vector3.ProjectOnPlane(tempY, transform.right);
+            if (temp.y > 0)
+            {
+                MoveDown();
+            }
+            else if (temp.y < 0)
+            {
+                MoveUp();
+            }
 
-            transform.position += tempX.normalized * movementScale;
-            transform.position += tempY.normalized * movementScale;
+            movementScale *= 10f;
 
         }
-     
     }
 
+
+
+    public void MoveUp()
+    {
+        transform.Translate(Vector3.up * movementScale);
+    }
+
+    public void MoveDown()
+    {
+        transform.Translate(Vector3.down * movementScale);
+    }
+
+    public void MoveRight()
+    {
+        transform.Translate(Vector3.right * movementScale);
+    }
+
+    public void MoveLeft()
+    {
+        transform.Translate(Vector3.left * movementScale);
+    }
 }
