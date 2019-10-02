@@ -51,9 +51,13 @@ public class LevelGenerator : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < 6; i++)
+
+        if (lanes.Count <= 0)
         {
-            lanes.Add(new LaneInfo());
+            for (int i = 0; i < 6; i++)
+            {
+                lanes.Add(new LaneInfo());
+            }
         }
 
         sidewalkPrefab = UnityEngine.Resources.Load<GameObject>("LanePrefabs/Sidewalk.prefab");
