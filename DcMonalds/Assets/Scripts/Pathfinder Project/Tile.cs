@@ -31,7 +31,7 @@ public class Tile : MonoBehaviour
 
         if (!Physics.Raycast(transform.position, Vector3.forward, out hit, 1))
         {
-            searchSpace.EndRow.Add(gameObject);
+            searchSpace.endRow.Add(gameObject);
         }
         else
         {

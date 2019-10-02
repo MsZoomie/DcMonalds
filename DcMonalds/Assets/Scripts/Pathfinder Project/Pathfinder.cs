@@ -30,20 +30,20 @@ public class Pathfinder : MonoBehaviour
         
         pathsFound.Clear();
 
-        for (int i = 0; i < searchSpace.EndRow.Count; i++)
+        for (int i = 0; i < searchSpace.endRow.Count; i++)
         {
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
-            searchSpace.endNode = searchSpace.EndRow[i];
+            searchSpace.endRow[i].GetComponent<Tile>().isEndNode = true;
+            searchSpace.endNode = searchSpace.endRow[i];
 
-            for (int j = 0; j < searchSpace.Tiles.Count; j++)
+            for (int j = 0; j < searchSpace.tiles.Count; j++)
             {
-                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
+                searchSpace.tiles[j].GetComponent<Tile>().UpdateTile();
             }
 
 
             pathsFound.Add(FindPath());
 
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
+            searchSpace.endRow[i].GetComponent<Tile>().isEndNode = false;
         }
 
         if (!pathsFound.Contains(true))
@@ -62,11 +62,11 @@ public class Pathfinder : MonoBehaviour
 
 
         //Add start node to open list
-        for (int i = 0; i < searchSpace.Tiles.Count; i++)
+        for (int i = 0; i < searchSpace.tiles.Count; i++)
         {
-            if (searchSpace.Tiles[i].GetComponent<Tile>().isStartNode)
+            if (searchSpace.tiles[i].GetComponent<Tile>().isStartNode)
             {
-                openList.Add(searchSpace.Tiles[i]);
+                openList.Add(searchSpace.tiles[i]);
             }
         }
 
@@ -121,9 +121,9 @@ public class Pathfinder : MonoBehaviour
         Vector3 rightNodePos = new Vector3(currentNodePos.x + 1, currentNodePos.y, currentNodePos.z);
         Vector3 frontNodePos = new Vector3(currentNodePos.x, currentNodePos.y, currentNodePos.z + 1);
 
-        GameObject leftNode = searchSpace.Tiles.Find(x => x.transform.position == leftNodePos);
-        GameObject rightNode = searchSpace.Tiles.Find(x => x.transform.position == rightNodePos);
-        GameObject frontNode = searchSpace.Tiles.Find(x => x.transform.position == frontNodePos);
+        GameObject leftNode = searchSpace.tiles.Find(x => x.transform.position == leftNodePos);
+        GameObject rightNode = searchSpace.tiles.Find(x => x.transform.position == rightNodePos);
+        GameObject frontNode = searchSpace.tiles.Find(x => x.transform.position == frontNodePos);
 
 
         //Add the adjecent nodes to the open list if possible
@@ -248,20 +248,20 @@ public class Pathfinder : MonoBehaviour
 
         pathsFound.Clear();
 
-        for (int i = 0; i < searchSpace.EndRow.Count; i++)
+        for (int i = 0; i < searchSpace.endRow.Count; i++)
         {
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
-            searchSpace.endNode = searchSpace.EndRow[i];
+            searchSpace.endRow[i].GetComponent<Tile>().isEndNode = true;
+            searchSpace.endNode = searchSpace.endRow[i];
 
-            for (int j = 0; j < searchSpace.Tiles.Count; j++)
+            for (int j = 0; j < searchSpace.tiles.Count; j++)
             {
-                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
+                searchSpace.tiles[j].GetComponent<Tile>().UpdateTile();
             }
 
 
             pathsFound.Add(FindPath());
 
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
+            searchSpace.endRow[i].GetComponent<Tile>().isEndNode = false;
         }
 
         if (!pathsFound.Contains(true))

@@ -109,6 +109,6 @@ MonoBehaviour:
   isEndNode: 0
   hasObstacle: 0
   tileCost: 0
-  heuristicCost: 16
+  heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}

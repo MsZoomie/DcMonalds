@@ -5,8 +5,9 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SearchSpace : MonoBehaviour
 {
-    public List <GameObject> Tiles = new List<GameObject> ();
-    public List<GameObject> EndRow = new List<GameObject> ();
+    public List <GameObject> tiles = new List<GameObject> ();
+    public List<GameObject> startRow = new List<GameObject>();
+    public List<GameObject> endRow = new List<GameObject> ();
 
     public GameObject endNode;
         
@@ -15,7 +16,7 @@ public class SearchSpace : MonoBehaviour
         Tile[] temp = GetComponentsInChildren<Tile>();
         foreach (var tile in temp)
         {
-            Tiles.Add(tile.gameObject);    
+            tiles.Add(tile.gameObject);    
         //    Debug.Log(tile.name);
         }
     }
