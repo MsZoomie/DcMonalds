@@ -114,7 +114,7 @@ public class LevelGenerator : MonoBehaviour
 
                 if (lanes[j].obstacles.Count > 0)
                 {
-                    InstantiateObstacle(lanes[j].obstacles[0], tile.transform, levelObstacles.transform);
+                    InstantiateObstacle(lanes[j].obstacles, tile.transform, levelObstacles.transform);
                 }
             }
         }
@@ -129,50 +129,81 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="obstacle">The obstacle to be instatiated.</param>
     /// <param name="transformParent">Transform of the tile the obstacle will be placed upon.</param>
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
-    private void InstantiateObstacle(Obstacle obstacle, Transform transformParent, Transform parentObject)
+    private void InstantiateObstacle(List<Obstacle> obstacles, Transform transformParent, Transform parentObject)
     {
-        // biased random generator för att välja vilken obstacle från listan, beroende på probability, kolla föreläsning i AI om självinlärning
+        Obstacle obstacle = ChooseObstacle(obstacles, transformParent);
+        Vector3 tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
 
+        if (obstacle == null)
+        {
+            return;
+        }
+        
+        GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
+        newObstacle.name = obstacle.prefab.name;
 
         if (obstacle.spawnFrequently)
         {
-            Vector3 tempPos;
-            if (obstacle.lastInstance != null)
-            {
-                float dist = Mathf.Abs(obstacle.lastInstance.position.z - transformParent.position.z);
-                if (dist < obstacle.spacing)
-                {
-                    return;
-                }
-                tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
-            }
-            else
-            {
-                tempPos = obstacle.firstSpawnPosition;
-            }
-            
-
-            GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
-            newObstacle.name = obstacle.prefab.name;
-
             obstacle.lastInstance = newObstacle.transform;
         }
-        else
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="obstacles">List of Obstacles available for lane.</param>
+    /// <param name="transformParent">Transform of the tile upon which obstacle will be spawned.</param>
+    /// <returns>Obstacle to be spawned. Might return null if</returns>
+    private Obstacle ChooseObstacle(List<Obstacle> obstacles, Transform transformParent)
+    {
+        //look for all the frequently spawning obstacles, they have priority
+        for (int i = 0; i < obstacles.Count; i++)
         {
-            float probability = obstacle.spawnProbability * 0.01f;
-            float rand = UnityEngine.Random.value;
-
-            if (rand <= probability)
+            if (obstacles[i].spawnFrequently)
             {
-                Vector3 tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
-
-                GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
-                newObstacle.name = obstacle.prefab.name;
+                if (obstacles[i].lastInstance == null)
+                {
+                    float dist = Mathf.Abs(obstacles[i].firstSpawnPosition.z - transformParent.position.z);
+                    if (Mathf.Approximately(dist, 0.5f))
+                    {
+                        return obstacles[i];
+                    }
+                }
+                else
+                {
+                    float dist = Mathf.Abs(obstacles[i].lastInstance.position.z - transformParent.position.z);
+                    if (dist >= obstacles[i].spacing)
+                    {
+                        return obstacles[i];
+                    }
+                }
             }
         }
 
+        // if there wasn't any frequently spawning obstacles matching this position, we look to the randomly spawning obstacles
+        // Roulette Wheel Selection
+        for (int i = 0; i < obstacles.Count; i++)
+        {
+            float preProbability = 0.0f;
+            float rand = UnityEngine.Random.value;
 
+            if (!obstacles[i].spawnFrequently)
+            {
+                float probability = obstacles[i].spawnProbability * 0.01f;
+                preProbability += probability;
 
+                if (rand <= preProbability)
+                {
+                    return obstacles[i];
+                }
+            }
+            if (preProbability > 1)
+            {
+                Debug.Log("The sum of all of the randomly spawning obstacle's spawn probability on this lane has to be 100 or less.");
+            }
+        }
+
+        return null;
     }
 }
 
@@ -214,10 +245,10 @@ public class Obstacle
     public int spacing = 2;
     public Vector3 firstSpawnPosition;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Transform lastInstance;
 
-
+    [Tooltip("The sum of all of the randomly spawning obstacle's spawn probability has to be 100 or less.")]
     [Range(0, 100)]
     public int spawnProbability = 50;
 
