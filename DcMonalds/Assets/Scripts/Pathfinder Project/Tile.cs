@@ -6,16 +6,12 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Tile : MonoBehaviour
 {
-    public bool isStartNode = false;
-    public bool isEndNode = false;
     public bool hasObstacle = false;
 
     public float tileCost = 0.0f;
     public float heuristicCost = 0.0f;
     public float fromStartCost = 1000.0f;
-
-    private GameObject startNode;
-    private GameObject endNode;
+    
     public GameObject parentTile;
 
     private SearchSpace searchSpace;
@@ -29,13 +25,12 @@ public class Tile : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (!Physics.Raycast(transform.position, Vector3.forward, out hit, 1))
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
         {
-            searchSpace.endRow.Add(gameObject);
-        }
-        else
-        {
-            Debug.Log("Raycast hit: " + hit, hit.collider.gameObject);
+            if (hit.collider.CompareTag("Obstacle"))
+            {
+                hasObstacle = true;
+            }
         }
 
     }
@@ -46,6 +41,24 @@ public class Tile : MonoBehaviour
         CalculateHeuristicCost();
     }
 
+
+    public void AddToStartRow()
+    {
+        searchSpace.startRow.Add(gameObject);
+    }
+    public void RemoveFromStartRow()
+    {
+        searchSpace.startRow.Remove(gameObject);
+    }
+
+    public void AddToEndRow()
+    {
+        searchSpace.endRow.Add(gameObject);
+    }
+    public void RemoveFromEndRow()
+    {
+        searchSpace.endRow.Remove(gameObject);
+    }
 
     public bool GetWalkability()
     {
@@ -74,11 +87,11 @@ public class Tile : MonoBehaviour
     /// <returns>tileCost</returns>
     public float CalculateCost()
     {
-        if (fromStartCost >= 1000 && !isStartNode)
+        if (fromStartCost >= 1000 && (searchSpace.startNode != gameObject))
         {
             fromStartCost = CalculateFromStartCost();
         }
-        else if (isStartNode)
+        else if (searchSpace.startNode == gameObject)
         {
             return 0;
         }
@@ -97,16 +110,20 @@ public class Tile : MonoBehaviour
         return tileCost;
     }
 
+    /// <summary>
+    /// Calculate heuristic cost with Manhattan method
+    /// </summary>
     private void CalculateHeuristicCost()
     {
-        float x = Mathf.Abs( endNode.transform.position.x - gameObject.transform.position.x);
-        float y = Mathf.Abs(endNode.transform.position.z - gameObject.transform.position.z);
+        Vector3 endNodePos = searchSpace.endNode.transform.position;
+        float x = Mathf.Abs( endNodePos.x - gameObject.transform.position.x);
+        float y = Mathf.Abs(endNodePos.z - gameObject.transform.position.z);
         heuristicCost = Mathf.Round( x + y);
     }
 
     private float CalculateFromStartCost()
     {
-        if (isStartNode)
+        if (searchSpace.startNode == gameObject)
         {
             fromStartCost = 0;
         }
@@ -125,34 +142,21 @@ public class Tile : MonoBehaviour
 
     private void ResetTile()
     {
-        isStartNode = false;
         hasObstacle = false;
 
         tileCost = 0.0f;
         heuristicCost = 0.0f;
         fromStartCost = 1000.0f;
-
-        startNode = null;
-        endNode = null;
+        
         parentTile = null;
 
-
-        startNode = GameObject.FindWithTag("Player");
-        if (startNode == null)
-            return;
-        else if (startNode.transform.position.x == gameObject.transform.position.x &&
-            startNode.transform.position.z == gameObject.transform.position.z)
+        if (gameObject == searchSpace.startNode)
         {
-            isStartNode = true;
             fromStartCost = 0;
         }
-
-        endNode = searchSpace.endNode;
-
-        Vector3 up = transform.TransformDirection(Vector3.up);
-
+        
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, up, out hit, 3))
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
         {
             if (hit.collider.CompareTag("Obstacle"))
             {

@@ -18,10 +18,15 @@ public class LevelGenerator : MonoBehaviour
     private GameObject grassPrefab;
     private GameObject roadPrefab;
 
-
+    private SearchSpace searchSpace;
+    public Pathfinder pathfinder;
 
     private void Awake()
     {
+        if (pathfinder == null)
+        {
+            pathfinder = gameObject.AddComponent<Pathfinder>();
+        }
 
         if (lanes.Count <= 0)
         {
@@ -56,6 +61,11 @@ public class LevelGenerator : MonoBehaviour
 
     private void OnValidate()
     {
+        if (pathfinder == null)
+        {
+            pathfinder = gameObject.AddComponent<Pathfinder>();
+        }
+
         for (int i = 0; i < lanes.Count; i++)
         {
             switch (lanes[i].type)
@@ -79,7 +89,7 @@ public class LevelGenerator : MonoBehaviour
     public void GenerateLevel()
     {
         Level[] temp = FindObjectsOfType(typeof(Level)) as Level[];
-
+  
         if (temp.Length > 0)
         {
             for (int i = 0; i < temp.Length; i++)
@@ -88,34 +98,72 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        GameObject tempLevel = new GameObject("Level");
-        tempLevel.AddComponent<Level>();
+
+        GameObject level = new GameObject("Level");
+        level.AddComponent<Level>();
+        searchSpace = level.AddComponent<SearchSpace>();
+
+        GameObject rows = new GameObject("Rows");
+        rows.transform.SetParent(level.transform);
 
         GameObject levelObstacles = new GameObject("Obstacles");
-        levelObstacles.transform.SetParent(tempLevel.transform);
+        levelObstacles.transform.SetParent(level.transform);
+        pathfinder.ResetPathfinder();
+        pathfinder.searchSpace = searchSpace;
 
-        for (int i = 0; i < numberOfRows; i++)
+
+        for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
+            //Create new row
             GameObject row = new GameObject("Row");
-            row.transform.position += Vector3.forward * i;
-            row.transform.SetParent(tempLevel.transform);
+            row.transform.position += Vector3.forward * rowIndex;
+            row.transform.SetParent(rows.transform);
 
+            //remove latest checked row from search space
+            searchSpace.tiles.RemoveAll(x => searchSpace.startRow.Contains(x));
+            searchSpace.startRow = searchSpace.endRow;
+            searchSpace.endRow.Clear();
+            
 
-            for (int j = 0; j < lanes.Count; j++)
+            for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
             {
-                Vector3 tempPos = new Vector3(row.transform.position.x + j, row.transform.position.y, row.transform.position.z);
-                GameObject tile = Instantiate(lanes[j].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                // Add a tile to row
+                Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
+                GameObject node = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                searchSpace.AddTile(node);
+                searchSpace.endNode = node;
+
+                // add the tile to next row to be examined
+                Tile tile = node.GetComponent<Tile>();
+                tile.AddToEndRow();
+                tile.UpdateTile();
                 
+
+
+                //if there's already an obstacle here, we don't want to add a new one
+                if (tile.hasObstacle)
+                {
+                    goto ObstacleAdded;
+                }
+
+                //do pathfinder
+                bool placeObstacle = true;
+                if (rowIndex < 0)
+                {
+                    placeObstacle = UsePathfinder(node);
+                }
+
                 // skip pathfinder if spawnFrequently is true
                 // use pathfinder
                 // if there is a path to the tile:
                 // check that there is not more than lanes.count - 2 obstacles on the row
                 // 
-
-                if (lanes[j].obstacles.Count > 0)
+                if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
                 {
-                    InstantiateObstacle(lanes[j].obstacles, tile.transform, levelObstacles.transform);
+                    InstantiateObstacle(lanes[laneIndex].obstacles, node.transform, levelObstacles.transform);
                 }
+
+                ObstacleAdded: { }
             }
         }
     }
@@ -132,7 +180,7 @@ public class LevelGenerator : MonoBehaviour
     private void InstantiateObstacle(List<Obstacle> obstacles, Transform transformParent, Transform parentObject)
     {
         Obstacle obstacle = ChooseObstacle(obstacles, transformParent);
-        Vector3 tempPos = new Vector3(transformParent.transform.position.x - 0.5f, transformParent.transform.position.y + 1, transformParent.transform.position.z + 0.5f);
+        Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
         if (obstacle == null)
         {
@@ -149,7 +197,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Choose which obstacle to be spawned.
     /// </summary>
     /// <param name="obstacles">List of Obstacles available for lane.</param>
     /// <param name="transformParent">Transform of the tile upon which obstacle will be spawned.</param>
@@ -164,7 +212,7 @@ public class LevelGenerator : MonoBehaviour
                 if (obstacles[i].lastInstance == null)
                 {
                     float dist = Mathf.Abs(obstacles[i].firstSpawnPosition.z - transformParent.position.z);
-                    if (Mathf.Approximately(dist, 0.5f))
+                    if (Mathf.Approximately(dist, 0))
                     {
                         return obstacles[i];
                     }
@@ -204,6 +252,12 @@ public class LevelGenerator : MonoBehaviour
         }
 
         return null;
+    }
+
+
+    private bool UsePathfinder(GameObject node)
+    {
+        return pathfinder.CheckAllPaths(node);
     }
 }
 

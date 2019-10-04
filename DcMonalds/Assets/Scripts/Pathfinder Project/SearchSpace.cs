@@ -10,14 +10,23 @@ public class SearchSpace : MonoBehaviour
     public List<GameObject> endRow = new List<GameObject> ();
 
     public GameObject endNode;
+    public GameObject startNode;
         
-    void Awake()
+   
+    public void GetAllTiles()
     {
+        tiles.Clear();
+
         Tile[] temp = GetComponentsInChildren<Tile>();
         foreach (var tile in temp)
         {
-            tiles.Add(tile.gameObject);    
-        //    Debug.Log(tile.name);
+            tiles.Add(tile.gameObject);
+            //    Debug.Log(tile.name);
         }
+    }
+
+    public void AddTile(GameObject node)
+    {
+        tiles.Add(node);
     }
 }
