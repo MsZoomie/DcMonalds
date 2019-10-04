@@ -8,9 +8,10 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField]
     public int numberOfRows = 3;
+    public int rowToStartPathfinderFrom = 3;
 
     [SerializeField]
-    private List<LaneInfo> lanes;
+    private List<LaneInfo> lanes = new List<LaneInfo>();
 
 
     // lane prefabs
@@ -111,6 +112,7 @@ public class LevelGenerator : MonoBehaviour
         pathfinder.ResetPathfinder();
         pathfinder.searchSpace = searchSpace;
 
+        List<GameObject> secondRowToCheck = new List<GameObject>();
 
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
@@ -119,11 +121,20 @@ public class LevelGenerator : MonoBehaviour
             row.transform.position += Vector3.forward * rowIndex;
             row.transform.SetParent(rows.transform);
 
-            //remove latest checked row from search space
-            searchSpace.tiles.RemoveAll(x => searchSpace.startRow.Contains(x));
-            searchSpace.startRow = searchSpace.endRow;
-            searchSpace.endRow.Clear();
-            
+            searchSpace.startRow.Clear();
+
+            if (rowIndex >= rowToStartPathfinderFrom)
+            {
+                for (int i = 0; i < lanes.Count; i++)
+                {
+                    int x = ((rowIndex - rowToStartPathfinderFrom) * lanes.Count) + i;
+
+                    //Debug.Log("Row " + rowIndex + ": " + x);
+                    searchSpace.startRow.Add(searchSpace.tiles[x]);
+                }
+            }
+
+            int obstaclesOnThisRow = 0;
 
             for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
             {
@@ -135,34 +146,37 @@ public class LevelGenerator : MonoBehaviour
 
                 // add the tile to next row to be examined
                 Tile tile = node.GetComponent<Tile>();
-                tile.AddToEndRow();
+                //tile.AddToEndRow();
                 tile.UpdateTile();
                 
 
-
                 //if there's already an obstacle here, we don't want to add a new one
-                if (tile.hasObstacle)
+                if (tile.hasObstacle || obstaclesOnThisRow >= 4)
                 {
+                    obstaclesOnThisRow++;
                     goto ObstacleAdded;
                 }
 
+
                 //do pathfinder
                 bool placeObstacle = true;
-                if (rowIndex < 0)
+                if (rowIndex > rowToStartPathfinderFrom)
                 {
+                   // searchSpace.tiles[];
                     placeObstacle = UsePathfinder(node);
                 }
+                
 
-                // skip pathfinder if spawnFrequently is true
-                // use pathfinder
-                // if there is a path to the tile:
-                // check that there is not more than lanes.count - 2 obstacles on the row
-                // 
-                if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
+                if (placeObstacle)
                 {
-                    InstantiateObstacle(lanes[laneIndex].obstacles, node.transform, levelObstacles.transform);
-                }
+                    if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
+                    {
+                        bool placedObstacle = InstantiateObstacle(lanes[laneIndex].obstacles, node.transform, levelObstacles.transform);
 
+                        if (placedObstacle)
+                            obstaclesOnThisRow++;
+                    }
+                }
                 ObstacleAdded: { }
             }
         }
@@ -177,14 +191,14 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="obstacle">The obstacle to be instatiated.</param>
     /// <param name="transformParent">Transform of the tile the obstacle will be placed upon.</param>
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
-    private void InstantiateObstacle(List<Obstacle> obstacles, Transform transformParent, Transform parentObject)
+    private bool InstantiateObstacle(List<Obstacle> obstacles, Transform transformParent, Transform parentObject)
     {
         Obstacle obstacle = ChooseObstacle(obstacles, transformParent);
         Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
         if (obstacle == null)
         {
-            return;
+            return false;
         }
         
         GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
@@ -194,6 +208,8 @@ public class LevelGenerator : MonoBehaviour
         {
             obstacle.lastInstance = newObstacle.transform;
         }
+
+        return true;
     }
 
     /// <summary>

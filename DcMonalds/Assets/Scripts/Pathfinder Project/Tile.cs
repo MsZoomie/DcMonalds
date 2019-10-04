@@ -53,11 +53,11 @@ public class Tile : MonoBehaviour
 
     public void AddToEndRow()
     {
-        searchSpace.endRow.Add(gameObject);
+        searchSpace.nextRowToCheck.Add(gameObject);
     }
     public void RemoveFromEndRow()
     {
-        searchSpace.endRow.Remove(gameObject);
+        searchSpace.nextRowToCheck.Remove(gameObject);
     }
 
     public bool GetWalkability()
