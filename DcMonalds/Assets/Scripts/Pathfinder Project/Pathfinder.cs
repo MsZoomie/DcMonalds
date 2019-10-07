@@ -15,45 +15,12 @@ public class Pathfinder : MonoBehaviour
 
     private bool pathFound = false;
     private bool deadend = false;
+    
 
-
-
-    private void Awake()
-    {
-        searchSpace = FindObjectOfType<SearchSpace>();
-    }
-
-
-
-    void Update()
-    {
-        
-        pathsFound.Clear();
-
-        for (int i = 0; i < searchSpace.EndRow.Count; i++)
-        {
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
-            searchSpace.endNode = searchSpace.EndRow[i];
-
-            for (int j = 0; j < searchSpace.Tiles.Count; j++)
-            {
-                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
-            }
-
-
-            pathsFound.Add(FindPath());
-
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
-        }
-
-        if (!pathsFound.Contains(true))
-        {
-            Debug.LogError("There is no available path from player to the end row.");
-        }
-
-    }
-
-
+    /// <summary>
+    /// Finds a path from start node to end node.
+    /// </summary>
+    /// <returns>true if there's a path. false if no path could be found.</returns>
     public bool FindPath()
     {
         pathFound = false;
@@ -62,11 +29,11 @@ public class Pathfinder : MonoBehaviour
 
 
         //Add start node to open list
-        for (int i = 0; i < searchSpace.Tiles.Count; i++)
+        for (int i = 0; i < searchSpace.tiles.Count; i++)
         {
-            if (searchSpace.Tiles[i].GetComponent<Tile>().isStartNode)
+            if (searchSpace.tiles[i] == searchSpace.startNode)
             {
-                openList.Add(searchSpace.Tiles[i]);
+                openList.Add(searchSpace.tiles[i]);
             }
         }
 
@@ -105,9 +72,9 @@ public class Pathfinder : MonoBehaviour
         return !deadend;
     }
 
-    void CheckNode(GameObject node)
+    private void CheckNode(GameObject node)
     {
-        if (node.GetComponent<Tile>().isEndNode)
+        if (searchSpace.endNode == node)
         {
             pathFound = true;
             CreatePath(node);
@@ -121,9 +88,9 @@ public class Pathfinder : MonoBehaviour
         Vector3 rightNodePos = new Vector3(currentNodePos.x + 1, currentNodePos.y, currentNodePos.z);
         Vector3 frontNodePos = new Vector3(currentNodePos.x, currentNodePos.y, currentNodePos.z + 1);
 
-        GameObject leftNode = searchSpace.Tiles.Find(x => x.transform.position == leftNodePos);
-        GameObject rightNode = searchSpace.Tiles.Find(x => x.transform.position == rightNodePos);
-        GameObject frontNode = searchSpace.Tiles.Find(x => x.transform.position == frontNodePos);
+        GameObject leftNode = searchSpace.tiles.Find(x => x.transform.position == leftNodePos);
+        GameObject rightNode = searchSpace.tiles.Find(x => x.transform.position == rightNodePos);
+        GameObject frontNode = searchSpace.tiles.Find(x => x.transform.position == frontNodePos);
 
 
         //Add the adjecent nodes to the open list if possible
@@ -145,7 +112,7 @@ public class Pathfinder : MonoBehaviour
     /// </summary>
     /// <param name="node"></param>
     /// <returns>Successfully added node to open list.</returns>
-    bool AddNodeToOpenList(GameObject node, GameObject parentNode)
+    private bool AddNodeToOpenList(GameObject node, GameObject parentNode)
     {
         if (node == null)
             return false;
@@ -165,12 +132,12 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    void CreatePath(GameObject finalNode)
+    private void CreatePath(GameObject finalNode)
     {
         path.Clear();
 
         GameObject currentNode = finalNode;
-        while (!currentNode.GetComponent<Tile>().isStartNode)
+        while (currentNode != searchSpace.startNode )
         {
             path.Add(currentNode);
             currentNode = currentNode.GetComponent<Tile>().GetParent();
@@ -183,91 +150,48 @@ public class Pathfinder : MonoBehaviour
 
         path.Add(currentNode);
     }
-
-    /* Obsolete Method ShowOpenList
-   public void ShowOpenList()
-   {
-       foreach (var node in openList)
-       {
-           if (!path.Contains(node))
-           {
-               Transform tempTransform = node.transform;
-               Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-               Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
-
-               Instantiate(openListIndicator, tempPos, tempQuat, openListParent.transform);
-           }
-       }
-   }
-   */
-
-    /*Obsolete Method ShowClosedList
-   public void ShowClosedList()
-   {
-       foreach (var node in closedList)
-       {
-           if (!path.Contains(node))
-           {
-               Transform tempTransform = node.transform;
-               Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-               Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
-
-               Instantiate(closedListIndicator, tempPos, tempQuat, closedListParent.transform);
-           }
-       }
-   }
-   */
-
-    /* Obsolete Method ShowPath
-    public void ShowPath()
-    {
-        for (int i = path.Count - 1; i > -1; i--)
-        {
-            Transform tempTransform = path[i].transform;
-            Vector3 tempPos = new Vector3(tempTransform.position.x, tempTransform.position.y + 0.51f, tempTransform.position.z);
-            Quaternion tempQuat = Quaternion.AngleAxis(90.0f, Vector3.right);
-
-            Instantiate(pathIndicator, tempPos, tempQuat, pathParent.transform);
-
-        }
-    }
-    */
-
+    
     private void ResetLists()
     {
         openList.Clear();
         closedList.Clear();
-       
     }
 
 
-
-    public void CheckAllPaths()
+    /// <summary>
+    /// Checks if theres any paths from start row to current node
+    /// </summary>
+    /// <param name="currentNode"></param>
+    /// <returns></returns>
+    public bool CheckAllPaths(GameObject currentNode)
     {
-        searchSpace = FindObjectOfType<SearchSpace>();
-
         pathsFound.Clear();
+        searchSpace.endNode = currentNode;
 
-        for (int i = 0; i < searchSpace.EndRow.Count; i++)
+        for (int i = 0; i < searchSpace.startRow.Count; i++)
         {
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = true;
-            searchSpace.endNode = searchSpace.EndRow[i];
-
-            for (int j = 0; j < searchSpace.Tiles.Count; j++)
-            {
-                searchSpace.Tiles[j].GetComponent<Tile>().UpdateTile();
-            }
-
-
+            searchSpace.startNode = searchSpace.startRow[i];
             pathsFound.Add(FindPath());
-
-            searchSpace.EndRow[i].GetComponent<Tile>().isEndNode = false;
         }
 
         if (!pathsFound.Contains(true))
         {
-            Debug.LogError("There is no available path from player to the end row.");
+            //Debug.LogError("There is no available path from start row to current tile.");
+            return false;
         }
 
+        return true;
     }
+
+    public void ResetPathfinder()
+    {
+        openList.Clear();
+        closedList.Clear();
+        path.Clear();
+        pathsFound.Clear();
+
+        pathFound = false;
+        deadend = false;
+    }
+
 }

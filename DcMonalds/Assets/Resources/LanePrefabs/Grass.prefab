@@ -100,15 +100,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2323200840625371968}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92083033afc359a4bbc7d8400b92e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartNode: 0
-  isEndNode: 0
   hasObstacle: 0
-  tileCost: 16
-  heuristicCost: 15
-  fromStartCost: 1
+  tileCost: 0
+  heuristicCost: 0
+  fromStartCost: 1000
   parentTile: {fileID: 0}
