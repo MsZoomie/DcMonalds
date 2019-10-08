@@ -124,6 +124,7 @@ public class LevelGenerator : MonoBehaviour
 
             //prepare pathfinding for this row
             searchSpace.startRow.Clear();
+            searchSpace.UpdateTiles();
             if (rowIndex >= rowToStartPathfinderFrom)
             {
                 for (int i = 0; i < lanes.Count; i++)
@@ -131,27 +132,41 @@ public class LevelGenerator : MonoBehaviour
                     int x = ((rowIndex - rowToStartPathfinderFrom) * lanes.Count) + i;
 
                     //Debug.Log("Row " + rowIndex + ": " + x);
-                    searchSpace.startRow.Add(searchSpace.tiles[x]);
+                    searchSpace.startRow.Add(searchSpace.tiles[x].gameObject);
                 }
             }
-            
 
-            
+
+
             //start adding tiles
             for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
             {
                 // Add a tile to row
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
-                GameObject node = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
-                searchSpace.AddTile(node);
-                searchSpace.endNode = node;
-               
+                GameObject currentNode = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                searchSpace.AddTile(currentNode);
+                searchSpace.endNode = currentNode;
 
-                Tile tile = node.GetComponent<Tile>();
-                //tile.UpdateTile();
+
+                Tile currentTile = currentNode.GetComponent<Tile>();
+
+
+                int x = (rowIndex - 1) * lanes.Count + laneIndex;
+                if (x >= 0)
+                {
+                    Tile tileInFront = searchSpace.tiles[x];
+                    if(tileInFront.hasObstacle)
+                    {
+                        if(tileInFront.obstacle.tilesCovered > 1)
+                        {
+                            currentTile.hasObstacle = true;
+                        }
+                    }
+                }
+
 
                 //if there's already an obstacle here, we don't want to add a new one
-                if (tile.hasObstacle)
+                if (currentTile.hasObstacle)
                 {
                     goto ObstacleAdded;
                 }
@@ -161,7 +176,7 @@ public class LevelGenerator : MonoBehaviour
                 bool placeObstacle = true;
                 if (rowIndex > rowToStartPathfinderFrom - 1)
                 {
-                    placeObstacle = UsePathfinder(node);
+                    placeObstacle = UsePathfinder(currentNode);
                 }
                 
 
@@ -169,12 +184,12 @@ public class LevelGenerator : MonoBehaviour
                 {
                     if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
                     {
-                        tile.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, node.transform);
-                        if (tile.obstacle != null)
-                            tile.hasObstacle = true;
+                        currentTile.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, currentNode.transform);
+                        if (currentTile.obstacle != null)
+                            currentTile.hasObstacle = true;
                     }
                 }
-                ObstacleAdded: { }
+            ObstacleAdded: { }
             }
         }
     }
@@ -245,7 +260,7 @@ public class LevelGenerator : MonoBehaviour
        
         Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
-        if (obstacle == null)
+        if (obstacle.prefab == null)
         {
             return false;
         }
@@ -337,7 +352,7 @@ public class LevelGenerator : MonoBehaviour
         return pathfinder.CheckAllPaths(node);
     }
 
-    private bool UsePathfinderOnce(GameObject node)
+    private bool UsePathfinderOnce(Tile node)
     {
         pathfinder.searchSpace = searchSpace;
         pathfinder.ResetPathfinder();
@@ -414,4 +429,6 @@ public class Obstacle
     [Range(0, 100)]
     public int spawnProbability = 50;
 
+
+    public int tilesCovered = 1;
 }

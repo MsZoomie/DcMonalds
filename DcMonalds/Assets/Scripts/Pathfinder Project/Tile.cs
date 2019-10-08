@@ -12,7 +12,7 @@ public class Tile : MonoBehaviour
     public float heuristicCost = 0.0f;
     public float fromStartCost = 1000.0f;
     
-    public GameObject parentTile;
+    public Tile parentTile;
 
     private SearchSpace searchSpace;
 
@@ -42,26 +42,25 @@ public class Tile : MonoBehaviour
     {
         ResetTile();
         CalculateHeuristicCost();
-        CalculateCost();
     }
 
 
     public void AddToStartRow()
     {
-        searchSpace.startRow.Add(gameObject);
+        searchSpace.startRow.Add(this);
     }
     public void RemoveFromStartRow()
     {
-        searchSpace.startRow.Remove(gameObject);
+        searchSpace.startRow.Remove(this);
     }
 
     public void AddToEndRow()
     {
-        searchSpace.endRow.Add(gameObject);
+        searchSpace.endRow.Add(this);
     }
     public void RemoveFromEndRow()
     {
-        searchSpace.endRow.Remove(gameObject);
+        searchSpace.endRow.Remove(this);
     }
 
     public bool GetWalkability()
@@ -74,11 +73,11 @@ public class Tile : MonoBehaviour
     }
 
 
-    public GameObject GetParent()
+    public Tile GetParent()
     {
         return parentTile;
     }
-    public void SetParent(GameObject node)
+    public void SetParent(Tile node)
     {
         parentTile = node;
     }
@@ -146,11 +145,8 @@ public class Tile : MonoBehaviour
 
     private void ResetTile()
     {
-        //hasObstacle = false;
-
         tileCost = 0.0f;
         heuristicCost = 0.0f;
-        fromStartCost = 1000.0f;
         
         parentTile = null;
 
@@ -158,15 +154,7 @@ public class Tile : MonoBehaviour
         {
             fromStartCost = 0;
         }
-        
-       /* RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
-        {
-            if (hit.collider.CompareTag("Obstacle"))
-            {
-                hasObstacle = true;
-            }
-        }*/
+       
     }
 
 }

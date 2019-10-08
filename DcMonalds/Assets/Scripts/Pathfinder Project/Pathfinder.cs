@@ -8,9 +8,9 @@ public class Pathfinder : MonoBehaviour
     public SearchSpace searchSpace;
     [Space]
 
-    public List<GameObject> openList = new List<GameObject>();
-    public List<GameObject> closedList = new List<GameObject>();
-    public List<GameObject> path = new List<GameObject>();
+    public List<Tile> openList = new List<Tile>();
+    public List<Tile> closedList = new List<Tile>();
+    public List<Tile> path = new List<Tile>();
     private List<bool> pathsFound = new List<bool>();
 
     private bool pathFound = false;
@@ -89,9 +89,9 @@ public class Pathfinder : MonoBehaviour
         Vector3 rightNodePos = new Vector3(currentNodePos.x + 1, currentNodePos.y, currentNodePos.z);
         Vector3 frontNodePos = new Vector3(currentNodePos.x, currentNodePos.y, currentNodePos.z + 1);
 
-        GameObject leftNode = searchSpace.tiles.Find(x => x.transform.position == leftNodePos);
-        GameObject rightNode = searchSpace.tiles.Find(x => x.transform.position == rightNodePos);
-        GameObject frontNode = searchSpace.tiles.Find(x => x.transform.position == frontNodePos);
+        Tile leftNode = searchSpace.tiles.Find(x => x.gameObject.transform.position == leftNodePos);
+        Tile rightNode = searchSpace.tiles.Find(x => x.transform.position == rightNodePos);
+        Tile frontNode = searchSpace.tiles.Find(x => x.transform.position == frontNodePos);
 
         
         //Add the adjecent nodes to the open list if possible
@@ -113,7 +113,7 @@ public class Pathfinder : MonoBehaviour
     /// </summary>
     /// <param name="node"></param>
     /// <returns>Successfully added node to open list.</returns>
-    private bool AddNodeToOpenList(GameObject node, GameObject parentNode)
+    private bool AddNodeToOpenList(Tile node, Tile parentNode)
     {
         if (node == null)
             return false;
@@ -126,8 +126,8 @@ public class Pathfinder : MonoBehaviour
             return false;
         else
         {
-            node.GetComponent<Tile>().SetParent(parentNode);
-            node.GetComponent<Tile>().CalculateCost();
+            node.SetParent(parentNode);
+            node.CalculateCost();
             openList.Add(node);
             return true;
         }
@@ -171,7 +171,7 @@ public class Pathfinder : MonoBehaviour
 
         for (int i = 0; i < searchSpace.startRow.Count; i++)
         {
-            searchSpace.startNode = searchSpace.startRow[i];
+            searchSpace.startNode = searchSpace.startRow[i].gameObject;
             bool found = FindPath();
             pathsFound.Add(found);
         }
@@ -193,7 +193,7 @@ public class Pathfinder : MonoBehaviour
 
         for (int i = 0; i < searchSpace.startRow.Count; i++)
         {
-            searchSpace.startNode = searchSpace.startRow[i];
+            searchSpace.startNode = searchSpace.startRow[i].gameObject;
             bool found = FindPath();
             if (found)
             {
