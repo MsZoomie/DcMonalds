@@ -113,10 +113,7 @@ public class LevelGenerator : MonoBehaviour
         levelObstacles.transform.SetParent(level.transform);
         
 
-        //List<GameObject> secondRowToCheck = new List<GameObject>();
-
-
-
+        //start adding rows
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
             //Create new row
@@ -124,9 +121,9 @@ public class LevelGenerator : MonoBehaviour
             row.transform.position += Vector3.forward * rowIndex;
             row.transform.SetParent(rows.transform);
 
+
+            //prepare pathfinding for this row
             searchSpace.startRow.Clear();
-            
-           
             if (rowIndex >= rowToStartPathfinderFrom)
             {
                 for (int i = 0; i < lanes.Count; i++)
@@ -140,7 +137,7 @@ public class LevelGenerator : MonoBehaviour
             
 
             
-
+            //start adding tiles
             for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
             {
                 // Add a tile to row
@@ -148,20 +145,14 @@ public class LevelGenerator : MonoBehaviour
                 GameObject node = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
                 searchSpace.AddTile(node);
                 searchSpace.endNode = node;
-                
-               /* if(rowIndex == 0)
-                {
-                    searchSpace.startRow.Add(node);
-                }*/
-
+               
 
                 Tile tile = node.GetComponent<Tile>();
-                tile.UpdateTile();
+                //tile.UpdateTile();
 
                 //if there's already an obstacle here, we don't want to add a new one
                 if (tile.hasObstacle)
                 {
-                    //obstaclesOnThisRow++;
                     goto ObstacleAdded;
                 }
 
@@ -170,7 +161,6 @@ public class LevelGenerator : MonoBehaviour
                 bool placeObstacle = true;
                 if (rowIndex > rowToStartPathfinderFrom - 1)
                 {
-                   // searchSpace.tiles[];
                     placeObstacle = UsePathfinder(node);
                 }
                 
@@ -193,24 +183,35 @@ public class LevelGenerator : MonoBehaviour
     public void ChooseLevel()
     {
         bool validLevel = false;
-        List<bool> pathsFound = new List<bool>();
 
-        GenerateLevel();
-        searchSpace.UpdateSearchSpace();
-
-        for (int i = 0; i < lanes.Count; i++)
+        while (!validLevel)
         {
-            searchSpace.startRow.Add(searchSpace.tiles[i]);
-        }
-        for (int i = numberOfRows * lanes.Count - lanes.Count; i < numberOfRows * lanes.Count; i++)
-        {
-            pathsFound.Add(UsePathfinder(searchSpace.tiles[i]));
-        }
 
-        if (pathsFound.Contains(true))
-            validLevel = true;
 
-        Debug.Log("The level is possible: " + validLevel);
+            GenerateLevel();
+            searchSpace.UpdateSearchSpace();
+
+
+            for (int i = 0; i < lanes.Count; i++)
+            {
+                searchSpace.startRow.Add(searchSpace.tiles[i]);
+            }
+
+            for (int i = numberOfRows * lanes.Count - lanes.Count; i < numberOfRows * lanes.Count; i++)
+            {
+                bool found = UsePathfinderOnce(searchSpace.tiles[i]);
+
+                if (found)
+                {
+                    validLevel = true;
+                    break;
+                }
+
+            }
+
+
+           // Debug.Log("The level is possible: " + validLevel);
+        }
 
 
 
@@ -218,10 +219,14 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int i = 0; i < searchSpace.tiles.Count; i++)
             {
-                Obstacle obstacle = searchSpace.tiles[i].GetComponent<Tile>().obstacle;
-                Transform transform = searchSpace.tiles[i].transform;
+                Tile tile = searchSpace.tiles[i].GetComponent<Tile>();
+                if (tile.hasObstacle)
+                {
+                    Obstacle obstacle = tile.obstacle;
+                    Transform transform = searchSpace.tiles[i].transform;
 
-                InstantiateObstacle(obstacle, transform, levelObstacles.transform);
+                    InstantiateObstacle(obstacle, transform, levelObstacles.transform);
+                }
             }
         }
     }
@@ -264,6 +269,7 @@ public class LevelGenerator : MonoBehaviour
     /// <returns>Obstacle to be spawned. Might return null if</returns>
     private Obstacle ChooseObstacle(List<Obstacle> obstacles, Transform transformParent)
     {
+        Obstacle obstacle;
         //look for all the frequently spawning obstacles, they have priority
         for (int i = 0; i < obstacles.Count; i++)
         {
@@ -274,7 +280,9 @@ public class LevelGenerator : MonoBehaviour
                     float dist = Mathf.Abs(obstacles[i].firstSpawnPosition.z - transformParent.position.z);
                     if (Mathf.Approximately(dist, 0))
                     {
-                        return obstacles[i];
+                        obstacles[i].lastInstance = transformParent;
+                        obstacle = obstacles[i];
+                        goto ObstacleChosen;
                     }
                 }
                 else
@@ -282,11 +290,14 @@ public class LevelGenerator : MonoBehaviour
                     float dist = Mathf.Abs(obstacles[i].lastInstance.position.z - transformParent.position.z);
                     if (dist >= obstacles[i].spacing)
                     {
-                        return obstacles[i];
+                        obstacles[i].lastInstance = transformParent;
+                        obstacle = obstacles[i];
+                        goto ObstacleChosen;
                     }
                 }
             }
         }
+
 
         // if there wasn't any frequently spawning obstacles matching this position, we look to the randomly spawning obstacles
         // Roulette Wheel Selection
@@ -302,7 +313,8 @@ public class LevelGenerator : MonoBehaviour
 
                 if (rand <= preProbability)
                 {
-                    return obstacles[i];
+                    obstacle = obstacles[i];
+                    goto ObstacleChosen;
                 }
             }
             if (preProbability > 1)
@@ -311,7 +323,10 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+
         return null;
+    ObstacleChosen:
+        return obstacle;
     }
 
 
@@ -320,6 +335,36 @@ public class LevelGenerator : MonoBehaviour
         pathfinder.searchSpace = searchSpace;
         pathfinder.ResetPathfinder();
         return pathfinder.CheckAllPaths(node);
+    }
+
+    private bool UsePathfinderOnce(GameObject node)
+    {
+        pathfinder.searchSpace = searchSpace;
+        pathfinder.ResetPathfinder();
+        return pathfinder.CheckForAPath(node);
+    }
+
+
+
+    private void OnDrawGizmos()
+    {
+        if (pathfinder.path.Count > 0)
+        {
+            Vector3 first = pathfinder.path[0].transform.position;
+            Vector3 second;
+            for (int i = 1; i < pathfinder.path.Count; i++)
+            {
+                second = pathfinder.path[i].transform.position;
+
+                first += Vector3.up;
+                second += Vector3.up;
+
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(first, second);
+
+                first = second - Vector3.up;
+            }
+        }
     }
 }
 

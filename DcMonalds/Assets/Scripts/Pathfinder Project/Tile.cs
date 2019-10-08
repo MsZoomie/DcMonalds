@@ -25,6 +25,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        /*
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
@@ -34,13 +35,14 @@ public class Tile : MonoBehaviour
                 hasObstacle = true;
             }
         }
-
+        */
     }
 
     public void UpdateTile()
     {
         ResetTile();
         CalculateHeuristicCost();
+        CalculateCost();
     }
 
 

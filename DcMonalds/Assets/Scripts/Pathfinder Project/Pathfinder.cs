@@ -173,25 +173,37 @@ public class Pathfinder : MonoBehaviour
         {
             searchSpace.startNode = searchSpace.startRow[i];
             bool found = FindPath();
-            if (found)
-            {
-                //Debug.Log("There is a path to this node", currentNode);
-                return true;
-            }
-            else
-            {
-                pathsFound.Add(found);
-            }
+            pathsFound.Add(found);
         }
 
         if (!pathsFound.Contains(true))
         {
-            Debug.LogError("There is no available path from start row to current tile.", currentNode);
+            //Debug.LogError("There is no available path from start row to current tile.", currentNode);
             return false;
         }
 
         return true;
     }
+
+
+    public bool CheckForAPath(GameObject currentNode)
+    {
+        pathsFound.Clear();
+        searchSpace.endNode = currentNode;
+
+        for (int i = 0; i < searchSpace.startRow.Count; i++)
+        {
+            searchSpace.startNode = searchSpace.startRow[i];
+            bool found = FindPath();
+            if (found)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     public void ResetPathfinder()
     {
@@ -203,5 +215,6 @@ public class Pathfinder : MonoBehaviour
         pathFound = false;
         deadend = false;
     }
+
 
 }
