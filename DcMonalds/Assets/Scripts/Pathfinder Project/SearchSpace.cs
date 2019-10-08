@@ -29,4 +29,5 @@ public class SearchSpace : MonoBehaviour
     {
         tiles.Add(node);
     }
+
 }

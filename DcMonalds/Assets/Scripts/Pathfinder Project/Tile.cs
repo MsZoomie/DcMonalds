@@ -16,6 +16,8 @@ public class Tile : MonoBehaviour
 
     private SearchSpace searchSpace;
 
+    public Obstacle obstacle;
+
     private void Awake()
     {
         searchSpace = FindObjectOfType<SearchSpace>();

@@ -51,6 +51,7 @@ public class Pathfinder : MonoBehaviour
             if (tempList.Count <= 0)
             {
                 deadend = true;
+                //Debug.Log("deadend");
                 return !deadend;
             }
             else    //not dead end
@@ -92,7 +93,7 @@ public class Pathfinder : MonoBehaviour
         GameObject rightNode = searchSpace.tiles.Find(x => x.transform.position == rightNodePos);
         GameObject frontNode = searchSpace.tiles.Find(x => x.transform.position == frontNodePos);
 
-
+        
         //Add the adjecent nodes to the open list if possible
         AddNodeToOpenList(leftNode, node);
         AddNodeToOpenList(rightNode, node);
@@ -171,12 +172,21 @@ public class Pathfinder : MonoBehaviour
         for (int i = 0; i < searchSpace.startRow.Count; i++)
         {
             searchSpace.startNode = searchSpace.startRow[i];
-            pathsFound.Add(FindPath());
+            bool found = FindPath();
+            if (found)
+            {
+                Debug.Log("There is a path to this node", currentNode);
+                return true;
+            }
+            else
+            {
+                pathsFound.Add(found);
+            }
         }
 
         if (!pathsFound.Contains(true))
         {
-            //Debug.LogError("There is no available path from start row to current tile.");
+            Debug.LogError("There is no available path from start row to current tile.", currentNode);
             return false;
         }
 
