@@ -109,10 +109,11 @@ public class LevelGenerator : MonoBehaviour
 
         GameObject levelObstacles = new GameObject("Obstacles");
         levelObstacles.transform.SetParent(level.transform);
-        pathfinder.ResetPathfinder();
-        pathfinder.searchSpace = searchSpace;
+        
 
-        List<GameObject> secondRowToCheck = new List<GameObject>();
+        //List<GameObject> secondRowToCheck = new List<GameObject>();
+
+
 
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
@@ -122,7 +123,8 @@ public class LevelGenerator : MonoBehaviour
             row.transform.SetParent(rows.transform);
 
             searchSpace.startRow.Clear();
-
+            
+           
             if (rowIndex >= rowToStartPathfinderFrom)
             {
                 for (int i = 0; i < lanes.Count; i++)
@@ -133,6 +135,7 @@ public class LevelGenerator : MonoBehaviour
                     searchSpace.startRow.Add(searchSpace.tiles[x]);
                 }
             }
+            
 
             int obstaclesOnThisRow = 0;
 
@@ -143,24 +146,27 @@ public class LevelGenerator : MonoBehaviour
                 GameObject node = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
                 searchSpace.AddTile(node);
                 searchSpace.endNode = node;
-
-                // add the tile to next row to be examined
-                Tile tile = node.GetComponent<Tile>();
-                //tile.AddToEndRow();
-                tile.UpdateTile();
                 
+               /* if(rowIndex == 0)
+                {
+                    searchSpace.startRow.Add(node);
+                }*/
+
+
+                Tile tile = node.GetComponent<Tile>();
+                tile.UpdateTile();
 
                 //if there's already an obstacle here, we don't want to add a new one
-                if (tile.hasObstacle || obstaclesOnThisRow >= 4)
+                if (tile.hasObstacle)
                 {
-                    obstaclesOnThisRow++;
+                    //obstaclesOnThisRow++;
                     goto ObstacleAdded;
                 }
 
 
                 //do pathfinder
                 bool placeObstacle = true;
-                if (rowIndex > rowToStartPathfinderFrom)
+                if (rowIndex > rowToStartPathfinderFrom - 1)
                 {
                    // searchSpace.tiles[];
                     placeObstacle = UsePathfinder(node);
@@ -174,7 +180,10 @@ public class LevelGenerator : MonoBehaviour
                         bool placedObstacle = InstantiateObstacle(lanes[laneIndex].obstacles, node.transform, levelObstacles.transform);
 
                         if (placedObstacle)
+                        {
+                            tile.UpdateTile();
                             obstaclesOnThisRow++;
+                        }
                     }
                 }
                 ObstacleAdded: { }
@@ -273,6 +282,8 @@ public class LevelGenerator : MonoBehaviour
 
     private bool UsePathfinder(GameObject node)
     {
+        pathfinder.searchSpace = searchSpace;
+        pathfinder.ResetPathfinder();
         return pathfinder.CheckAllPaths(node);
     }
 }
