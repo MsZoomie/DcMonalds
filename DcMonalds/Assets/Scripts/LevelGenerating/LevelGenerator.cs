@@ -19,6 +19,8 @@ public class LevelGenerator : MonoBehaviour
     private GameObject grassPrefab;
     private GameObject roadPrefab;
 
+    private GameObject levelObstacles;
+
     private SearchSpace searchSpace;
     public Pathfinder pathfinder;
 
@@ -107,7 +109,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject rows = new GameObject("Rows");
         rows.transform.SetParent(level.transform);
 
-        GameObject levelObstacles = new GameObject("Obstacles");
+        levelObstacles = new GameObject("Obstacles");
         levelObstacles.transform.SetParent(level.transform);
         
 
@@ -137,7 +139,7 @@ public class LevelGenerator : MonoBehaviour
             }
             
 
-            int obstaclesOnThisRow = 0;
+            
 
             for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
             {
@@ -177,16 +179,49 @@ public class LevelGenerator : MonoBehaviour
                 {
                     if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
                     {
-                        bool placedObstacle = InstantiateObstacle(lanes[laneIndex].obstacles, node.transform, levelObstacles.transform);
-
-                        if (placedObstacle)
-                        {
-                            tile.UpdateTile();
-                            obstaclesOnThisRow++;
-                        }
+                        tile.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, node.transform);
+                        if (tile.obstacle != null)
+                            tile.hasObstacle = true;
                     }
                 }
                 ObstacleAdded: { }
+            }
+        }
+    }
+
+
+    public void ChooseLevel()
+    {
+        bool validLevel = false;
+        List<bool> pathsFound = new List<bool>();
+
+        GenerateLevel();
+        searchSpace.UpdateSearchSpace();
+
+        for (int i = 0; i < lanes.Count; i++)
+        {
+            searchSpace.startRow.Add(searchSpace.tiles[i]);
+        }
+        for (int i = numberOfRows * lanes.Count - lanes.Count; i < numberOfRows * lanes.Count; i++)
+        {
+            pathsFound.Add(UsePathfinder(searchSpace.tiles[i]));
+        }
+
+        if (pathsFound.Contains(true))
+            validLevel = true;
+
+        Debug.Log("The level is possible: " + validLevel);
+
+
+
+        if (validLevel)
+        {
+            for (int i = 0; i < searchSpace.tiles.Count; i++)
+            {
+                Obstacle obstacle = searchSpace.tiles[i].GetComponent<Tile>().obstacle;
+                Transform transform = searchSpace.tiles[i].transform;
+
+                InstantiateObstacle(obstacle, transform, levelObstacles.transform);
             }
         }
     }
@@ -200,9 +235,9 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="obstacle">The obstacle to be instatiated.</param>
     /// <param name="transformParent">Transform of the tile the obstacle will be placed upon.</param>
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
-    private bool InstantiateObstacle(List<Obstacle> obstacles, Transform transformParent, Transform parentObject)
+    private bool InstantiateObstacle(Obstacle obstacle, Transform transformParent, Transform parentObject)
     {
-        Obstacle obstacle = ChooseObstacle(obstacles, transformParent);
+       
         Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
         if (obstacle == null)
@@ -292,6 +327,7 @@ public class LevelGenerator : MonoBehaviour
 
 public class Level : MonoBehaviour
 {
+    
 }
 
 

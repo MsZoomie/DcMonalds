@@ -55,11 +55,11 @@ public class Tile : MonoBehaviour
 
     public void AddToEndRow()
     {
-        searchSpace.nextRowToCheck.Add(gameObject);
+        searchSpace.endRow.Add(gameObject);
     }
     public void RemoveFromEndRow()
     {
-        searchSpace.nextRowToCheck.Remove(gameObject);
+        searchSpace.endRow.Remove(gameObject);
     }
 
     public bool GetWalkability()
@@ -144,7 +144,7 @@ public class Tile : MonoBehaviour
 
     private void ResetTile()
     {
-        hasObstacle = false;
+        //hasObstacle = false;
 
         tileCost = 0.0f;
         heuristicCost = 0.0f;
@@ -157,14 +157,14 @@ public class Tile : MonoBehaviour
             fromStartCost = 0;
         }
         
-        RaycastHit hit;
+       /* RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
         {
             if (hit.collider.CompareTag("Obstacle"))
             {
                 hasObstacle = true;
             }
-        }
+        }*/
     }
 
 }

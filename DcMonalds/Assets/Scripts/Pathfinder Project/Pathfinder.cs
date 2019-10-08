@@ -175,7 +175,7 @@ public class Pathfinder : MonoBehaviour
             bool found = FindPath();
             if (found)
             {
-                Debug.Log("There is a path to this node", currentNode);
+                //Debug.Log("There is a path to this node", currentNode);
                 return true;
             }
             else

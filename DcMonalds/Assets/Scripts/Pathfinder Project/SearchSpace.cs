@@ -7,7 +7,7 @@ public class SearchSpace : MonoBehaviour
 {
     public List <GameObject> tiles = new List<GameObject> ();
     public List<GameObject> startRow = new List<GameObject>();
-    public List<GameObject> nextRowToCheck = new List<GameObject> ();
+    public List<GameObject> endRow = new List<GameObject> ();
 
     public GameObject endNode;
     public GameObject startNode;
@@ -30,4 +30,11 @@ public class SearchSpace : MonoBehaviour
         tiles.Add(node);
     }
 
+
+    public void UpdateSearchSpace()
+    {
+        startRow.Clear();
+        endRow.Clear();
+        GetAllTiles();
+    }
 }
