@@ -25,7 +25,9 @@ public class LevelGenerator : MonoBehaviour
     private GameObject levelObstacles;
 
     private SearchSpace searchSpace;
-    
+
+    [HideInInspector]
+    public int tilesChecked = 0;
 
     private void Awake()
     {
@@ -121,8 +123,8 @@ public class LevelGenerator : MonoBehaviour
                 Tile currentNode = currentTile.GetComponent<Tile>();
                 searchSpace.AddTile(currentNode);
 
-                
-                currentNode.CheckForObstacle();
+                tilesChecked = 0;
+                currentNode.CheckForObstacle(this);
 
 
                 //if there's already an obstacle here, we don't want to add a new one

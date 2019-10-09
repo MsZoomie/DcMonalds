@@ -18,6 +18,8 @@ public class Tile : MonoBehaviour
 
     public ObstacleInstance obstacle;
 
+    
+
     private void Awake()
     {
         searchSpace = FindObjectOfType<SearchSpace>();
@@ -119,8 +121,9 @@ public class Tile : MonoBehaviour
     /// and in that case sets variable hasObstacle to true and the tilesCovered of the obstacle on this tile.
     /// </summary>
     /// <returns>Wheter there's an obstacle on this tile.</returns>
-    public bool CheckForObstacle()
+    public bool CheckForObstacle(LevelGenerator levelGenerator)
     {
+        Debug.Log("times checked: " + levelGenerator.tilesChecked);
         if (hasObstacle)
         {
             return true;
@@ -131,18 +134,29 @@ public class Tile : MonoBehaviour
             pos += Vector3.back;
             Tile tileInFront = searchSpace.tiles.Find(x => x.gameObject.transform.position == pos);
 
-            if (tileInFront == null)
+            if (tileInFront != null && tileInFront.hasObstacle)
             {
-                hasObstacle = false;
-                return false;
-            }
-            else if (tileInFront.hasObstacle && tileInFront.obstacle.obstaclePrefab != null && tileInFront.obstacle.obstaclePrefab.tilesCovered > 1)
-            {
-                hasObstacle = tileInFront.CheckForObstacle();
-                return true;
+                if (tileInFront.obstacle.obstaclePrefab != null)
+                {
+                    if (tileInFront.obstacle.obstaclePrefab.tilesCovered > 1 && tileInFront.obstacle.obstaclePrefab.tilesCovered >= levelGenerator.tilesChecked)
+                    {
+                        hasObstacle = true;
+                    }
+                    else
+                    {
+                        hasObstacle = false;
+                    }
+                    return hasObstacle;
+                }
+
+
+                Debug.Log("Calling Check for Obstacle recursive");
+                levelGenerator.tilesChecked++;
+                hasObstacle = tileInFront.CheckForObstacle(levelGenerator);
+                return hasObstacle;
+
             }
 
-            hasObstacle = false;
             return false;
         }
     }
