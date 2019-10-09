@@ -25,21 +25,6 @@ public class Tile : MonoBehaviour
         searchSpace = FindObjectOfType<SearchSpace>();
     }
 
-    private void Start()
-    {
-        /*
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
-        {
-            if (hit.collider.CompareTag("Obstacle"))
-            {
-                hasObstacle = true;
-            }
-        }
-        */
-    }
-
     public void UpdateTile()
     {
         ResetTile();
@@ -68,10 +53,6 @@ public class Tile : MonoBehaviour
     public bool GetWalkability()
     {
         return !hasObstacle;
-    }
-    public void SetWalkability(bool isWalkable)
-    {
-        hasObstacle = !isWalkable;
     }
 
 
@@ -121,43 +102,47 @@ public class Tile : MonoBehaviour
     /// and in that case sets variable hasObstacle to true and the tilesCovered of the obstacle on this tile.
     /// </summary>
     /// <returns>Wheter there's an obstacle on this tile.</returns>
-    public bool CheckForObstacle(LevelGenerator levelGenerator)
+    public bool CheckForObstacle(int counter)
     {
-        Debug.Log("times checked: " + levelGenerator.tilesChecked);
-        if (hasObstacle)
+        counter++;
+
+        if (hasObstacle && counter <= 1)
         {
             return true;
         }
-        else
+
+
+        Vector3 pos = gameObject.transform.position;
+        pos += Vector3.back;
+        Tile tileInFront = searchSpace.tiles.Find(x => x.gameObject.transform.position == pos);
+
+        //there's no tile in front, therefor there's no obstacle in front
+        if (tileInFront == null)
         {
-            Vector3 pos = gameObject.transform.position;
-            pos += Vector3.back;
-            Tile tileInFront = searchSpace.tiles.Find(x => x.gameObject.transform.position == pos);
-
-            if (tileInFront != null && tileInFront.hasObstacle)
-            {
-                if (tileInFront.obstacle.obstaclePrefab != null)
-                {
-                    if (tileInFront.obstacle.obstaclePrefab.tilesCovered > 1 && tileInFront.obstacle.obstaclePrefab.tilesCovered >= levelGenerator.tilesChecked)
-                    {
-                        hasObstacle = true;
-                    }
-                    else
-                    {
-                        hasObstacle = false;
-                    }
-                    return hasObstacle;
-                }
-
-
-                Debug.Log("Calling Check for Obstacle recursive");
-                levelGenerator.tilesChecked++;
-                hasObstacle = tileInFront.CheckForObstacle(levelGenerator);
-                return hasObstacle;
-
-            }
-
             return false;
+        }
+
+
+        //there's no obstacle in front
+        if (!tileInFront.hasObstacle)
+        {
+            return false;
+        }
+
+
+        //if there is an obstacle in front and it's the first of the tiles it's covering
+        if (tileInFront.obstacle.obstaclePrefab != null)
+        {
+            bool obstacle = false;
+            if (tileInFront.obstacle.obstaclePrefab.tilesCovered > 1 && tileInFront.obstacle.obstaclePrefab.tilesCovered > counter)
+            {
+                obstacle = true;
+            }
+            return obstacle;
+        }
+        else    //if there's an obstacle in front and it's not the first of the tiles it's covering
+        {
+            return tileInFront.CheckForObstacle(counter);
         }
     }
 

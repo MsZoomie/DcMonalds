@@ -49,7 +49,7 @@ public class Pathfinder : MonoBehaviour
             List<Tile> tempList = new List<Tile>(openList);
 
             Tile nodeWithSmallestCost = null;
-            float currentSmallestCost = 10000;   //using 10000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
+            float currentSmallestCost = float.PositiveInfinity;   //using 10 000 000 since the search space isn't very large, if using a larger search spece, increase currentSmallestCost
 
             //dead end
             if (tempList.Count <= 0)

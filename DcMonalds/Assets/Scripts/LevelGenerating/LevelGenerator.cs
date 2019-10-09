@@ -11,14 +11,10 @@ public class LevelGenerator : MonoBehaviour
     private int rowToStartPathfinderFrom = 2;
     private int numberOfLanes;
 
-    /*
-    [SerializeField]
-    private List<LaneInfo> lanes = new List<LaneInfo>();
-    */
-
+    [Space]
     public LevelTheme theme;
     
-
+    [Space]
     public Pathfinder pathfinder;
 
     
@@ -123,8 +119,7 @@ public class LevelGenerator : MonoBehaviour
                 Tile currentNode = currentTile.GetComponent<Tile>();
                 searchSpace.AddTile(currentNode);
 
-                tilesChecked = 0;
-                currentNode.CheckForObstacle(this);
+                currentNode.hasObstacle = currentNode.CheckForObstacle(0);
 
 
                 //if there's already an obstacle here, we don't want to add a new one
@@ -134,12 +129,12 @@ public class LevelGenerator : MonoBehaviour
                 }
 
 
-                //do pathfinder
+               //do pathfinder
                 bool placeObstacle = true;
-                if (rowIndex > rowToStartPathfinderFrom - 1)
+               /* if (rowIndex > rowToStartPathfinderFrom - 1)
                 {
                     placeObstacle = UsePathfinder(currentNode);
-                }
+                }*/
                 
 
                 if (placeObstacle)

@@ -12,7 +12,7 @@ public class ObstacleInstance
     public int spacing = 2;
     public Vector3 firstSpawnPosition;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Transform lastInstance;
 
     [Tooltip("The sum of all of the randomly spawning obstacle's spawn probability has to be 100 or less.")]

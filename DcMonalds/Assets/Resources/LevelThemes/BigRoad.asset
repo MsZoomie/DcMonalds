@@ -34,7 +34,7 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 20
+      spawnProbability: 25
   - type: 2
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
@@ -42,7 +42,7 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 20
+      spawnProbability: 25
   - type: 2
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: f1e111bc07ce36d4bbff25b8ddaaa88c, type: 2}
@@ -50,13 +50,13 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 10
+      spawnProbability: 25
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
       spawnFrequently: 0
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 10
+      spawnProbability: 25
   - type: 2
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
@@ -64,7 +64,7 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 50
+      spawnProbability: 25
   - type: 0
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
