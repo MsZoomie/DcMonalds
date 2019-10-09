@@ -12,7 +12,7 @@ public class LevelGeneratorEditor : Editor
 
         if (GUILayout.Button("Generate"))
         {
-            ((LevelGenerator)target).GenerateLevel();
+            ((LevelGenerator)target).ChooseLevel();
         }
     }
 

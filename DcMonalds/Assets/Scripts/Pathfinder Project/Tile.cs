@@ -12,11 +12,11 @@ public class Tile : MonoBehaviour
     public float heuristicCost = 0.0f;
     public float fromStartCost = 1000.0f;
     
-    public GameObject parentTile;
+    public Tile parentTile;
 
     private SearchSpace searchSpace;
 
-    public Obstacle obstacle;
+    public ObstacleInstance obstacle;
 
     private void Awake()
     {
@@ -25,6 +25,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        /*
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
@@ -34,7 +35,7 @@ public class Tile : MonoBehaviour
                 hasObstacle = true;
             }
         }
-
+        */
     }
 
     public void UpdateTile()
@@ -46,20 +47,20 @@ public class Tile : MonoBehaviour
 
     public void AddToStartRow()
     {
-        searchSpace.startRow.Add(gameObject);
+        searchSpace.startRow.Add(this);
     }
     public void RemoveFromStartRow()
     {
-        searchSpace.startRow.Remove(gameObject);
+        searchSpace.startRow.Remove(this);
     }
 
     public void AddToEndRow()
     {
-        searchSpace.nextRowToCheck.Add(gameObject);
+        searchSpace.endRow.Add(this);
     }
     public void RemoveFromEndRow()
     {
-        searchSpace.nextRowToCheck.Remove(gameObject);
+        searchSpace.endRow.Remove(this);
     }
 
     public bool GetWalkability()
@@ -72,11 +73,11 @@ public class Tile : MonoBehaviour
     }
 
 
-    public GameObject GetParent()
+    public Tile GetParent()
     {
         return parentTile;
     }
-    public void SetParent(GameObject node)
+    public void SetParent(Tile node)
     {
         parentTile = node;
     }
@@ -113,6 +114,41 @@ public class Tile : MonoBehaviour
     }
 
     /// <summary>
+    /// Checks if there's an obstacle on tile. 
+    /// Also checkes if the tile in front of this one has an obstacle that covers more than one tile, 
+    /// and in that case sets variable hasObstacle to true and the tilesCovered of the obstacle on this tile.
+    /// </summary>
+    /// <returns>Wheter there's an obstacle on this tile.</returns>
+    public bool CheckForObstacle()
+    {
+        if (hasObstacle)
+        {
+            return true;
+        }
+        else
+        {
+            Vector3 pos = gameObject.transform.position;
+            pos += Vector3.back;
+            Tile tileInFront = searchSpace.tiles.Find(x => x.gameObject.transform.position == pos);
+
+            if (tileInFront == null)
+            {
+                hasObstacle = false;
+                return false;
+            }
+            else if (tileInFront.hasObstacle && tileInFront.obstacle.obstaclePrefab != null && tileInFront.obstacle.obstaclePrefab.tilesCovered > 1)
+            {
+                hasObstacle = tileInFront.CheckForObstacle();
+                return true;
+            }
+
+            hasObstacle = false;
+            return false;
+        }
+    }
+
+
+    /// <summary>
     /// Calculate heuristic cost with Manhattan method
     /// </summary>
     private void CalculateHeuristicCost()
@@ -144,11 +180,8 @@ public class Tile : MonoBehaviour
 
     private void ResetTile()
     {
-        hasObstacle = false;
-
         tileCost = 0.0f;
         heuristicCost = 0.0f;
-        fromStartCost = 1000.0f;
         
         parentTile = null;
 
@@ -156,15 +189,6 @@ public class Tile : MonoBehaviour
         {
             fromStartCost = 0;
         }
-        
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 3))
-        {
-            if (hit.collider.CompareTag("Obstacle"))
-            {
-                hasObstacle = true;
-            }
-        }
+       
     }
-
 }

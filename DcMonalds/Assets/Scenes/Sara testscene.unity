@@ -216,6 +216,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &13265346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -371,6 +378,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &18127200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -480,7 +494,14 @@ MonoBehaviour:
   tileCost: 3
   heuristicCost: 0
   fromStartCost: 3
-  parentTile: {fileID: 1668342887}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &29589405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -650,6 +671,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &51962536
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +766,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &55445823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -885,6 +920,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &64193180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1040,7 +1082,14 @@ MonoBehaviour:
   tileCost: 7
   heuristicCost: 0
   fromStartCost: 7
-  parentTile: {fileID: 524026169}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &71608283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1137,6 +1186,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &82020298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1338,6 +1394,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &107871045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1448,6 +1511,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &111198120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1707,6 +1777,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &134469619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1816,7 +1893,14 @@ MonoBehaviour:
   tileCost: 1
   heuristicCost: 0
   fromStartCost: 1
-  parentTile: {fileID: 1742208710}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &140918991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2080,6 +2164,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &161623939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2249,6 +2340,13 @@ MonoBehaviour:
   heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &172432860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2531,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &172529759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2673,8 +2778,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &175977685 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 175977684}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &177550553 stripped
@@ -2809,6 +2913,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &179554845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2919,6 +3030,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &180186548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3088,6 +3206,13 @@ MonoBehaviour:
   heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &192855312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3264,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &192855315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3386,6 +3518,13 @@ MonoBehaviour:
   heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &197386838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,6 +3576,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &197386841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3547,6 +3693,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &202606829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3769,6 +3922,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &214806851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3879,6 +4039,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &220195698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4067,6 +4234,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &227381744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4177,6 +4351,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &228391987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4287,6 +4468,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &242630713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4477,6 +4665,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &260831173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4587,6 +4782,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &263438715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4869,7 +5071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles: []
   startRow: []
-  nextRowToCheck: []
+  endRow: []
   endNode: {fileID: 1972448624}
   startNode: {fileID: 0}
 --- !u!4 &277636926
@@ -5008,6 +5210,13 @@ MonoBehaviour:
   heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &295270112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,6 +5268,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &295270115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5228,6 +5444,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &302166218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,6 +5652,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &310662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5664,6 +5894,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &332263650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5774,6 +6011,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &336790266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6251,6 +6495,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &364048951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6436,6 +6687,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &366379360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6665,8 +6923,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &380610325 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 380610324}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &382967292
@@ -6729,7 +6986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles: []
   startRow: []
-  nextRowToCheck: []
+  endRow: []
   endNode: {fileID: 0}
   startNode: {fileID: 0}
 --- !u!1001 &390671921
@@ -6833,8 +7090,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &390671922 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 390671921}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &391107105
@@ -7035,7 +7291,14 @@ MonoBehaviour:
   tileCost: 5
   heuristicCost: 0
   fromStartCost: 5
-  parentTile: {fileID: 1114977041}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &429237866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7146,6 +7409,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &432853143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7256,6 +7526,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &435672255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7366,6 +7643,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &436720536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7476,6 +7760,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &440837595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7586,6 +7877,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &446064571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7748,6 +8046,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &464237550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7858,6 +8163,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &465153691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8257,6 +8569,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &479022621
 GameObject:
   m_ObjectHideFlags: 0
@@ -8367,6 +8686,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &481334397
 GameObject:
   m_ObjectHideFlags: 0
@@ -8494,6 +8820,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &485592795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8604,6 +8937,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &487989996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8764,8 +9104,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &492765943 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 492765942}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &495052508
@@ -8819,6 +9158,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &495052511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8988,6 +9334,13 @@ MonoBehaviour:
   heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &499033468
 GameObject:
   m_ObjectHideFlags: 0
@@ -9098,6 +9451,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &501939139
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,7 +9531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles: []
   startRow: []
-  nextRowToCheck: []
+  endRow: []
   endNode: {fileID: 0}
   startNode: {fileID: 0}
 --- !u!1 &505679032
@@ -9315,6 +9675,13 @@ MonoBehaviour:
   heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &507597094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9366,6 +9733,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &507597097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9572,6 +9946,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &511826575
 GameObject:
   m_ObjectHideFlags: 0
@@ -9623,6 +10004,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &511826578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9732,7 +10120,14 @@ MonoBehaviour:
   tileCost: 6
   heuristicCost: 0
   fromStartCost: 6
-  parentTile: {fileID: 429237863}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &524026172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9843,6 +10238,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &537184050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9953,6 +10355,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &539370408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10153,6 +10562,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &548190882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10406,6 +10822,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &552575844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10516,6 +10939,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &555166836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10626,6 +11056,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &557469343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10814,6 +11251,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &567133880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10924,6 +11368,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &568614555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11084,8 +11535,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &570591690 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 570591689}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &571927801
@@ -11138,7 +11588,14 @@ MonoBehaviour:
   tileCost: 6
   heuristicCost: 0
   fromStartCost: 6
-  parentTile: {fileID: 429237863}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &571927804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11249,6 +11706,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &572949884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11359,6 +11823,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &575772722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11603,6 +12074,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &591560073
 GameObject:
   m_ObjectHideFlags: 0
@@ -11775,6 +12253,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &601859327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11944,6 +12429,13 @@ MonoBehaviour:
   heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &617016147
 GameObject:
   m_ObjectHideFlags: 0
@@ -12026,6 +12518,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &619219357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12301,6 +12800,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &638201089
 GameObject:
   m_ObjectHideFlags: 0
@@ -12352,6 +12858,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &638201092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12499,6 +13012,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &652353895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12609,6 +13129,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &657728704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12719,6 +13246,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &667405958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12888,6 +13422,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &674561096
 GameObject:
   m_ObjectHideFlags: 0
@@ -13094,6 +13635,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &686649024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13204,6 +13752,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &688430124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13437,6 +13992,13 @@ MonoBehaviour:
   heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!4 &696984147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -13713,6 +14275,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &705898158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13981,6 +14550,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &711578897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14122,6 +14698,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &717022411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14363,6 +14946,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &735784904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14473,6 +15063,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &736229501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14786,8 +15383,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &753589722 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 753589721}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &763073487
@@ -15080,6 +15676,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &782592336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15265,6 +15868,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &785253967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15455,6 +16065,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &788953183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15565,6 +16182,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &790561530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15675,6 +16299,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &793127417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15785,6 +16416,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &796445904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15954,6 +16592,13 @@ MonoBehaviour:
   heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &806854421
 GameObject:
   m_ObjectHideFlags: 0
@@ -16005,6 +16650,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &806854424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16115,6 +16767,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &808824668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16284,6 +16943,13 @@ MonoBehaviour:
   heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &811859608
 GameObject:
   m_ObjectHideFlags: 0
@@ -16468,6 +17134,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &817495357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16628,8 +17301,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &834868010 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 834868009}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &837182157
@@ -16683,6 +17355,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &837182160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16977,6 +17656,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &861646438
 GameObject:
   m_ObjectHideFlags: 0
@@ -17028,6 +17714,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &861646441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17268,8 +17961,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &863830178 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 863830177}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &866668772
@@ -17323,6 +18015,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &866668775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17433,6 +18132,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &869210642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17580,6 +18286,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &872596911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17727,6 +18440,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &877765721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17896,6 +18616,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &889324941
 GameObject:
   m_ObjectHideFlags: 0
@@ -17947,6 +18674,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &889324944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18135,6 +18869,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &914001281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18244,7 +18985,14 @@ MonoBehaviour:
   tileCost: 7
   heuristicCost: 0
   fromStartCost: 7
-  parentTile: {fileID: 524026169}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &917093699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18405,8 +19153,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &919910924 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 919910923}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &921196408
@@ -18460,6 +19207,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &921196411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18620,8 +19374,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &927453047 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 927453046}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &930851683
@@ -19016,6 +19769,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &955389689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19335,6 +20095,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &966718743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19501,8 +20268,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &970692373 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 970692372}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &975650474
@@ -19555,7 +20321,14 @@ MonoBehaviour:
   tileCost: 8
   heuristicCost: 0
   fromStartCost: 8
-  parentTile: {fileID: 917093696}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &975650477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19965,6 +20738,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &999593328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20075,6 +20855,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1017417721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20185,6 +20972,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1017476844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20332,6 +21126,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1022040222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20442,6 +21243,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1023831210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20589,6 +21397,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1029952592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20869,6 +21684,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1039192470
 GameObject:
   m_ObjectHideFlags: 0
@@ -20920,6 +21742,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1039192473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21030,6 +21859,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1042890322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21746,6 +22582,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1090795786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21856,6 +22699,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1100401396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22204,6 +23054,13 @@ MonoBehaviour:
   heuristicCost: 14
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1111217048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22323,7 +23180,14 @@ MonoBehaviour:
   tileCost: 4
   heuristicCost: 0
   fromStartCost: 4
-  parentTile: {fileID: 29589402}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1114977044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22434,6 +23298,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1119019926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22589,6 +23460,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1137302312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22679,83 +23557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfRows: 15
-  rowToStartPathfinderFrom: 2
-  lanes:
-  - type: 0
-    obstacles:
-    - prefab: {fileID: 4050818447559825408, guid: ea7141a1457bef94fa9e12b327e8b42c,
-        type: 3}
-      spawnFrequently: 1
-      spacing: 5
-      firstSpawnPosition: {x: -0.5, y: 1, z: 0}
-      lastInstance: {fileID: 845911595}
-      spawnProbability: 30
-  - type: 1
-    obstacles:
-    - prefab: {fileID: 734459378979073089, guid: 8d3e4a31fa9dd914fa61c41d98a751c9,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0.5, y: 1, z: 0.5}
-      lastInstance: {fileID: 0}
-      spawnProbability: 19
-    - prefab: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0.5, y: 1, z: 0.5}
-      lastInstance: {fileID: 0}
-      spawnProbability: 22
-  - type: 2
-    obstacles:
-    - prefab: {fileID: 3226054797211439331, guid: 6dfd2be79b65b7c4fa05d2e9ea076705,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0, y: 0, z: 0}
-      lastInstance: {fileID: 0}
-      spawnProbability: 73
-  - type: 2
-    obstacles:
-    - prefab: {fileID: 3226054797211439331, guid: 6dfd2be79b65b7c4fa05d2e9ea076705,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0, y: 0, z: 0}
-      lastInstance: {fileID: 0}
-      spawnProbability: 27
-  - type: 1
-    obstacles:
-    - prefab: {fileID: 734459378979073089, guid: 8d3e4a31fa9dd914fa61c41d98a751c9,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0, y: 0, z: 0}
-      lastInstance: {fileID: 0}
-      spawnProbability: 47
-    - prefab: {fileID: 1352181107782960611, guid: 276e51125932f824cbfd8334b989568f,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 0
-      firstSpawnPosition: {x: 0, y: 0, z: 0}
-      lastInstance: {fileID: 0}
-      spawnProbability: 23
-  - type: 0
-    obstacles:
-    - prefab: {fileID: 4050818447559825408, guid: ea7141a1457bef94fa9e12b327e8b42c,
-        type: 3}
-      spawnFrequently: 1
-      spacing: 5
-      firstSpawnPosition: {x: 5, y: 1, z: 0}
-      lastInstance: {fileID: 65867545}
-      spawnProbability: 0
-    - prefab: {fileID: 2312989917677360246, guid: 9694e79244777d343885a9d95d4dd4f7,
-        type: 3}
-      spawnFrequently: 0
-      spacing: 5
-      firstSpawnPosition: {x: 5, y: 1, z: 0.5}
-      lastInstance: {fileID: 0}
-      spawnProbability: 27
+  theme: {fileID: 11400000, guid: 499361ee551fe844c858c142c319a2f1, type: 2}
   pathfinder: {fileID: 1143190722}
 --- !u!4 &1143190721
 Transform:
@@ -22786,7 +23588,7 @@ MonoBehaviour:
   searchSpace: {fileID: 2139049924}
   openList: []
   closedList:
-  - {fileID: 364048948}
+  - {fileID: 0}
   path: []
 --- !u!1001 &1144234349
 PrefabInstance:
@@ -23113,8 +23915,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1160909192 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1160909191}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1165139822
@@ -23243,6 +24044,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1165663739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23389,6 +24197,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1171323452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23712,6 +24527,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1190094059
 GameObject:
   m_ObjectHideFlags: 0
@@ -23763,6 +24585,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1190094062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23873,6 +24702,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1194820945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24099,6 +24935,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1217110524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24581,6 +25424,13 @@ MonoBehaviour:
   heuristicCost: 1
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1230325235
 GameObject:
   m_ObjectHideFlags: 0
@@ -24632,6 +25482,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1230325238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25017,6 +25874,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1257620667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25253,6 +26117,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1268478763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25438,6 +26309,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1272538674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25607,6 +26485,13 @@ MonoBehaviour:
   heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1277682726
 GameObject:
   m_ObjectHideFlags: 0
@@ -25658,6 +26543,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1277682729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25856,8 +26748,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1283828826 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1283828825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1288349665
@@ -25911,6 +26802,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1288349668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26261,6 +27159,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1316398366
 GameObject:
   m_ObjectHideFlags: 0
@@ -26371,6 +27276,13 @@ MonoBehaviour:
   heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1318423308
 GameObject:
   m_ObjectHideFlags: 0
@@ -26481,6 +27393,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1321019270
 GameObject:
   m_ObjectHideFlags: 0
@@ -26836,6 +27755,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1326103437
 GameObject:
   m_ObjectHideFlags: 0
@@ -27153,7 +28079,14 @@ MonoBehaviour:
   tileCost: 8
   heuristicCost: 0
   fromStartCost: 8
-  parentTile: {fileID: 917093696}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1333643882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27368,6 +28301,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1340491031
 GameObject:
   m_ObjectHideFlags: 0
@@ -27418,7 +28358,14 @@ MonoBehaviour:
   tileCost: 10
   heuristicCost: 0
   fromStartCost: 10
-  parentTile: {fileID: 2009090457}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1340491034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27579,8 +28526,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1342012043 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1342012042}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1347492874
@@ -27684,8 +28630,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1347492875 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1347492874}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347727714
@@ -27775,6 +28720,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1348142209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27944,6 +28896,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1355585855
 GameObject:
   m_ObjectHideFlags: 0
@@ -28054,6 +29013,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1358241306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28180,6 +29146,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1368388284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28370,6 +29343,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1380250021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28480,6 +29460,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1388134443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28590,6 +29577,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1393076069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28700,6 +29694,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1394777733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28907,6 +29908,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1398583542
 GameObject:
   m_ObjectHideFlags: 0
@@ -28958,6 +29966,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1398583545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29202,6 +30217,13 @@ MonoBehaviour:
   heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1409283510
 GameObject:
   m_ObjectHideFlags: 0
@@ -29348,6 +30370,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1424045546
 GameObject:
   m_ObjectHideFlags: 0
@@ -29399,6 +30428,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1424045549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29574,6 +30610,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1433266258
 GameObject:
   m_ObjectHideFlags: 0
@@ -29684,6 +30727,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1434473678
 GameObject:
   m_ObjectHideFlags: 0
@@ -29766,6 +30816,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1434857207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29876,6 +30933,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 0
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1441096641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30076,6 +31140,13 @@ MonoBehaviour:
   heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1454615246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30394,6 +31465,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1463317517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30751,8 +31829,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1481984444 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1481984443}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1483260911
@@ -30865,6 +31942,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1488137819
 GameObject:
   m_ObjectHideFlags: 0
@@ -31108,6 +32192,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1492654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -31159,6 +32250,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1492654485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31269,6 +32367,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1494367931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31507,8 +32612,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1499657761 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1499657760}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1500886773
@@ -31718,6 +32822,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1513550638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31962,6 +33073,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1533834412
 GameObject:
   m_ObjectHideFlags: 0
@@ -32049,7 +33167,14 @@ MonoBehaviour:
   tileCost: 3
   heuristicCost: 0
   fromStartCost: 3
-  parentTile: {fileID: 1668342887}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1546255264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32232,7 +33357,14 @@ MonoBehaviour:
   tileCost: 1
   heuristicCost: 0
   fromStartCost: 1
-  parentTile: {fileID: 872596908}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1559240091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32343,6 +33475,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1561593300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32614,6 +33753,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1566997729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32724,6 +33870,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1571682115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32871,6 +34024,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1583342679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33056,6 +34216,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1585118156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33362,6 +34529,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1614086984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33472,6 +34646,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1618063680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33582,6 +34763,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1619251212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33697,7 +34885,14 @@ MonoBehaviour:
   tileCost: 11
   heuristicCost: 0
   fromStartCost: 11
-  parentTile: {fileID: 1340491031}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1626695595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33858,8 +35053,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1627120728 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1627120727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627713609
@@ -33972,6 +35166,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!4 &1630125696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1352181107782960612, guid: 276e51125932f824cbfd8334b989568f,
@@ -34029,6 +35230,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1633346426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34198,6 +35406,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1640362321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34299,8 +35514,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1640362322 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1640362321}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640792767
@@ -34522,8 +35736,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1649073379 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1649073378}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651442141
@@ -34577,6 +35790,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1651442144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34841,7 +36061,14 @@ MonoBehaviour:
   tileCost: 2
   heuristicCost: 0
   fromStartCost: 2
-  parentTile: {fileID: 140918988}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1668342890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34952,6 +36179,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1680472785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35121,6 +36355,13 @@ MonoBehaviour:
   heuristicCost: 12
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1689817521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35222,8 +36463,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1689817522 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1689817521}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1690694558
@@ -35351,7 +36591,14 @@ MonoBehaviour:
   tileCost: 8
   heuristicCost: 0
   fromStartCost: 8
-  parentTile: {fileID: 917093696}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1690996224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35462,6 +36709,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1691368559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35631,6 +36885,13 @@ MonoBehaviour:
   heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1708821741
 GameObject:
   m_ObjectHideFlags: 0
@@ -35741,6 +37002,13 @@ MonoBehaviour:
   heuristicCost: 5
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1712056452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35861,6 +37129,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1715330436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35971,6 +37246,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1720306419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36309,6 +37591,13 @@ MonoBehaviour:
   heuristicCost: 14
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1725058120
 GameObject:
   m_ObjectHideFlags: 0
@@ -36505,6 +37794,13 @@ MonoBehaviour:
   heuristicCost: 11
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1727048233
 GameObject:
   m_ObjectHideFlags: 0
@@ -36636,6 +37932,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 0
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1742208713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36746,6 +38049,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1743149185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36960,6 +38270,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1754093856
 GameObject:
   m_ObjectHideFlags: 0
@@ -37381,8 +38698,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1769652282 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1769652281}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1797492019
@@ -37511,6 +38827,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1798832726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37701,6 +39024,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1804896217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37811,6 +39141,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1805917025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37980,6 +39317,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1826334312
 GameObject:
   m_ObjectHideFlags: 0
@@ -38223,6 +39567,13 @@ MonoBehaviour:
   heuristicCost: 10
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1832054492
 GameObject:
   m_ObjectHideFlags: 0
@@ -38333,6 +39684,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1838565864
 GameObject:
   m_ObjectHideFlags: 0
@@ -38384,6 +39742,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1838565867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38494,6 +39859,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1841530791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38743,6 +40115,13 @@ MonoBehaviour:
   heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1855252319
 GameObject:
   m_ObjectHideFlags: 0
@@ -38794,6 +40173,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1855252322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38904,6 +40290,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1855582863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39051,6 +40444,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1877702483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39220,6 +40620,13 @@ MonoBehaviour:
   heuristicCost: 1
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1886129742
 GameObject:
   m_ObjectHideFlags: 0
@@ -39271,6 +40678,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1886129745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39431,8 +40845,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1887649644 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1887649643}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891258121
@@ -39624,6 +41037,13 @@ MonoBehaviour:
   heuristicCost: 13
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1894949970
 GameObject:
   m_ObjectHideFlags: 0
@@ -39734,6 +41154,13 @@ MonoBehaviour:
   heuristicCost: 9
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1896133568
 GameObject:
   m_ObjectHideFlags: 0
@@ -39821,6 +41248,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1897589835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39990,6 +41424,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1912134516
 GameObject:
   m_ObjectHideFlags: 0
@@ -40041,6 +41482,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1912134519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40151,6 +41599,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1913913791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40261,6 +41716,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1914017100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40371,6 +41833,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1921706733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40556,6 +42025,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1927308849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40741,6 +42217,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1930118574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40901,8 +42384,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1931108192 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1931108191}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1939400985
@@ -41106,6 +42588,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1947099586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41207,8 +42696,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1947099587 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1947099586}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948508597
@@ -41297,7 +42785,14 @@ MonoBehaviour:
   tileCost: 9
   heuristicCost: 0
   fromStartCost: 9
-  parentTile: {fileID: 1333643879}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1952165989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41483,6 +42978,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1961773563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41593,6 +43095,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1962725395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41790,8 +43299,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &1968093944 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1968093943}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1972448624
@@ -41904,6 +43412,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1973577258
 GameObject:
   m_ObjectHideFlags: 0
@@ -42014,6 +43529,13 @@ MonoBehaviour:
   heuristicCost: 4
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1974526834
 GameObject:
   m_ObjectHideFlags: 0
@@ -42065,6 +43587,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1974526837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42234,6 +43763,13 @@ MonoBehaviour:
   heuristicCost: 15
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &1985569277
 GameObject:
   m_ObjectHideFlags: 0
@@ -42344,6 +43880,13 @@ MonoBehaviour:
   heuristicCost: 2
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &1987008889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42470,6 +44013,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1988001480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42579,7 +44129,14 @@ MonoBehaviour:
   tileCost: 1
   heuristicCost: 0
   fromStartCost: 1
-  parentTile: {fileID: 2108183258}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &1988446774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42696,6 +44253,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2006511113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42842,7 +44406,14 @@ MonoBehaviour:
   tileCost: 9
   heuristicCost: 0
   fromStartCost: 9
-  parentTile: {fileID: 1333643879}
+  parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2009090460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43137,6 +44708,13 @@ MonoBehaviour:
   heuristicCost: 6
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &2033782495
 GameObject:
   m_ObjectHideFlags: 0
@@ -43224,6 +44802,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2033899969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43446,6 +45031,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2077658212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43556,6 +45148,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2081414744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43789,6 +45388,13 @@ MonoBehaviour:
   heuristicCost: 8
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &2096857291
 GameObject:
   m_ObjectHideFlags: 0
@@ -43899,6 +45505,13 @@ MonoBehaviour:
   heuristicCost: 7
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1001 &2097444573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44000,8 +45613,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &2097444574 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 2097444573}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104779815
@@ -44135,6 +45747,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 0
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2108183261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44304,6 +45923,13 @@ MonoBehaviour:
   heuristicCost: 3
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!1 &2117098206
 GameObject:
   m_ObjectHideFlags: 0
@@ -44466,6 +46092,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2122145110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44576,6 +46209,13 @@ MonoBehaviour:
   heuristicCost: 0
   fromStartCost: 1000
   parentTile: {fileID: 0}
+  obstacle:
+    obstaclePrefab: {fileID: 0}
+    spawnFrequently: 0
+    spacing: 2
+    firstSpawnPosition: {x: 0, y: 0, z: 0}
+    lastInstance: {fileID: 0}
+    spawnProbability: 50
 --- !u!65 &2130033623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44790,104 +46430,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 1742208710}
-  - {fileID: 1441096638}
-  - {fileID: 1559240088}
-  - {fileID: 872596908}
-  - {fileID: 2108183258}
-  - {fileID: 364048948}
-  - {fileID: 140918988}
-  - {fileID: 336790263}
-  - {fileID: 180186545}
-  - {fileID: 1388134440}
-  - {fileID: 1988446771}
-  - {fileID: 1566997726}
-  - {fileID: 1668342887}
-  - {fileID: 1546255261}
-  - {fileID: 179554842}
-  - {fileID: 1017476841}
-  - {fileID: 511826575}
-  - {fileID: 214806848}
-  - {fileID: 29589402}
-  - {fileID: 793127414}
-  - {fileID: 1619251209}
-  - {fileID: 966718740}
-  - {fileID: 485592792}
-  - {fileID: 735784901}
-  - {fileID: 1114977041}
-  - {fileID: 429237863}
-  - {fileID: 571927801}
-  - {fileID: 1838565864}
-  - {fileID: 1171323449}
-  - {fileID: 1022040219}
-  - {fileID: 1434857204}
-  - {fileID: 524026169}
-  - {fileID: 71608280}
-  - {fileID: 172529756}
-  - {fileID: 921196408}
-  - {fileID: 686649021}
-  - {fileID: 975650474}
-  - {fileID: 917093696}
-  - {fileID: 1690996221}
-  - {fileID: 1190094059}
-  - {fileID: 435672252}
-  - {fileID: 228391984}
-  - {fileID: 1952165986}
-  - {fileID: 1333643879}
-  - {fileID: 1380250018}
-  - {fileID: 914001278}
-  - {fileID: 192855312}
-  - {fileID: 1571682112}
-  - {fileID: 1340491031}
-  - {fileID: 2009090457}
-  - {fileID: 1691368556}
-  - {fileID: 806854421}
-  - {fileID: 657728701}
-  - {fileID: 1042890319}
-  - {fileID: 1626695592}
-  - {fileID: 552575841}
-  - {fileID: 1877702480}
-  - {fileID: 788953180}
-  - {fileID: 1583342676}
-  - {fileID: 711578894}
-  - {fileID: 1715330433}
-  - {fileID: 507597094}
-  - {fileID: 1855252319}
-  - {fileID: 688430121}
-  - {fileID: 295270112}
-  - {fileID: 1614086981}
-  - {fileID: 619219354}
-  - {fileID: 197386838}
-  - {fileID: 1463317514}
-  - {fileID: 1424045546}
-  - {fileID: 161623936}
-  - {fileID: 263438712}
-  - {fileID: 866668772}
-  - {fileID: 1277682726}
-  - {fileID: 1090795783}
-  - {fileID: 1974526834}
-  - {fileID: 889324941}
-  - {fileID: 1913913788}
-  - {fileID: 202606826}
-  - {fileID: 1561593297}
-  - {fileID: 487989993}
-  - {fileID: 2081414741}
-  - {fileID: 1743149182}
-  - {fileID: 539370405}
-  - {fileID: 1585118153}
-  - {fileID: 107871042}
-  - {fileID: 1272538671}
-  - {fileID: 260831170}
-  - {fileID: 1398583542}
-  - {fileID: 82020296}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   startRow:
-  - {fileID: 1742208710}
-  - {fileID: 1441096638}
-  - {fileID: 1559240088}
-  - {fileID: 872596908}
-  - {fileID: 2108183258}
-  - {fileID: 364048948}
-  nextRowToCheck: []
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  endRow: []
   endNode: {fileID: 82020296}
   startNode: {fileID: 364048948}
 --- !u!114 &2139049925
@@ -45019,8 +46659,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f759b6dd9434aa34b93799b976ab8ceb, type: 3}
 --- !u!4 &19884648902730415 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3165104488315196227, guid: f759b6dd9434aa34b93799b976ab8ceb,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 19884648902730414}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &734459377379079690
