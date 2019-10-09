@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EasyLevel
   m_EditorClassIdentifier: 
   lanes:
-  - type: 1
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
@@ -21,7 +22,8 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 5
-  - type: 1
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
@@ -29,11 +31,14 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 5
-  - type: 0
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
     obstacles: []
-  - type: 0
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
     obstacles: []
-  - type: 1
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
@@ -41,7 +46,8 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 5
-  - type: 1
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
@@ -49,3 +55,4 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 5
+  extras: []
