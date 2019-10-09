@@ -213,13 +213,13 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckWalkablity(Vector3 tilePos)
     {
-        GameObject tile = searchSpace.tiles.Find 
-               (t => Mathf.Abs(t.transform.position.x - tilePos.x) <= 0.1f
-               && Mathf.Abs(t.transform.position.z - tilePos.z) <= 0.1f );
+        Tile tile = searchSpace.tiles.Find 
+               (t => Mathf.Abs(t.gameObject.transform.position.x - tilePos.x) <= 0.1f
+               && Mathf.Abs(t.gameObject.transform.position.z - tilePos.z) <= 0.1f );
 
         if (tile != null)
         {
-            return tile.GetComponent<Tile>().GetWalkability();
+            return tile.GetWalkability();
         }
         else
         {

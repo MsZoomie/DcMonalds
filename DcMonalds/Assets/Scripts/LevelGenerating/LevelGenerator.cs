@@ -8,10 +8,17 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField]
     public int numberOfRows = 3;
-    public int rowToStartPathfinderFrom = 3;
+    private int rowToStartPathfinderFrom = 2;
 
+    
     [SerializeField]
     private List<LaneInfo> lanes = new List<LaneInfo>();
+
+
+    public LevelTheme theme;
+    
+
+    public Pathfinder pathfinder;
 
 
     // lane prefabs
@@ -19,16 +26,22 @@ public class LevelGenerator : MonoBehaviour
     private GameObject grassPrefab;
     private GameObject roadPrefab;
 
+
     private GameObject levelObstacles;
 
     private SearchSpace searchSpace;
-    public Pathfinder pathfinder;
+    
 
     private void Awake()
     {
         if (pathfinder == null)
         {
             pathfinder = gameObject.AddComponent<Pathfinder>();
+        }
+
+        if (theme == null)
+        {
+            theme = gameObject.AddComponent<LevelTheme>();
         }
 
         if (lanes.Count <= 0)
@@ -39,9 +52,11 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        sidewalkPrefab = UnityEngine.Resources.Load<GameObject>("LanePrefabs/Sidewalk");
-        grassPrefab = UnityEngine.Resources.Load<GameObject>("LanePrefabs/Grass");
-        roadPrefab = UnityEngine.Resources.Load<GameObject>("LanePrefabs/Road");
+
+        sidewalkPrefab = Resources.Load<GameObject>("LanePrefabs/Sidewalk");
+        grassPrefab = Resources.Load<GameObject>("LanePrefabs/Grass");
+        roadPrefab = Resources.Load<GameObject>("LanePrefabs/Road");
+
 
         for (int i = 0; i < lanes.Count; i++)
         {
@@ -68,36 +83,18 @@ public class LevelGenerator : MonoBehaviour
         {
             pathfinder = gameObject.AddComponent<Pathfinder>();
         }
-
-        for (int i = 0; i < lanes.Count; i++)
-        {
-            switch (lanes[i].type)
-            {
-                case LaneInfo.LaneType.Sidewalk:
-                    lanes[i].SetPrefab(sidewalkPrefab);
-                    break;
-                case LaneInfo.LaneType.Grass:
-                    lanes[i].SetPrefab(grassPrefab);
-                    break;
-                case LaneInfo.LaneType.Road:
-                    lanes[i].SetPrefab(roadPrefab);
-                    break;
-                default:
-                    break;
-            }
-        }
     }
 
 
     public void GenerateLevel()
     {
-        Level[] temp = FindObjectsOfType(typeof(Level)) as Level[];
+        Level[] levelToDestroy = FindObjectsOfType(typeof(Level)) as Level[];
   
-        if (temp.Length > 0)
+        if (levelToDestroy.Length > 0)
         {
-            for (int i = 0; i < temp.Length; i++)
+            for (int i = 0; i < levelToDestroy.Length; i++)
             {
-                DestroyImmediate(temp[i].gameObject);
+                DestroyImmediate(levelToDestroy[i].gameObject);
             }
         }
 
@@ -132,7 +129,7 @@ public class LevelGenerator : MonoBehaviour
                     int x = ((rowIndex - rowToStartPathfinderFrom) * lanes.Count) + i;
 
                     //Debug.Log("Row " + rowIndex + ": " + x);
-                    searchSpace.startRow.Add(searchSpace.tiles[x].gameObject);
+                    searchSpace.startRow.Add(searchSpace.tiles[x]);
                 }
             }
 
@@ -143,30 +140,18 @@ public class LevelGenerator : MonoBehaviour
             {
                 // Add a tile to row
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
-                GameObject currentNode = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                GameObject currentTile = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                searchSpace.endNode = currentTile;
+
+                Tile currentNode = currentTile.GetComponent<Tile>();
                 searchSpace.AddTile(currentNode);
-                searchSpace.endNode = currentNode;
 
-
-                Tile currentTile = currentNode.GetComponent<Tile>();
-
-
-                int x = (rowIndex - 1) * lanes.Count + laneIndex;
-                if (x >= 0)
-                {
-                    Tile tileInFront = searchSpace.tiles[x];
-                    if(tileInFront.hasObstacle)
-                    {
-                        if(tileInFront.obstacle.tilesCovered > 1)
-                        {
-                            currentTile.hasObstacle = true;
-                        }
-                    }
-                }
+                
+                currentNode.CheckForObstacle();
 
 
                 //if there's already an obstacle here, we don't want to add a new one
-                if (currentTile.hasObstacle)
+                if (currentNode.hasObstacle)
                 {
                     goto ObstacleAdded;
                 }
@@ -184,9 +169,9 @@ public class LevelGenerator : MonoBehaviour
                 {
                     if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
                     {
-                        currentTile.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, currentNode.transform);
-                        if (currentTile.obstacle != null)
-                            currentTile.hasObstacle = true;
+                        currentNode.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, currentTile.transform);
+                        if (currentNode.obstacle != null)
+                            currentNode.hasObstacle = true;
                     }
                 }
             ObstacleAdded: { }
@@ -234,11 +219,11 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int i = 0; i < searchSpace.tiles.Count; i++)
             {
-                Tile tile = searchSpace.tiles[i].GetComponent<Tile>();
-                if (tile.hasObstacle)
+                Tile tile = searchSpace.tiles[i];
+                if (tile.hasObstacle && tile.obstacle.prefab != null)
                 {
                     Obstacle obstacle = tile.obstacle;
-                    Transform transform = searchSpace.tiles[i].transform;
+                    Transform transform = tile.gameObject.transform;
 
                     InstantiateObstacle(obstacle, transform, levelObstacles.transform);
                 }
@@ -345,7 +330,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
 
-    private bool UsePathfinder(GameObject node)
+    private bool UsePathfinder(Tile node)
     {
         pathfinder.searchSpace = searchSpace;
         pathfinder.ResetPathfinder();
@@ -365,7 +350,7 @@ public class LevelGenerator : MonoBehaviour
     {
         if (pathfinder.path.Count > 0)
         {
-            Vector3 first = pathfinder.path[0].transform.position;
+            Vector3 first = pathfinder.path[0].gameObject.transform.position;
             Vector3 second;
             for (int i = 1; i < pathfinder.path.Count; i++)
             {
@@ -390,45 +375,3 @@ public class Level : MonoBehaviour
     
 }
 
-
-[Serializable]
-public class LaneInfo
-{
-    public enum LaneType
-    { Sidewalk, Grass, Road }
-
-    public LaneType type;
-    public List<Obstacle> obstacles = new List<Obstacle>();
-
-    private GameObject prefab;
-
-    public void SetPrefab(GameObject prefabObject)
-    {
-        prefab = prefabObject;
-    }
-
-    public GameObject GetPrefab()
-    {
-        return prefab;
-    }
-}
-
-[Serializable]
-public class Obstacle
-{
-    public GameObject prefab;
-
-    public bool spawnFrequently;
-    public int spacing = 2;
-    public Vector3 firstSpawnPosition;
-
-    //[HideInInspector]
-    public Transform lastInstance;
-
-    [Tooltip("The sum of all of the randomly spawning obstacle's spawn probability has to be 100 or less.")]
-    [Range(0, 100)]
-    public int spawnProbability = 50;
-
-
-    public int tilesCovered = 1;
-}

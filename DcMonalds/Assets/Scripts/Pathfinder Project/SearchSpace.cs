@@ -24,9 +24,9 @@ public class SearchSpace : MonoBehaviour
         }
     }
 
-    public void AddTile(GameObject node)
+    public void AddTile(Tile node)
     {
-        tiles.Add(node.GetComponent<Tile>());
+        tiles.Add(node);
     }
 
 

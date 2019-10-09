@@ -114,6 +114,42 @@ public class Tile : MonoBehaviour
     }
 
     /// <summary>
+    /// Checks if there's an obstacle on tile. 
+    /// Also checkes if the tile in front of this one has an obstacle that covers more than one tile, 
+    /// and in that case sets variable hasObstacle to true and the tilesCovered of the obstacle on this tile.
+    /// </summary>
+    /// <returns>Wheter there's an obstacle on this tile.</returns>
+    public bool CheckForObstacle()
+    {
+        if (hasObstacle)
+        {
+            return true;
+        }
+        else
+        {
+            Vector3 pos = gameObject.transform.position;
+            pos += Vector3.back;
+            Tile tileInFront = searchSpace.tiles.Find(x => x.gameObject.transform.position == pos);
+
+            if (tileInFront == null)
+            {
+                hasObstacle = false;
+                return false;
+            }
+            else if (tileInFront.hasObstacle && tileInFront.obstacle.tilesCovered > 1)
+            {
+                hasObstacle = true;
+                obstacle.tilesCovered = tileInFront.obstacle.tilesCovered - 1;
+                return true;
+            }
+
+            hasObstacle = false;
+            return false;
+        }
+    }
+
+
+    /// <summary>
     /// Calculate heuristic cost with Manhattan method
     /// </summary>
     private void CalculateHeuristicCost()
@@ -156,5 +192,4 @@ public class Tile : MonoBehaviour
         }
        
     }
-
 }
