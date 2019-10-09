@@ -33,10 +33,14 @@ public class Pathfinder : MonoBehaviour
         {
             if (searchSpace.tiles[i].gameObject == searchSpace.startNode)
             {
+                if (searchSpace.tiles[i].hasObstacle)
+                    return false;
+                
+
                 openList.Add(searchSpace.tiles[i]);
             }
         }
-
+        
         
         //find a path
         while (!pathFound && !deadend)

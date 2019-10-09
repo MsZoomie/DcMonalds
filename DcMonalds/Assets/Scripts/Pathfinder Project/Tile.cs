@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour
 
     private SearchSpace searchSpace;
 
-    public Obstacle obstacle;
+    public ObstacleInstance obstacle;
 
     private void Awake()
     {
@@ -136,10 +136,9 @@ public class Tile : MonoBehaviour
                 hasObstacle = false;
                 return false;
             }
-            else if (tileInFront.hasObstacle && tileInFront.obstacle.tilesCovered > 1)
+            else if (tileInFront.hasObstacle && tileInFront.obstacle.obstaclePrefab != null && tileInFront.obstacle.obstaclePrefab.tilesCovered > 1)
             {
-                hasObstacle = true;
-                obstacle.tilesCovered = tileInFront.obstacle.tilesCovered - 1;
+                hasObstacle = tileInFront.CheckForObstacle();
                 return true;
             }
 

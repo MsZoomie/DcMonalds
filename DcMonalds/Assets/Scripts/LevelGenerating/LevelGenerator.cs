@@ -9,24 +9,19 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField]
     public int numberOfRows = 3;
     private int rowToStartPathfinderFrom = 2;
+    private int numberOfLanes;
 
-    
+    /*
     [SerializeField]
     private List<LaneInfo> lanes = new List<LaneInfo>();
-
+    */
 
     public LevelTheme theme;
     
 
     public Pathfinder pathfinder;
 
-
-    // lane prefabs
-    private GameObject sidewalkPrefab;
-    private GameObject grassPrefab;
-    private GameObject roadPrefab;
-
-
+    
     private GameObject levelObstacles;
 
     private SearchSpace searchSpace;
@@ -41,40 +36,10 @@ public class LevelGenerator : MonoBehaviour
 
         if (theme == null)
         {
-            theme = gameObject.AddComponent<LevelTheme>();
+            theme = Resources.Load<LevelTheme>("LevelThemes/DefaultTheme");
         }
 
-        if (lanes.Count <= 0)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                lanes.Add(new LaneInfo());
-            }
-        }
-
-
-        sidewalkPrefab = Resources.Load<GameObject>("LanePrefabs/Sidewalk");
-        grassPrefab = Resources.Load<GameObject>("LanePrefabs/Grass");
-        roadPrefab = Resources.Load<GameObject>("LanePrefabs/Road");
-
-
-        for (int i = 0; i < lanes.Count; i++)
-        {
-            switch (lanes[i].type)
-            {
-                case LaneInfo.LaneType.Sidewalk:
-                    lanes[i].SetPrefab(sidewalkPrefab);
-                    break;
-                case LaneInfo.LaneType.Grass:
-                    lanes[i].SetPrefab(grassPrefab);
-                    break;
-                case LaneInfo.LaneType.Road:
-                    lanes[i].SetPrefab(roadPrefab);
-                    break;
-                default:
-                    break;
-            }
-        }
+        numberOfLanes = theme.lanes.Count;
     }
 
     private void OnValidate()
@@ -83,6 +48,13 @@ public class LevelGenerator : MonoBehaviour
         {
             pathfinder = gameObject.AddComponent<Pathfinder>();
         }
+        if (theme == null)
+        {
+            theme = Resources.Load<LevelTheme>("LevelThemes/DefaultTheme");
+        }
+
+        
+        numberOfLanes = theme.lanes.Count;
     }
 
 
@@ -108,7 +80,10 @@ public class LevelGenerator : MonoBehaviour
 
         levelObstacles = new GameObject("Obstacles");
         levelObstacles.transform.SetParent(level.transform);
-        
+
+
+        if (numberOfLanes <= 0 || numberOfRows <= 0)
+            return;
 
         //start adding rows
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
@@ -124,9 +99,9 @@ public class LevelGenerator : MonoBehaviour
             searchSpace.UpdateTiles();
             if (rowIndex >= rowToStartPathfinderFrom)
             {
-                for (int i = 0; i < lanes.Count; i++)
+                for (int i = 0; i < numberOfLanes; i++)
                 {
-                    int x = ((rowIndex - rowToStartPathfinderFrom) * lanes.Count) + i;
+                    int x = ((rowIndex - rowToStartPathfinderFrom) * numberOfLanes) + i;
 
                     //Debug.Log("Row " + rowIndex + ": " + x);
                     searchSpace.startRow.Add(searchSpace.tiles[x]);
@@ -136,11 +111,11 @@ public class LevelGenerator : MonoBehaviour
 
 
             //start adding tiles
-            for (int laneIndex = 0; laneIndex < lanes.Count; laneIndex++)
+            for (int laneIndex = 0; laneIndex < numberOfLanes; laneIndex++)
             {
                 // Add a tile to row
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
-                GameObject currentTile = Instantiate(lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                GameObject currentTile = Instantiate(theme.lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
                 searchSpace.endNode = currentTile;
 
                 Tile currentNode = currentTile.GetComponent<Tile>();
@@ -167,9 +142,9 @@ public class LevelGenerator : MonoBehaviour
 
                 if (placeObstacle)
                 {
-                    if (lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
+                    if (theme.lanes[laneIndex].obstacles.Count > 0 && placeObstacle)
                     {
-                        currentNode.obstacle = ChooseObstacle(lanes[laneIndex].obstacles, currentTile.transform);
+                        currentNode.obstacle = ChooseObstacle(theme.lanes[laneIndex].obstacles, currentTile.transform);
                         if (currentNode.obstacle != null)
                             currentNode.hasObstacle = true;
                     }
@@ -192,12 +167,12 @@ public class LevelGenerator : MonoBehaviour
             searchSpace.UpdateSearchSpace();
 
 
-            for (int i = 0; i < lanes.Count; i++)
+            for (int i = 0; i <numberOfLanes; i++)
             {
                 searchSpace.startRow.Add(searchSpace.tiles[i]);
             }
 
-            for (int i = numberOfRows * lanes.Count - lanes.Count; i < numberOfRows * lanes.Count; i++)
+            for (int i = numberOfRows * numberOfLanes - numberOfLanes; i < numberOfRows * numberOfLanes; i++)
             {
                 bool found = UsePathfinderOnce(searchSpace.tiles[i]);
 
@@ -220,9 +195,9 @@ public class LevelGenerator : MonoBehaviour
             for (int i = 0; i < searchSpace.tiles.Count; i++)
             {
                 Tile tile = searchSpace.tiles[i];
-                if (tile.hasObstacle && tile.obstacle.prefab != null)
+                if (tile.hasObstacle && tile.obstacle.obstaclePrefab != null)
                 {
-                    Obstacle obstacle = tile.obstacle;
+                    ObstacleInstance obstacle = tile.obstacle;
                     Transform transform = tile.gameObject.transform;
 
                     InstantiateObstacle(obstacle, transform, levelObstacles.transform);
@@ -240,18 +215,18 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="obstacle">The obstacle to be instatiated.</param>
     /// <param name="transformParent">Transform of the tile the obstacle will be placed upon.</param>
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
-    private bool InstantiateObstacle(Obstacle obstacle, Transform transformParent, Transform parentObject)
+    private bool InstantiateObstacle(ObstacleInstance obstacle, Transform transformParent, Transform parentObject)
     {
        
         Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
-        if (obstacle.prefab == null)
+        if (obstacle.obstaclePrefab.prefab == null)
         {
             return false;
         }
         
-        GameObject newObstacle = Instantiate(obstacle.prefab, tempPos, Quaternion.identity, parentObject);
-        newObstacle.name = obstacle.prefab.name;
+        GameObject newObstacle = Instantiate(obstacle.obstaclePrefab.prefab, tempPos, Quaternion.identity, parentObject);
+        newObstacle.name = obstacle.obstaclePrefab.name;
 
         if (obstacle.spawnFrequently)
         {
@@ -267,9 +242,9 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="obstacles">List of Obstacles available for lane.</param>
     /// <param name="transformParent">Transform of the tile upon which obstacle will be spawned.</param>
     /// <returns>Obstacle to be spawned. Might return null if</returns>
-    private Obstacle ChooseObstacle(List<Obstacle> obstacles, Transform transformParent)
+    private ObstacleInstance ChooseObstacle(List<ObstacleInstance> obstacles, Transform transformParent)
     {
-        Obstacle obstacle;
+        ObstacleInstance obstacle;
         //look for all the frequently spawning obstacles, they have priority
         for (int i = 0; i < obstacles.Count; i++)
         {
