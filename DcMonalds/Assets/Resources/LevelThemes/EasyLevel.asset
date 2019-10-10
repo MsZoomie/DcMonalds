@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f8c895d593ad94c91e99502f2a773a, type: 3}
+  m_Name: EasyLevel
+  m_EditorClassIdentifier: 
+  lanes:
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
+    obstacles:
+    - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
+      spawnFrequently: 0
+      spacing: 0
+      firstSpawnPosition: {x: 0, y: 0, z: 0}
+      lastInstance: {fileID: 0}
+      spawnProbability: 5
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
+    obstacles:
+    - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
+      spawnFrequently: 0
+      spacing: 0
+      firstSpawnPosition: {x: 0, y: 0, z: 0}
+      lastInstance: {fileID: 0}
+      spawnProbability: 5
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
+    obstacles: []
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
+    obstacles: []
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
+    obstacles:
+    - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
+      spawnFrequently: 0
+      spacing: 0
+      firstSpawnPosition: {x: 0, y: 0, z: 0}
+      lastInstance: {fileID: 0}
+      spawnProbability: 5
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
+    obstacles:
+    - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
+      spawnFrequently: 0
+      spacing: 0
+      firstSpawnPosition: {x: 0, y: 0, z: 0}
+      lastInstance: {fileID: 0}
+      spawnProbability: 5
+  extras: []

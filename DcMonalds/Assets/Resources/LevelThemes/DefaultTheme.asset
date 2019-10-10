@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DefaultTheme
   m_EditorClassIdentifier: 
   lanes:
-  - type: 0
+  - laneTypePrefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
       spawnFrequently: 1
@@ -26,52 +27,57 @@ MonoBehaviour:
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 20
-  - type: 1
+      spawnProbability: 10
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
+      spawnProbability: 10
     - obstaclePrefab: {fileID: 11400000, guid: 2c9460ce6a7d6dd4f81aed79c64261c8, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 15
-  - type: 2
+      spawnProbability: 10
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: f1e111bc07ce36d4bbff25b8ddaaa88c, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 50
-  - type: 2
+      spawnProbability: 10
+  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: f1e111bc07ce36d4bbff25b8ddaaa88c, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
-  - type: 1
+      spawnProbability: 10
+  - laneTypePrefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 0c8b77bf50f0e1e4abf504b505ab386c, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 30
+      spawnProbability: 10
     - obstaclePrefab: {fileID: 11400000, guid: 32b40db94d2f8514bb1b5860c340df80, type: 2}
       spawnFrequently: 0
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 15
-  - type: 0
+      spawnProbability: 5
+  - laneTypePrefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+      type: 3}
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
       spawnFrequently: 1
@@ -84,4 +90,23 @@ MonoBehaviour:
       spacing: 2
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 35
+      spawnProbability: 10
+  extras:
+  - prefab: {fileID: 5403759785758009744, guid: c5dee4d76c4fdb2409a357fbe1eec0bf,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 1}
+    startPos: {x: 2.5, y: 0, z: 0}
+  - prefab: {fileID: -927199367670048503, guid: 5e4b873f062849d49bfe3ddaf7b52015,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 25}
+    startPos: {x: 2.5, y: -0.6, z: 0}
+  - prefab: {fileID: -927199367670048503, guid: 0826533f48b638a42b3d45fc62017ab3,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 18}
+    startPos: {x: 2.5, y: -0.5, z: 2.5}

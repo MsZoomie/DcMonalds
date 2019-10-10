@@ -11,21 +11,19 @@ public class LevelGenerator : MonoBehaviour
     private int rowToStartPathfinderFrom = 2;
     private int numberOfLanes;
 
-    /*
-    [SerializeField]
-    private List<LaneInfo> lanes = new List<LaneInfo>();
-    */
-
+    [Space]
     public LevelTheme theme;
     
-
+    [Space]
     public Pathfinder pathfinder;
 
-    
+    private GameObject level;
     private GameObject levelObstacles;
 
     private SearchSpace searchSpace;
-    
+
+    [HideInInspector]
+    public int tilesChecked = 0;
 
     private void Awake()
     {
@@ -71,7 +69,7 @@ public class LevelGenerator : MonoBehaviour
         }
 
 
-        GameObject level = new GameObject("Level");
+        level = new GameObject("Level");
         level.AddComponent<Level>();
         searchSpace = level.AddComponent<SearchSpace>();
 
@@ -114,15 +112,17 @@ public class LevelGenerator : MonoBehaviour
             for (int laneIndex = 0; laneIndex < numberOfLanes; laneIndex++)
             {
                 // Add a tile to row
+                Vector3 prefabPos = theme.lanes[laneIndex].GetPrefab().transform.position;
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
+                tempPos += prefabPos;
+
                 GameObject currentTile = Instantiate(theme.lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
                 searchSpace.endNode = currentTile;
 
                 Tile currentNode = currentTile.GetComponent<Tile>();
                 searchSpace.AddTile(currentNode);
 
-                
-                currentNode.CheckForObstacle();
+                currentNode.hasObstacle = currentNode.CheckForObstacle(0);
 
 
                 //if there's already an obstacle here, we don't want to add a new one
@@ -132,12 +132,12 @@ public class LevelGenerator : MonoBehaviour
                 }
 
 
-                //do pathfinder
+               //do pathfinder
                 bool placeObstacle = true;
-                if (rowIndex > rowToStartPathfinderFrom - 1)
+               /* if (rowIndex > rowToStartPathfinderFrom - 1)
                 {
                     placeObstacle = UsePathfinder(currentNode);
-                }
+                }*/
                 
 
                 if (placeObstacle)
@@ -183,9 +183,11 @@ public class LevelGenerator : MonoBehaviour
                 }
 
             }
+        }
 
-
-           // Debug.Log("The level is possible: " + validLevel);
+        if (theme.extras.Count > 0)
+        {
+            InstantiateExtras();
         }
 
 
@@ -235,6 +237,7 @@ public class LevelGenerator : MonoBehaviour
 
         return true;
     }
+
 
     /// <summary>
     /// Choose which obstacle to be spawned.
@@ -305,6 +308,66 @@ public class LevelGenerator : MonoBehaviour
     }
 
 
+    private void InstantiateExtras()
+    {
+        GameObject extras = new GameObject("Extras");
+        extras.transform.SetParent(level.transform);
+
+
+        for (int i = 0; i < theme.extras.Count; i++)
+        {
+            Extra instance = theme.extras[i];
+
+            float x = numberOfLanes / instance.interval.x;
+            float y = numberOfRows / instance.interval.y;
+
+            GameObject instanceParent = new GameObject("Extra" + i.ToString());
+            instanceParent.transform.SetParent(extras.transform);
+
+
+            if (instance.repeatingX && instance.repeatingY)
+            {
+                for (int rowIndex = 0; rowIndex < y; rowIndex++)
+                {
+                    for (int laneIndex = 0; laneIndex < x; laneIndex++)
+                    {
+                        Vector3 pos = new Vector3(instance.startPos.x + (instance.interval.x * laneIndex), instance.startPos.y, instance.startPos.z + (instance.interval.y * rowIndex));
+                        GameObject extra = Instantiate<GameObject>(instance.prefab, pos, Quaternion.identity);
+                        extra.name = instance.prefab.name;
+                        extra.transform.SetParent(instanceParent.transform);
+                    }
+                }
+            }
+            else if (instance.repeatingX)
+            {
+                for (int laneIndex = 0; laneIndex < x; laneIndex++)
+                {
+                    Vector3 pos = new Vector3(instance.startPos.x + (instance.interval.x * laneIndex), instance.startPos.y, instance.startPos.z);
+                    GameObject extra = Instantiate<GameObject>(instance.prefab, pos, Quaternion.identity);
+                    extra.name = instance.prefab.name;
+                    extra.transform.SetParent(instanceParent.transform);
+                }
+            }
+            else if (instance.repeatingY)
+            {
+                for (int rowIndex = 0; rowIndex < y; rowIndex++)
+                {
+                    Vector3 pos = new Vector3(instance.startPos.x, instance.startPos.y, instance.startPos.z + (instance.interval.y * rowIndex));
+                    GameObject extra = Instantiate<GameObject>(instance.prefab, pos, Quaternion.identity);
+                    extra.name = instance.prefab.name;
+                    extra.transform.SetParent(instanceParent.transform);
+                }
+            }
+            else
+            {
+                GameObject extra = Instantiate<GameObject>(instance.prefab, instance.startPos, Quaternion.identity);
+                extra.name = instance.prefab.name;
+                extra.transform.SetParent(instanceParent.transform);
+            }
+        }
+    }
+
+
     private bool UsePathfinder(Tile node)
     {
         pathfinder.searchSpace = searchSpace;
@@ -344,9 +407,4 @@ public class LevelGenerator : MonoBehaviour
 }
 
 
-
-public class Level : MonoBehaviour
-{
-    
-}
 
