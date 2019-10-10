@@ -104,3 +104,9 @@ MonoBehaviour:
     repeatingY: 1
     interval: {x: 1, y: 25}
     startPos: {x: 2.5, y: -0.6, z: 0}
+  - prefab: {fileID: -927199367670048503, guid: 0826533f48b638a42b3d45fc62017ab3,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 18}
+    startPos: {x: 2.5, y: -0.5, z: 2.5}

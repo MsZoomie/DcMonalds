@@ -112,7 +112,10 @@ public class LevelGenerator : MonoBehaviour
             for (int laneIndex = 0; laneIndex < numberOfLanes; laneIndex++)
             {
                 // Add a tile to row
+                Vector3 prefabPos = theme.lanes[laneIndex].GetPrefab().transform.position;
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
+                tempPos += prefabPos;
+
                 GameObject currentTile = Instantiate(theme.lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
                 searchSpace.endNode = currentTile;
 
@@ -404,9 +407,4 @@ public class LevelGenerator : MonoBehaviour
 }
 
 
-
-public class Level : MonoBehaviour
-{
-    
-}
 
