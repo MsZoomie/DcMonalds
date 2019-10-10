@@ -52,7 +52,8 @@ public class GameController : MonoBehaviour
         switch (gameState)
         {
             case GameState.Start:
-               
+
+                pauseButton.SetActive(false);
                 playerRB.velocity = Vector3.zero;
                 playerRB.angularVelocity = Vector3.zero;
                 playerRB.rotation = Quaternion.identity;
@@ -72,6 +73,8 @@ public class GameController : MonoBehaviour
                 break;
             case GameState.End:
                 endUI.SetActive(true);
+
+                pauseButton.SetActive(false);
                 break;
             default:
                 break;
@@ -92,6 +95,7 @@ public class GameController : MonoBehaviour
                 break;
             case GameState.Pause:
                 pauseUI.SetActive(false);
+                
                 
                 break;
             case GameState.End:
