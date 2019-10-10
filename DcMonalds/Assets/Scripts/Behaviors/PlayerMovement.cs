@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public enum Direction
     { Left, Right, Forward, LeftAndForward, RightAndForward }
     public enum MovementMethod
-    { NoInput, Dancing, AlwaysForward}
+    { NoInput, Dancing, AlwaysForward, DcMonalds}
 
     public bool tiledEnviroment;
     private SearchSpace searchSpace;
@@ -25,6 +25,22 @@ public class PlayerMovement : MonoBehaviour
     public bool moving;
     public bool turning;
 
+
+    [Space]
+    [Space]
+    [Header("DcMonalds Player")]
+    public Vector2 bounds = new Vector2(0, 5);
+    [Range(0, 1)]
+    public float speedX = 1.0f;
+    [Range(0, 10)]
+    public float speedZ = 1.0f;
+
+    private float direction;
+
+   
+
+
+    //lerp stuff
     private Vector3 startPos;
     private Vector3 endPos;
 
@@ -120,6 +136,16 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
                 break;
+
+            case MovementMethod.DcMonalds:
+                {
+                    MoveDcMonalds(Input.GetAxis("Horizontal"));
+                    if (moving)
+                    {
+                        MoveHorizontal();
+                    }
+                }
+                break;
             default:
                 break;
         }
@@ -193,6 +219,7 @@ public class PlayerMovement : MonoBehaviour
         Walk(dir);
     }
 
+
     public void Move(Direction dir)
     {
         switch (movementMethod)
@@ -226,5 +253,56 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("There's no tile there.");
             return false;
         }
+    }
+
+
+
+
+    private void MoveDcMonalds(float dir)
+    {
+            Vector3 horizontal = new Vector3(dir * speedX, 0, 0);
+           
+            transform.position += horizontal;
+            float x = Mathf.Clamp(transform.position.x, bounds.x, bounds.y);
+
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        
+
+        Vector3 forward = Vector3.forward * speedZ;
+        transform.position += forward * Time.deltaTime;
+    }
+
+    private void MoveHorizontal()
+    {
+        Vector3 horizontal = new Vector3(direction * speedX, 0, 0);
+
+        transform.position += horizontal;
+        float x = Mathf.Clamp(transform.position.x, bounds.x, bounds.y);
+
+        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
+
+    
+    public void MoveLeft()
+    {
+        moving = true;
+        direction = -1;
+        
+    }
+
+    public void MoveRight()
+    {
+        moving = true;
+        direction = 1;
+    }
+
+    public void StopMoving()
+    {
+        moving = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 }
