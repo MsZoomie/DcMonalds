@@ -8,12 +8,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class LevelTheme : ScriptableObject
 {
+   
     public List<LaneInfo> lanes = new List<LaneInfo>();
 
     public List<Extra> extras = new List<Extra>();
-
-  
-
 }
 
 
@@ -21,6 +19,7 @@ public class LevelTheme : ScriptableObject
 [Serializable]
 public class LaneInfo
 {
+    
     public LaneType[] laneTypes;
     [Space]
     public List<ObstacleInstance> obstacles = new List<ObstacleInstance>();
