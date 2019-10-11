@@ -36,7 +36,7 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
+      spawnProbability: 20
   - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
       type: 3}
     obstacles:
@@ -45,7 +45,7 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
+      spawnProbability: 15
   - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
       type: 3}
     obstacles:
@@ -54,13 +54,13 @@ MonoBehaviour:
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
+      spawnProbability: 20
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
       spawnFrequently: 0
       spacing: 0
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
-      spawnProbability: 25
+      spawnProbability: 10
   - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
       type: 3}
     obstacles:
@@ -85,4 +85,22 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 20
-  extras: []
+  extras:
+  - prefab: {fileID: 6986720073152167171, guid: 300045008ece1954682b3d854c348cd0,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 1}
+    startPos: {x: 1.5, y: 0, z: 0}
+  - prefab: {fileID: 6986720073152167171, guid: 300045008ece1954682b3d854c348cd0,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 1}
+    startPos: {x: 2.5, y: 0, z: 0}
+  - prefab: {fileID: 6986720073152167171, guid: 300045008ece1954682b3d854c348cd0,
+      type: 3}
+    repeatingX: 0
+    repeatingY: 1
+    interval: {x: 1, y: 1}
+    startPos: {x: 3.5, y: 0, z: 0}

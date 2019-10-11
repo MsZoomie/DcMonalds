@@ -12,8 +12,9 @@ public class LevelGenerator : MonoBehaviour
     private int numberOfLanes;
 
     [Space]
+    [Tooltip("After editing a theme, to apply the changes, you must choose another one, and then rechoose this one.")]
     public LevelTheme theme;
-    
+
     [Space]
     public Pathfinder pathfinder;
 
@@ -51,7 +52,8 @@ public class LevelGenerator : MonoBehaviour
             theme = Resources.Load<LevelTheme>("LevelThemes/DefaultTheme");
         }
 
-        
+
+
         numberOfLanes = theme.lanes.Count;
     }
 
@@ -59,7 +61,7 @@ public class LevelGenerator : MonoBehaviour
     public void GenerateLevel()
     {
         Level[] levelToDestroy = FindObjectsOfType(typeof(Level)) as Level[];
-  
+
         if (levelToDestroy.Length > 0)
         {
             for (int i = 0; i < levelToDestroy.Length; i++)
@@ -112,11 +114,12 @@ public class LevelGenerator : MonoBehaviour
             for (int laneIndex = 0; laneIndex < numberOfLanes; laneIndex++)
             {
                 // Add a tile to row
-                Vector3 prefabPos = theme.lanes[laneIndex].GetPrefab().transform.position;
+                GameObject prefab = theme.lanes[laneIndex].GetPrefab();
+                Vector3 prefabPos = prefab.transform.position;
                 Vector3 tempPos = new Vector3(row.transform.position.x + laneIndex, row.transform.position.y, row.transform.position.z);
                 tempPos += prefabPos;
 
-                GameObject currentTile = Instantiate(theme.lanes[laneIndex].GetPrefab(), tempPos, Quaternion.identity, row.transform);
+                GameObject currentTile = Instantiate(prefab, tempPos, Quaternion.identity, row.transform);
                 searchSpace.endNode = currentTile;
 
                 Tile currentNode = currentTile.GetComponent<Tile>();
@@ -132,13 +135,13 @@ public class LevelGenerator : MonoBehaviour
                 }
 
 
-               //do pathfinder
+                //do pathfinder
                 bool placeObstacle = true;
-               /* if (rowIndex > rowToStartPathfinderFrom - 1)
-                {
-                    placeObstacle = UsePathfinder(currentNode);
-                }*/
-                
+                /* if (rowIndex > rowToStartPathfinderFrom - 1)
+                 {
+                     placeObstacle = UsePathfinder(currentNode);
+                 }*/
+
 
                 if (placeObstacle)
                 {
@@ -167,7 +170,7 @@ public class LevelGenerator : MonoBehaviour
             searchSpace.UpdateSearchSpace();
 
 
-            for (int i = 0; i <numberOfLanes; i++)
+            for (int i = 0; i < numberOfLanes; i++)
             {
                 searchSpace.startRow.Add(searchSpace.tiles[i]);
             }
@@ -219,14 +222,14 @@ public class LevelGenerator : MonoBehaviour
     /// <param name="parentObject">Transform of the game object in the scene which will be set as parent.</param>
     private bool InstantiateObstacle(ObstacleInstance obstacle, Transform transformParent, Transform parentObject)
     {
-       
+
         Vector3 tempPos = new Vector3(transformParent.transform.position.x, transformParent.transform.position.y + 1, transformParent.transform.position.z);
 
         if (obstacle.obstaclePrefab.prefab == null)
         {
             return false;
         }
-        
+
         GameObject newObstacle = Instantiate(obstacle.obstaclePrefab.prefab, tempPos, Quaternion.identity, parentObject);
         newObstacle.name = obstacle.obstaclePrefab.name;
 
@@ -386,6 +389,10 @@ public class LevelGenerator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (level == null)
+            return;
+
+
         if (pathfinder.path.Count > 0)
         {
             Vector3 first = pathfinder.path[0].gameObject.transform.position;
