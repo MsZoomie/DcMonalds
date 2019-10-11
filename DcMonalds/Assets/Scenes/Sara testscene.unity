@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5625,7 +5625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &196739635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33857,6 +33857,7 @@ MonoBehaviour:
   movementScale: 0.5
   player: {fileID: 2082170123}
   offset: -2
+  speed: 1
 --- !u!1001 &963400561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78909,10 +78910,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83004c7e93cf74160b2f4e6653684843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementType: 1
   bounds: {x: 0, y: 5}
+  moving: 0
   speedX: 0.1
   speedZ: 1
-  moving: 0
+  speed: 1
 --- !u!4 &2082170127
 Transform:
   m_ObjectHideFlags: 0
