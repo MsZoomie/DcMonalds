@@ -36,12 +36,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 endPos;
 
 
-
     private void Awake()
     {
         gameController = FindObjectOfType<GameController>();
     }
 
+    public void SetBounds(int left, int right)
+    {
+        bounds = new Vector2(left, right);
+    }
 
     private void Update()
     {

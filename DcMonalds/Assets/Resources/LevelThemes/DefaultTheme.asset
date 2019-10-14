@@ -16,10 +16,10 @@ MonoBehaviour:
   - laneTypes:
     - prefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
         type: 3}
-      ratio: 5
+      ratio: 10
     - prefab: {fileID: 2323200840625371968, guid: a027f9c7940a6fd49a69b02744ab7fe2,
         type: 3}
-      ratio: 1
+      ratio: 0
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
       spawnFrequently: 1

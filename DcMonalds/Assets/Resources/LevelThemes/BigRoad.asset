@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: BigRoad
   m_EditorClassIdentifier: 
   lanes:
-  - laneTypePrefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
       spawnFrequently: 1
@@ -28,8 +30,10 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 20
-  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: f1e111bc07ce36d4bbff25b8ddaaa88c, type: 2}
       spawnFrequently: 0
@@ -37,8 +41,10 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 20
-  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
       spawnFrequently: 0
@@ -46,8 +52,10 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 15
-  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: f1e111bc07ce36d4bbff25b8ddaaa88c, type: 2}
       spawnFrequently: 0
@@ -61,8 +69,10 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 10
-  - laneTypePrefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7598838583171394052, guid: da2f60565c9d2e2438e4fa799eec2383,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: ae80397e1c522e543840dcd315c90283, type: 2}
       spawnFrequently: 0
@@ -70,8 +80,10 @@ MonoBehaviour:
       firstSpawnPosition: {x: 0, y: 0, z: 0}
       lastInstance: {fileID: 0}
       spawnProbability: 25
-  - laneTypePrefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
-      type: 3}
+  - laneTypes:
+    - prefab: {fileID: 7142043244555444368, guid: 80ff802f67e108244b47a0a02b9a1f0f,
+        type: 3}
+      ratio: 1
     obstacles:
     - obstaclePrefab: {fileID: 11400000, guid: 803c1eec5609723498b0741a9bc3b7b2, type: 2}
       spawnFrequently: 1

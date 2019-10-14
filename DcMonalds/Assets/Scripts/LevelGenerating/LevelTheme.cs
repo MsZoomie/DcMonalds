@@ -19,7 +19,7 @@ public class LevelTheme : ScriptableObject
 [Serializable]
 public class LaneInfo
 {
-    
+    [Tooltip("Has to be at least 1. \nThe total ratio of the lane types has to be at least 1")]
     public LaneType[] laneTypes;
     [Space]
     public List<ObstacleInstance> obstacles = new List<ObstacleInstance>();
@@ -64,13 +64,6 @@ public class LaneInfo
     }
 }
 
-/*[Serializable]
-public class LaneType
-{
-    public GameObject prefab;
-    public int ratio = 1;
-}
-*/
 
 [Serializable]
 public class Extra
