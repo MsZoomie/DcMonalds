@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
     public GameObject pauseButton;
     public GameObject endUI;
 
+    public Level level;
+
 
     private void Awake()
     {
@@ -30,10 +32,12 @@ public class GameController : MonoBehaviour
         player = playerMovement.gameObject;
         playerStartPos = player.transform.position;
         playerRB = player.GetComponent<Rigidbody>();
+        level = FindObjectOfType<Level>();
     }
 
     private void Start()
     {
+        playerMovement.SetBounds(0, level.GetNumberOfLanes());
         playerMovement.enabled = false;
     }
 

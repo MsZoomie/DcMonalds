@@ -11,8 +11,14 @@ public class CameraMovement : MonoBehaviour
     [Space]
     [Header("For following player")]
     public GameObject player;
+    private PlayerMovement playerMovement;
     public float offset = 0;
   
+    [Space]
+    [Header("For CrossyRoad")]
+    public float speed = 1.0f;
+    
+
     private Vector3 plane = new Vector3(1, 0, 1);
     private Vector3 planeNormal;
     private float distanceToPlane;
@@ -20,21 +26,11 @@ public class CameraMovement : MonoBehaviour
     private Vector2 currentPos;
     private Vector2 nextPos;
 
-    private void Awake()
+    private void Start()
     {
-        if (player == null)
-        {
-            player = FindObjectOfType<PlayerMovement>().gameObject;
-        }
+        playerMovement = player.GetComponent<PlayerMovement>();
     }
-
-    private void OnValidate()
-    {
-        if (player == null)
-        {
-            player = FindObjectOfType<PlayerMovement>().gameObject;
-        }
-    }
+    
 
     private void LateUpdate()
     {
@@ -127,7 +123,18 @@ public class CameraMovement : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3 (transform.position.x, transform.position.y, player.transform.position.z + offset);
+            switch (playerMovement.movementType)
+            {
+                case PlayerMovement.MovementType.DcMonalds:
+                    transform.position = new Vector3 (transform.position.x, transform.position.y, player.transform.position.z + offset);
+                    break;
+                case PlayerMovement.MovementType.CrossyRoad:
+                    transform.position += Vector3.forward * speed * Time.deltaTime;
+                    break;
+                default:
+                    break;
+            }
+            
         }
     }
 
