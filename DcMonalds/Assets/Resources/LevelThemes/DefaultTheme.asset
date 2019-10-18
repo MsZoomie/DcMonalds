@@ -113,7 +113,7 @@ MonoBehaviour:
     repeatingY: 1
     interval: {x: 1, y: 1}
     startPos: {x: 2.5, y: 0, z: 0}
-  - prefab: {fileID: -927199367670048503, guid: 5e4b873f062849d49bfe3ddaf7b52015,
+  - prefab: {fileID: -927199367670048503, guid: c3a78a49757fff94d83176dec1181be6,
       type: 3}
     repeatingX: 0
     repeatingY: 1
