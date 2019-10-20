@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fde644e2e1bdd204ba39a1b318e1847d
+guid: e5126e08230ade0479cfe0dd129071a9
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
@@ -7,18 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.019
+      name: car
     second: {fileID: 2100000, guid: c250cb2215477474dadd79043d1210ed, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.020
+      name: lanterns
+    second: {fileID: 2100000, guid: f108a85f7a9f550469c407e5eddfb4b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shadow
     second: {fileID: 2100000, guid: 75408c2cc8126be4d913a069c41e90d0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.021
-    second: {fileID: 2100000, guid: abe9ff0e38b459841b74a84abecc6df0, type: 2}
+      name: windows
+    second: {fileID: 2100000, guid: 1c67e9a6a953ef14291599b520b349a6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
