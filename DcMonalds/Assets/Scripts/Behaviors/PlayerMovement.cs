@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 destination = Vector3.zero;
 
 
-    private void Awake()
+    private void Start()
     {
         swipe = GetComponent<Swipe>();
         gameController = FindObjectOfType<GameController>();
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.collider.tag == "Obstacle")
         {
-      //      gameController.ChangeState(GameController.GameState.End);
+            gameController.ChangeState(GameController.GameState.End);
         }
         
     }
