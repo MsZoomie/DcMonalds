@@ -3856,7 +3856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -13995,7 +13995,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -15410,7 +15410,6 @@ GameObject:
   m_Component:
   - component: {fileID: 666866172}
   - component: {fileID: 666866171}
-  - component: {fileID: 666866173}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -15430,13 +15429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5606d291453a1a545ab3916a4609ff9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  movementUI: {fileID: 242666089}
-  startUI: {fileID: 196739634}
-  pauseUI: {fileID: 335527637}
-  pauseButton: {fileID: 1899944538}
-  endUI: {fileID: 920366904}
-  level: {fileID: 0}
 --- !u!4 &666866172
 Transform:
   m_ObjectHideFlags: 0
@@ -15451,18 +15443,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &666866173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666866170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd9608736e103341ad8a5181ff9768f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &667405955
 GameObject:
   m_ObjectHideFlags: 0
@@ -22686,7 +22666,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -23030,11 +23010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7adced7fb39c54284c5b80560787f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  developmentMode: 0
-  movementScale: 0.5
   player: {fileID: 2082170123}
-  offset: -2
-  speed: 1
+  onlyFollowZ: 1
 --- !u!1001 &963400561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25948,7 +25925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1106946483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26810,7 +26787,7 @@ GameObject:
   - component: {fileID: 1143190720}
   - component: {fileID: 1143190722}
   m_Layer: 0
-  m_Name: Level Generator
+  m_Name: Level Generator (NOT ENDLESS)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27715,7 +27692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -40558,7 +40535,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -42719,7 +42696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -46790,7 +46767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -47392,7 +47369,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666866173}
+      - m_Target: {fileID: 0}
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -51954,6 +51931,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5771626565828194139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2082170124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082170123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a423b6c08d03c45a7029179f4ba388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tap: 0
+  swipeLeft: 0
+  swipeRight: 0
+  swipeUp: 0
+  swipeDown: 0
+  minSwipeDist: 100
 --- !u!114 &2082170126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5771626565762730581, guid: 1a43da457c540254abe36c32159f21f9,
@@ -54147,6 +54142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5771626565762730581, guid: 1a43da457c540254abe36c32159f21f9,
+        type: 3}
+      propertyPath: speedX
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5771626565762730580, guid: 1a43da457c540254abe36c32159f21f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54155,7 +54155,7 @@ PrefabInstance:
     - target: {fileID: 5771626565762730580, guid: 1a43da457c540254abe36c32159f21f9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5771626565762730580, guid: 1a43da457c540254abe36c32159f21f9,
         type: 3}
@@ -54200,6 +54200,16 @@ PrefabInstance:
     - target: {fileID: 5771626565762730580, guid: 1a43da457c540254abe36c32159f21f9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771626565762730582, guid: 1a43da457c540254abe36c32159f21f9,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771626565762730582, guid: 1a43da457c540254abe36c32159f21f9,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

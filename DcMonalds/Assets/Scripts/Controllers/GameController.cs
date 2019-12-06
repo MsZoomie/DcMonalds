@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
-{
+{/*
     public enum GameState
     {
        Start, Play, Pause, End
@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour
                 break;
             case GameState.Play:
                 movementUI.SetActive(false);
-                playerMovement.moving = false;
+              //  playerMovement.moving = false;
                 playerMovement.enabled = false;
                 break;
             case GameState.Pause:
@@ -108,5 +108,5 @@ public class GameController : MonoBehaviour
             default:
                 break;
         }
-    }
+    }*/
 }

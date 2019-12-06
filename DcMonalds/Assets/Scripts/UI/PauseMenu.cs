@@ -18,22 +18,22 @@ public class PauseMenu : Menu
 
     private void Awake()
     {
-        gameController = FindObjectOfType<GameController>();
+   //     gameController = FindObjectOfType<GameController>();
     }
 
 
     public void StartGame()
     {
-        gameController.ChangeState(GameController.GameState.Play);
+  //      gameController.ChangeState(GameController.GameState.Play);
     }
 
     public void PauseGame()
     {
-        gameController.ChangeState(GameController.GameState.Pause);
+   //     gameController.ChangeState(GameController.GameState.Pause);
     }
 
     public void RestartGame()
     {
-        gameController.ChangeState(GameController.GameState.Start);
+     //   gameController.ChangeState(GameController.GameState.Start);
     }
 }
