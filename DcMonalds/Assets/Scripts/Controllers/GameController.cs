@@ -6,32 +6,27 @@ public class GameController : MonoBehaviour
 {
     public enum GameState
     {
-       Start, Play, Pause, End
+       Start, Resume, Pause, End, Restart
     }
 
     public GameState currentState;
 
+
+    private Level level;
+
     private PlayerMovement playerMovement;
-    private GameObject player;
-    private Vector3 playerStartPos;
-    private Rigidbody playerRB;
+    private PlayerBehaviour playerBehaviour;
 
-    public GameObject movementUI;
-    public GameObject startUI;
-    public GameObject pauseUI;
-    public GameObject pauseButton;
-    public GameObject endUI;
-
-    public Level level;
-
+    public UIController UIcontroller;
+    public SceneController sceneController;
 
     private void Awake()
     {
         currentState = GameState.Start;
+
         playerMovement = FindObjectOfType<PlayerMovement>();
-        player = playerMovement.gameObject;
-        playerStartPos = player.transform.position;
-        playerRB = player.GetComponent<Rigidbody>();
+        playerBehaviour = playerMovement.gameObject.GetComponent<PlayerBehaviour>();
+       
         level = FindObjectOfType<Level>();
     }
 
@@ -39,6 +34,27 @@ public class GameController : MonoBehaviour
     {
         playerMovement.SetBounds(0, level.GetNumberOfLanes());
         playerMovement.enabled = false;
+        EnterState(currentState);
+    }
+
+
+    public void Pause()
+    {
+        ChangeState(GameState.Pause);
+    }
+
+    public void Resume()
+    {
+        ChangeState(GameState.Resume);
+    }
+
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+		    Application.Quit();
+        #endif
     }
 
 
@@ -56,54 +72,56 @@ public class GameController : MonoBehaviour
         switch (gameState)
         {
             case GameState.Start:
+                UIcontroller.HideAll();
+                UIcontroller.Play();
 
-                pauseButton.SetActive(false);
-                playerRB.velocity = Vector3.zero;
-                playerRB.angularVelocity = Vector3.zero;
-                playerRB.rotation = Quaternion.identity;
-                //playerRB.ResetCenterOfMass();
-                player.transform.position = playerStartPos;
-
-                ChangeState(GameState.Play);
+                ChangeState(GameState.Resume);
                 break;
+
             case GameState.Pause:
-                pauseUI.SetActive(true);
-                pauseButton.SetActive(false);
+                UIcontroller.Pause();
+                playerMovement.enabled = false;
+                playerBehaviour.Jumping(false);
+                
                 break;
-            case GameState.Play:
-                playerMovement.enabled = true;
-                movementUI.SetActive(true);
-                pauseButton.SetActive(true);
-                break;
-            case GameState.End:
-                endUI.SetActive(true);
 
-                pauseButton.SetActive(false);
+            case GameState.Resume:
+                playerMovement.enabled = true;
+                playerBehaviour.Jumping(true);
+                break;
+
+            case GameState.End:
+                playerMovement.enabled = false;
+                UIcontroller.Lose();
+                break;
+
+            case GameState.Restart:
+                sceneController.ReloadScene();
                 break;
             default:
                 break;
         }
     }
     
+
     private void ExitState(GameState gameState)
     {
         switch (gameState)
         {
             case GameState.Start:
-                startUI.SetActive(false);
+                
                 break;
-            case GameState.Play:
-                movementUI.SetActive(false);
-                playerMovement.moving = false;
-                playerMovement.enabled = false;
+
+            case GameState.Resume:
+                
                 break;
+
             case GameState.Pause:
-                pauseUI.SetActive(false);
-                
-                
+                UIcontroller.Unpause();
                 break;
+
             case GameState.End:
-                endUI.SetActive(false);
+              
                 break;
             default:
                 break;

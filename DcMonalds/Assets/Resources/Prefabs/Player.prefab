@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5771626565762730583}
   - component: {fileID: 5771626565762730581}
   - component: {fileID: 5771626565762730582}
+  - component: {fileID: 2082170124}
+  - component: {fileID: 2082170125}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5771626565762730576}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 1, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children:
@@ -59,12 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83004c7e93cf74160b2f4e6653684843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementType: 1
   bounds: {x: 0, y: 5}
-  moving: 0
-  speedX: 0.1
+  speedX: 3
   speedZ: 1
-  speed: 1
+  destination: {x: 0, y: 0, z: 0}
 --- !u!54 &5771626565762730582
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,8 +79,38 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2082170124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771626565762730576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a423b6c08d03c45a7029179f4ba388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tap: 0
+  swipeLeft: 0
+  swipeRight: 0
+  swipeUp: 0
+  swipeDown: 0
+  minSwipeDist: 100
+--- !u!114 &2082170125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771626565762730576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c9278a13b8fed43a870f6e1c0d477f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5771626564938735938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,11 +123,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBJ_Player1
       objectReference: {fileID: 0}
-    - target: {fileID: -8052268681426833813, guid: d0f282ca05f1e4628b64ff71af4e4271,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fbed8494370aef34594b2c9328b9c33b, type: 2}
     - target: {fileID: -4216859302048453862, guid: d0f282ca05f1e4628b64ff71af4e4271,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -168,6 +193,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: -8052268681426833813, guid: d0f282ca05f1e4628b64ff71af4e4271,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbed8494370aef34594b2c9328b9c33b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f282ca05f1e4628b64ff71af4e4271, type: 3}
 --- !u!4 &1540894106173573720 stripped
