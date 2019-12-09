@@ -36,6 +36,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Falling()
     {
-        playerAnimator.SetTrigger("falling");
+        playerAnimator.SetTrigger("fall");
     }
 }

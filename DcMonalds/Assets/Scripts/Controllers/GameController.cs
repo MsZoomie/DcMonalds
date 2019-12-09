@@ -79,10 +79,11 @@ public class GameController : MonoBehaviour
                 break;
 
             case GameState.Pause:
-                UIcontroller.Pause();
                 playerMovement.enabled = false;
                 playerBehaviour.Jumping(false);
                 
+                StartCoroutine(WaitBeforeMenu(GameState.Pause));
+
                 break;
 
             case GameState.Resume:
@@ -92,7 +93,7 @@ public class GameController : MonoBehaviour
 
             case GameState.End:
                 playerMovement.enabled = false;
-                UIcontroller.Lose();
+                StartCoroutine(WaitBeforeMenu(GameState.End));
                 break;
 
             case GameState.Restart:
@@ -122,6 +123,24 @@ public class GameController : MonoBehaviour
 
             case GameState.End:
               
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    private IEnumerator WaitBeforeMenu(GameState state)
+    {
+        yield return new WaitForSeconds(2);
+
+        switch (state)
+        {
+            case GameState.Pause:
+                UIcontroller.Pause();
+                break;
+            case GameState.End:
+                UIcontroller.Lose();
                 break;
             default:
                 break;
