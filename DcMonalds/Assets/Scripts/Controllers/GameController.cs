@@ -37,6 +37,17 @@ public class GameController : MonoBehaviour
         EnterState(currentState);
     }
 
+
+    public void Pause()
+    {
+        ChangeState(GameState.Pause);
+    }
+
+    public void Resume()
+    {
+        ChangeState(GameState.Resume);
+    }
+
     public void Quit()
     {
         #if UNITY_EDITOR
