@@ -24,11 +24,18 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Jumping(false);
             gameController.ChangeState(GameController.GameState.End);
+
+            Falling();
         }
     }
 
     public void Jumping(bool jumping)
     {
         playerAnimator.SetBool("jump", jumping);
+    }
+
+    public void Falling()
+    {
+        playerAnimator.SetTrigger("falling");
     }
 }

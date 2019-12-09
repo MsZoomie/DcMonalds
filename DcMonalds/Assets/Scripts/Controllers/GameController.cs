@@ -82,6 +82,7 @@ public class GameController : MonoBehaviour
                 UIcontroller.Pause();
                 playerMovement.enabled = false;
                 playerBehaviour.Jumping(false);
+                
                 break;
 
             case GameState.Resume:
