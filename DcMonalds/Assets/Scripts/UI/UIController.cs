@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject[] hideInPause;
     [SerializeField] private GameObject[] showInPause;
     [SerializeField] private GameObject[] showDuringPlay;
-
+    [SerializeField] private GameObject[] showOnLose;
 
     public void Pause()
     {
@@ -43,6 +43,16 @@ public class UIController : MonoBehaviour
             item.SetActive(true);
         }
     }
+
+    public void Lose() 
+    {
+        foreach (var item in showOnLose)
+        {
+            item.SetActive(true);
+        }
+    }
+
+
 
     public void HideAll()
     {

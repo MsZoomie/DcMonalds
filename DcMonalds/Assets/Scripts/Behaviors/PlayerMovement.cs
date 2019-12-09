@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("x is the left bound. y is the right bound.")]
     public Vector2 bounds = new Vector2(0, 5);
     
-    private GameController gameController;
     private Swipe swipe;
     
 
@@ -29,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         swipe = GetComponent<Swipe>();
-        gameController = FindObjectOfType<GameController>();
         destination.x = transform.position.x;
     }
 
@@ -103,16 +101,4 @@ public class PlayerMovement : MonoBehaviour
         movingHorizontal = true;
     }
 
-    
-
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Obstacle")
-        {
-            gameController.ChangeState(GameController.GameState.End);
-        }
-        
-    }
 }

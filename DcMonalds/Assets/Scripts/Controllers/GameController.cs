@@ -37,6 +37,15 @@ public class GameController : MonoBehaviour
         EnterState(currentState);
     }
 
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+		    Application.Quit();
+        #endif
+    }
+
 
     public void ChangeState(GameState newState)
     {
@@ -70,7 +79,7 @@ public class GameController : MonoBehaviour
 
             case GameState.End:
                 playerMovement.enabled = false;
-                
+                UIcontroller.Lose();
                 break;
 
             case GameState.Restart:
