@@ -11,14 +11,17 @@ public class GameController : MonoBehaviour
 
     public GameState currentState;
 
-
-    private Level level;
+    public int numberOfLanes;
+    
 
     private PlayerMovement playerMovement;
     private PlayerBehaviour playerBehaviour;
 
     public UIController UIcontroller;
     public SceneController sceneController;
+
+
+    EndlessLevelGenerator levelGenerator;
 
     private void Awake()
     {
@@ -27,12 +30,12 @@ public class GameController : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerBehaviour = playerMovement.gameObject.GetComponent<PlayerBehaviour>();
        
-        level = FindObjectOfType<Level>();
+        levelGenerator = GetComponent<EndlessLevelGenerator>();
     }
 
     private void Start()
     {
-        playerMovement.SetBounds(0, level.GetNumberOfLanes());
+        playerMovement.SetBounds(0, numberOfLanes);
         playerMovement.enabled = false;
         EnterState(currentState);
     }
@@ -84,16 +87,23 @@ public class GameController : MonoBehaviour
                 
                 StartCoroutine(WaitBeforeMenu(GameState.Pause));
 
+                levelGenerator.enabled = false;
+
                 break;
 
             case GameState.Resume:
                 playerMovement.enabled = true;
                 playerBehaviour.Jumping(true);
+
+                levelGenerator.enabled = true;
+
                 break;
 
             case GameState.End:
                 playerMovement.enabled = false;
                 StartCoroutine(WaitBeforeMenu(GameState.End));
+
+                levelGenerator.enabled = false;
                 break;
 
             case GameState.Restart:
@@ -132,7 +142,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator WaitBeforeMenu(GameState state)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         switch (state)
         {

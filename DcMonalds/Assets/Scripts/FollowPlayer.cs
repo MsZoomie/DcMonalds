@@ -16,16 +16,11 @@ public class FollowPlayer : MonoBehaviour
 
     private void LateUpdate()
     {
-        float dist = player.transform.position.x - Camera.main.transform.position.x;
-
-        if (dist >= offset)
-        {
             foreach (var follower in followers)
             {
                 follower.transform.position = Vector3.Lerp(follower.transform.position,
-                                                         follower.transform.position + (Vector3.right * dist),
+                                                         follower.transform.position + (Vector3.forward),
                                                          Time.deltaTime);
             }
-        }
     }
 }
