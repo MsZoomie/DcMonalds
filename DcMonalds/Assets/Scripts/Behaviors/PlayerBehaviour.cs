@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public Animator playerAnimator;
+
     private GameController gameController;
 
 
     private void Start()
     {
         gameController = FindObjectOfType<GameController>();
+        playerAnimator = GetComponent<Animator>();
+
+        Jumping(true);
     }
 
 
@@ -17,7 +22,13 @@ public class PlayerBehaviour : MonoBehaviour
     {        
         if(collision.gameObject.tag == "Obstacle")
         {
+            Jumping(false);
             gameController.ChangeState(GameController.GameState.End);
         }
+    }
+
+    public void Jumping(bool jumping)
+    {
+        playerAnimator.SetBool("jump", jumping);
     }
 }

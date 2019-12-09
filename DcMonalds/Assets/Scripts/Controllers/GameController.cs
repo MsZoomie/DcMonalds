@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     private Level level;
 
     private PlayerMovement playerMovement;
-    private GameObject player;
+    private PlayerBehaviour playerBehaviour;
 
     public UIController UIcontroller;
     public SceneController sceneController;
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         currentState = GameState.Start;
 
         playerMovement = FindObjectOfType<PlayerMovement>();
-        player = playerMovement.gameObject;
+        playerBehaviour = playerMovement.gameObject.GetComponent<PlayerBehaviour>();
        
         level = FindObjectOfType<Level>();
     }
@@ -81,11 +81,12 @@ public class GameController : MonoBehaviour
             case GameState.Pause:
                 UIcontroller.Pause();
                 playerMovement.enabled = false;
+                playerBehaviour.Jumping(false);
                 break;
 
             case GameState.Resume:
                 playerMovement.enabled = true;
-
+                playerBehaviour.Jumping(true);
                 break;
 
             case GameState.End:
