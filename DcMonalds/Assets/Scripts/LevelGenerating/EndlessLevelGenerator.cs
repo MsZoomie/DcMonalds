@@ -14,31 +14,37 @@ public class EndlessLevelGenerator : MonoBehaviour
 
     public Difficulty[] difficulties;
 
-    private Vector3 generationPosition = Vector3.zero;
 
-    private GameObject currentPrefab;
+    private Vector3 generationPosition = Vector3.zero;
+    private float lastDifficultyChangeTime;
+    private int currentDifficulty;
 
     private void Start()
     {
-        generationPosition.z += playerOffset;
+        currentDifficulty = 0;
+        lastDifficultyChangeTime = Time.time;
 
-        currentPrefab = difficulties[0].levelChunkPrefabs[0];
+        generationPosition.z += playerOffset;
     }
 
     private void Update()
     {
-       
-
-       if(CheckPlayerPosition())
+        if(CheckPlayerPosition())
         {
             GenerateChunk();
+        }
+
+        if(Time.time - lastDifficultyChangeTime >= changeDifficultyTime)
+        {
+            ChangeDifficulty();
         }
     }
 
     private void GenerateChunk()
     {
-        Instantiate(currentPrefab, generationPosition, Quaternion.identity);
+        GameObject chunkToGenerate = ChooseLevelChunk();
 
+        Instantiate(chunkToGenerate, generationPosition, Quaternion.identity);
 
         generationPosition.z += playerOffset;
     }
@@ -54,7 +60,30 @@ public class EndlessLevelGenerator : MonoBehaviour
         return false;
     }
 
+    private void ChangeDifficulty()
+    {
+        if (difficulties.Length - 1 <= currentDifficulty)
+            return;
+
+        currentDifficulty++;
+        lastDifficultyChangeTime = Time.time;
+        Debug.Log("changing difficulty");
+    }
+
+    private GameObject ChooseLevelChunk()
+    {
+        GameObject levelChunk;
+
+        int rand = UnityEngine.Random.Range(0, difficulties[currentDifficulty].levelChunkPrefabs.Length);
+
+        levelChunk = difficulties[currentDifficulty].levelChunkPrefabs[rand];
+
+        return levelChunk;
+    }
+
 }
+
+
 
 [Serializable]
 public class Difficulty

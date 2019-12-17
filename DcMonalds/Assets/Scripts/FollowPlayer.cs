@@ -11,7 +11,6 @@ public class FollowPlayer : MonoBehaviour
     public GameObject player;
     public GameObject[] followers;
 
-    private float offset = 1.0f;
 
 
     private void LateUpdate()

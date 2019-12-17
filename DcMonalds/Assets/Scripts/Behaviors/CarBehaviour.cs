@@ -37,5 +37,14 @@ public class CarBehaviour : MonoBehaviour
         yield return new WaitForSeconds(delay);
         movement.StartLerp(false);
     }
-  
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            movement.enabled = false;
+            this.enabled = false;
+        }
+    }
 }

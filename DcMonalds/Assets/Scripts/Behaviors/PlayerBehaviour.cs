@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     private void OnCollisionEnter(Collision collision)
-    {        
+    {
         if(collision.gameObject.tag == "Obstacle")
         {
             Jumping(false);
