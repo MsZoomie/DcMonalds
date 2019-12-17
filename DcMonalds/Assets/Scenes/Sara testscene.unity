@@ -22711,6 +22711,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -22782,7 +22783,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 35, y: -45, z: -0.981}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22797,6 +22798,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2082170123}
   onlyFollowZ: 1
+--- !u!111 &963194230
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9679210336e105146860791692fe6c01, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9679210336e105146860791692fe6c01, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &963400561
 PrefabInstance:
   m_ObjectHideFlags: 0
